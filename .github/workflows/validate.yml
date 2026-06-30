@@ -39,3 +39,6 @@ jobs:
 
       - name: Validate ADMX structure
         run: python scripts/validate.py
+
+      - name: Check minified size against Intune's 1024 KB upload limit
+        run: python scripts/minify.py dist/AdobeDC

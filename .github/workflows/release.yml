@@ -48,14 +48,13 @@ jobs:
       - name: Validate ADMX structure
         run: python scripts/validate.py
 
+      - name: Minify for Intune's 1024 KB upload limit
+        run: python scripts/minify.py dist/AdobeDC
+
       - name: Package release zip
         id: package
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          STAGING="dist/AdobeDC"
-          mkdir -p "$STAGING/en-US"
-          cp build/AdobeDC.admx       "$STAGING/AdobeDC.admx"
-          cp build/en-US/AdobeDC.adml "$STAGING/en-US/AdobeDC.adml"
           cd dist
           zip -r "AdobeDC-v${VERSION}.zip" AdobeDC/
 
