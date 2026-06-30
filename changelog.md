@@ -10,6 +10,12 @@ Settings changes across ADMX versions. Only new, renamed, or reclassified settin
 
 ---
 
+## v3.5 — 29 June 2026
+
+**No settings changes:** Policy definitions are unchanged from **v3.4** below. Release packaging now minifies `AdobeDC.admx`/`AdobeDC.adml` (strips comments and indentation, keeping `_Explain` text intact) before zipping, since Intune base64-encodes uploads for the Graph API and the raw file size was pushing the encoded size past the platform's 1024 KB limit.
+
+---
+
 ## v3.4 — 29 June 2026
 
 **New category: Browser Extension.** Adds 12 policies for the Adobe Acrobat browser extension (Chrome and Edge), configured through each browser's own managed-storage policy mechanism rather than Adobe's `FeatureLockDown` namespace. These control the extension itself, not whether it's installed — installation remains controlled by the browser's own `ExtensionInstallForcelist`/`ExtensionInstallBlocklist` policies.
