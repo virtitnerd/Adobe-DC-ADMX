@@ -547,7 +547,7 @@
     <!-- ======================================== -->
 
     <!-- Check MIP Policy on Save - [bMIPCheckPolicyOnDocSave] -->
-    <policy class="Machine" displayName="$(string.bMIPCheckPolicyOnDocSave_Acrobat)" explainText="$(string.bMIPCheckPolicyOnDocSave_Acrobat_Explain)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
+    <policy class="Machine" displayName="$(string.bMIPCheckPolicyOnDocSave_Acrobat)" explainText="$(string.bMIPCheckPolicyOnDocSave_Acrobat_Explain)" key="SOFTWARE\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
       name="bMIPCheckPolicyOnDocSave_Acrobat" valueName="bMIPCheckPolicyOnDocSave">
       <parentCategory ref="MicrosoftPurviewMIP_AcrobatCategory"/>
       <supportedOn ref="SupportedAcrobatReaderPolicies"/>
@@ -556,7 +556,7 @@
     </policy>
 
     <!-- Enable MIP Labelling - [bMIPLabelling] -->
-    <policy class="Machine" displayName="$(string.bMIPLabelling_Acrobat)" explainText="$(string.bMIPLabelling_Acrobat_Explain)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
+    <policy class="Machine" displayName="$(string.bMIPLabelling_Acrobat)" explainText="$(string.bMIPLabelling_Acrobat_Explain)" key="SOFTWARE\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
       name="bMIPLabelling_Acrobat" valueName="bMIPLabelling">
       <parentCategory ref="MicrosoftPurviewMIP_AcrobatCategory"/>
       <supportedOn ref="SupportedAcrobatReaderPolicies"/>
@@ -565,7 +565,7 @@
     </policy>
 
     <!-- MIP Double Key Encryption - [bEnableDKEAdmin] -->
-    <policy class="Machine" displayName="$(string.bEnableDKEAdmin_Acrobat)" explainText="$(string.bEnableDKEAdmin_Acrobat_Explain)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
+    <policy class="Machine" displayName="$(string.bEnableDKEAdmin_Acrobat)" explainText="$(string.bEnableDKEAdmin_Acrobat_Explain)" key="SOFTWARE\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
       name="bEnableDKEAdmin_Acrobat" valueName="bEnableDKEAdmin">
       <parentCategory ref="MicrosoftPurviewMIP_AcrobatCategory"/>
       <supportedOn ref="SupportedAcrobatReaderPolicies"/>
@@ -574,7 +574,7 @@
     </policy>
 
     <!-- MIP External Browser Auth - [bMIPExternalAuthAdmin] -->
-    <policy class="Machine" displayName="$(string.bMIPExternalAuthAdmin_Acrobat)" explainText="$(string.bMIPExternalAuthAdmin_Acrobat_Explain)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
+    <policy class="Machine" displayName="$(string.bMIPExternalAuthAdmin_Acrobat)" explainText="$(string.bMIPExternalAuthAdmin_Acrobat_Explain)" key="SOFTWARE\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
       name="bMIPExternalAuthAdmin_Acrobat" valueName="bMIPExternalAuthAdmin">
       <parentCategory ref="MicrosoftPurviewMIP_AcrobatCategory"/>
       <supportedOn ref="SupportedAcrobatReaderPolicies"/>
@@ -583,7 +583,7 @@
     </policy>
 
     <!-- MIP Sovereign Cloud - [iMIPCloud] -->
-    <policy class="Machine" displayName="$(string.iMIPCloud_Acrobat)" explainText="$(string.iMIPCloud_Acrobat_Explain)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
+    <policy class="Machine" displayName="$(string.iMIPCloud_Acrobat)" explainText="$(string.iMIPCloud_Acrobat_Explain)" key="SOFTWARE\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
       name="iMIPCloud_Acrobat" valueName="iMIPCloud" presentation="$(presentation.iMIPCloud_Acrobat_enum)">
       <parentCategory ref="MicrosoftPurviewMIP_AcrobatCategory"/>
       <supportedOn ref="SupportedAcrobatReaderPolicies"/>
@@ -627,7 +627,7 @@
     </policy>
 
     <!-- Suppress OS Auth Prompts (MIP) - [bSilentAuth] -->
-    <policy class="Machine" displayName="$(string.bSilentAuth_Acrobat)" explainText="$(string.bSilentAuth_Acrobat_Explain)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
+    <policy class="Machine" displayName="$(string.bSilentAuth_Acrobat)" explainText="$(string.bSilentAuth_Acrobat_Explain)" key="SOFTWARE\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
       name="bSilentAuth_Acrobat" valueName="bSilentAuth">
       <parentCategory ref="MicrosoftPurviewMIP_AcrobatCategory"/>
       <supportedOn ref="SupportedAcrobatReaderPolicies"/>
