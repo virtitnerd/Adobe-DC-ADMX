@@ -71,7 +71,7 @@
       <string id="bBoxConnectorEnabled_Acrobat">Box Cloud Connector</string>
       <string id="bBoxConnectorEnabled_Acrobat_Explain">Specifies whether to enable connection to the Box cloud when bToggleWebConnectors is set to 1.&#10;&#10;Overrides a bToggleWebConnectors value of 1. Only supported on the Continuous track. Possible values include: 0: Disable connection to Box 1: Enable connection to Box</string>
       <string id="bToggleAdobeDocumentServices_Acrobat">Document Cloud Services</string>
-      <string id="bToggleAdobeDocumentServices_Acrobat_Explain">Enable Document Cloud services (except those controlled by other prefs).&#10;&#10;Does not affect Sign, prefs sync, or third-party connectors. Reader removes Create/Export/Organize/Combine without subscription. Use bUpdater to disable all services. Values: 0 = enabled; 1 = disabled.&#10;&#10;Security Reference: STIG ARDC-CN-000060 (V-213178) Medium</string>
+      <string id="bToggleAdobeDocumentServices_Acrobat_Explain">Enable Document Cloud services (except those controlled by other prefs).&#10;&#10;Does not affect Sign, prefs sync, or third-party connectors. Reader removes Create/Export/Organize/Combine without subscription. Use bUpdater to disable all services. Values: 0 = enabled; 1 = disabled.</string>
       <string id="bToggleDocumentCloud_Acrobat">Document Cloud Storage</string>
       <string id="bToggleDocumentCloud_Acrobat_Explain">Specifies whether to enable Document Cloud storage.&#10;&#10;DC storage is enabled by default. Possible values include: 0: Enable Document Cloud storage. 1: Disable Document Cloud storage.</string>
       <string id="bDropboxConnectorEnabled_Acrobat">Dropbox Cloud Connector</string>
@@ -87,11 +87,11 @@
       <string id="bOneDriveConnectorEnabled_Acrobat">OneDrive Connector</string>
       <string id="bOneDriveConnectorEnabled_Acrobat_Explain">Specifies whether to enable connection to the OneDrive cloud when bToggleWebConnectors is set to 1.&#10;&#10;Overrides a bToggleWebConnectors value of 1. Only supported on the Continuous track. Possible values include: 0: Disable connection to OneDrive 1: Enable connection to OneDrive</string>
       <string id="bTogglePrefsSync_Acrobat">Preferences Synchronization</string>
-      <string id="bTogglePrefsSync_Acrobat_Explain">Sync desktop preferences across signed-in devices.&#10;&#10;Values: 0 = enabled; 1 = disabled and locked.&#10;&#10;Security Reference: STIG ARDC-CN-000065 (V-213179) Medium; STIG AADC-CN-001290 (V-213132) Medium</string>
+      <string id="bTogglePrefsSync_Acrobat_Explain">Sync desktop preferences across signed-in devices.&#10;&#10;Values: 0 = enabled; 1 = disabled and locked.</string>
       <string id="bUpdater_Updates_Acrobat">Services &amp; Web-Plugin Updates</string>
-      <string id="bUpdater_Updates_Acrobat_Explain">Web-plugin updates and cloud services.&#10;&#10;Disables all services including sign-in. Not the same as FeatureLockDown\bUpdater (product updates). Values: 0 = disable services and component updates; 1 = enable.&#10;&#10;Security Reference: STIG ARDC-CN-000120 (V-213187) Low</string>
+      <string id="bUpdater_Updates_Acrobat_Explain">Web-plugin updates and cloud services.&#10;&#10;Disables all services including sign-in. Not the same as FeatureLockDown\bUpdater (product updates). Values: 0 = disable services and component updates; 1 = enable.</string>
       <string id="bToggleWebConnectors_Acrobat">Third-Party Cloud Connectors</string>
-      <string id="bToggleWebConnectors_Acrobat_Explain">Third-party cloud storage connectors (Continuous track).&#10;&#10;Controls Box, OneDrive, and Dropbox (not SharePoint). Disables Home, Add Account, and custom Open/Save entry points. Values: 0 = enabled; 1 = disabled.&#10;&#10;Security Reference: STIG ARDC-CN-000075 (V-213181) Medium; STIG AADC-CN-001300 (V-213134) Low</string>
+      <string id="bToggleWebConnectors_Acrobat_Explain">Third-party cloud storage connectors (Continuous track).&#10;&#10;Controls Box, OneDrive, and Dropbox (not SharePoint). Disables Home, Add Account, and custom Open/Save entry points. Values: 0 = enabled; 1 = disabled.</string>
 
       <!-- ======================================== -->
       <!--        Context, Tools and Search         -->
@@ -186,21 +186,21 @@
       <string id="bDisableJavaScript_Acrobat">Block JavaScript Execution</string>
       <string id="bDisableJavaScript_Acrobat_Explain">Blocks and locks JavaScript execution in PDF documents, preventing users from bypassing via privileged locations.&#10;&#10;This lockable setting overrides bEnableJS and prevents users from re-enabling JavaScript through the Yellow Message Bar or Trusted Locations. Possible values include: 0 or null: Don't disable JS. 1: Disable and lock JS.</string>
       <string id="iFileAttachmentPerms_Acrobat">Block non-PDF file attachments</string>
-      <string id="iFileAttachmentPerms_Acrobat_Explain">Block opening non-PDF/FDF file attachments.&#10;&#10;Values: 0 = allow (not STIG-compliant); 1 = block (recommended; DISA STIG and NSA hardening guidance).&#10;&#10;Security Reference: STIG ARDC-CN-000035 (V-213174) Medium; STIG AADC-CN-000275 (V-213119) Medium</string>
+      <string id="iFileAttachmentPerms_Acrobat_Explain">Block opening non-PDF/FDF file attachments.&#10;&#10;Values: 0 = allow; 1 = block.</string>
       <string id="bDisablePDFRedirectionActions_Acrobat">Block PDF Link Actions</string>
       <string id="bDisablePDFRedirectionActions_Acrobat_Explain">Specifies whether to block specific PDF actions (listed below) which result in opening a link.&#10;&#10;This preference does not block regular web links. Enabling this feature blocks PDF actions that open links, including GoToE, GoToR, Launch, Thread, Import Data, Export Form Data, Submit Form, and Reset Form. Possible values include: 0 or null: Don't block these opening links. 1: Block links.</string>
       <string id="bEnablePVCertificateBasedTrust_Acrobat">Certification Status in Protected View</string>
       <string id="bEnablePVCertificateBasedTrust_Acrobat_Explain">Specifies whether a document's certification status should appear in the Protected View document message bar.&#10;&#10;Possible values include: 0: Don't show the document's certification status. 1: Do show the document's certification status.</string>
       <string id="bEnhancedSecurityInBrowser_Acrobat">Enhanced Security in Browser</string>
-      <string id="bEnhancedSecurityInBrowser_Acrobat_Explain">Enhanced security when running in the browser.&#10;&#10;GUI checkbox sets this with bEnhancedSecurityStandalone. On 8.x, use bEnhancedSecurityStandalone for both. Values: 0 = disabled; 1 = enabled.&#10;&#10;Security Reference: STIG ARDC-CN-000010 (V-213169) Medium; STIG AADC-CN-000210 (V-213118) Medium</string>
+      <string id="bEnhancedSecurityInBrowser_Acrobat_Explain">Enhanced security when running in the browser.&#10;&#10;GUI checkbox sets this with bEnhancedSecurityStandalone. On 8.x, use bEnhancedSecurityStandalone for both. Values: 0 = disabled; 1 = enabled.</string>
       <string id="bEnhancedSecurityStandalone_Acrobat">Enhanced Security Standalone</string>
-      <string id="bEnhancedSecurityStandalone_Acrobat_Explain">Enhanced security in the standalone application.&#10;&#10;GUI checkbox sets this with bEnhancedSecurityInBrowser. On 8.x, this controls both browser and standalone. Values: 0 = disabled; 1 = enabled.&#10;&#10;Security Reference: STIG ARDC-CN-000005 (V-213168) Medium; STIG AADC-CN-000205 (V-213117) Medium</string>
+      <string id="bEnhancedSecurityStandalone_Acrobat_Explain">Enhanced security in the standalone application.&#10;&#10;GUI checkbox sets this with bEnhancedSecurityInBrowser. On 8.x, this controls both browser and standalone. Values: 0 = disabled; 1 = enabled.</string>
       <string id="bEnableFlash_Acrobat">Flash Content in PDFs</string>
-      <string id="bEnableFlash_Acrobat_Explain">Render Flash content in PDFs.&#10;&#10;Privileged locations do not override this setting. Values: 0 = empty box and security warning; 1 = play if Flash player present.&#10;&#10;Security Reference: STIG ARDC-CN-000045 (V-213175) Medium; STIG AADC-CN-000290 (V-213122) Medium</string>
+      <string id="bEnableFlash_Acrobat_Explain">Render Flash content in PDFs.&#10;&#10;Privileged locations do not override this setting. Values: 0 = empty box and security warning; 1 = play if Flash player present.</string>
       <string id="bProtectedMode_Acrobat">Protected Mode Sandbox</string>
-      <string id="bProtectedMode_Acrobat_Explain">Enables Protected Mode which sandboxes Acrobat and Reader processes.&#10;&#10;Protected Mode should be enabled to protect user systems and data. Possible values include: 0: Don't enable protected mode. 1: Do enable protected mode.&#10;&#10;Security Reference: STIG ARDC-CN-000015 (V-213170) Medium; STIG AADC-CN-001010 (V-213127) Medium</string>
+      <string id="bProtectedMode_Acrobat_Explain">Enables Protected Mode which sandboxes Acrobat and Reader processes.&#10;&#10;Protected Mode should be enabled to protect user systems and data. Possible values include: 0: Don't enable protected mode. 1: Do enable protected mode.</string>
       <string id="iProtectedView_Acrobat">Protected View Mode</string>
-      <string id="iProtectedView_Acrobat_Explain">Protected View mode.&#10;&#10;Values: 0 = off (default); 1 = untrusted locations only (recommended); 2 = all files.&#10;&#10;Security Reference: STIG ARDC-CN-000020 (V-213171) Medium; STIG AADC-CN-001015 (V-213128) Medium</string>
+      <string id="iProtectedView_Acrobat_Explain">Protected View mode.&#10;&#10;Values: 0 = off (default); 1 = untrusted locations only (recommended); 2 = all files.</string>
       <string id="iProtectedView_Acrobat_opt0">Disable Protected View</string>
       <string id="iProtectedView_Acrobat_opt1">Enable Protected View for unsafe locations only</string>
       <string id="iProtectedView_Acrobat_opt2">Enable Protected View for all files</string>
@@ -230,7 +230,7 @@
       <string id="bWinCacheSessionHandles_Acrobat">Cache Digital ID Session Handles</string>
       <string id="bWinCacheSessionHandles_Acrobat_Explain">Specifies whether to retain cryptographic service provider (CSP) handles when a user authenticates to a digital ID.&#10;&#10;If true, a user does not have to re-authenticate to use the ID unless they log out or the session ends. The impact of this preference will vary based on the CSP in use; however, the setting does not affect the Windows CSPs.</string>
       <string id="bDisableADCFileStore_Acrobat">Disable Acrobat.com File Storage</string>
-      <string id="bDisableADCFileStore_Acrobat_Explain">Disables Acrobat.com file storage integration.&#10;&#10;When enabled, disables storage of files on Acrobat.com (Adobe Document Cloud). Aligns with DISA STIG Acrobat Pro DC V-213131 (AADC-CN-000250). Possible values include: 0: Allow Acrobat.com file storage. 1: Disable Acrobat.com file storage.&#10;&#10;Security Reference: STIG AADC-CN-000250 (V-213131) Medium</string>
+      <string id="bDisableADCFileStore_Acrobat_Explain">Disables Acrobat.com file storage integration.&#10;&#10;When enabled, disables storage of files on Acrobat.com (Adobe Document Cloud). Possible values include: 0: Allow Acrobat.com file storage. 1: Disable Acrobat.com file storage.</string>
       <string id="bDisableOSTrustedSites_Acrobat">Disable IE Trusted Sites as Privileged Locations</string>
       <string id="bDisableOSTrustedSites_Acrobat_Explain">Locks the ability to treat IE trusted sites as privileged locations either on or off so the users can't change the bTrustOSTrustedSites value via the user interface.&#10;&#10;If set, bTrustOSTrustedSites is simply ignored. Possible values include: 0 or null: Enables and locks trusting sites from IE. 1: Disables and locks trusting sites from IE.</string>
       <string id="bAllowAPSConfig_Acrobat">LiveCycle RMS Server Config</string>
@@ -240,9 +240,9 @@
       <string id="bReasons_Acrobat">Lock Signing Reasons Settings</string>
       <string id="bReasons_Acrobat_Explain">Prevents users from modifying reason settings.&#10;&#10;v8.1: If locked and cReasons is empty, bAllowSigningReasons is 0 and read only. If locked and cReasons has values, then bAllowSigningReasons is true and read only.</string>
       <string id="bDisableTrustedFolders_Acrobat">Lock Trusted Folders and Files</string>
-      <string id="bDisableTrustedFolders_Acrobat_Explain">Disable and lock trusted folders and files.&#10;&#10;Prevents users from adding folder or file privileged locations. Values: 0 or null = allowed; 1 = disabled and locked.&#10;&#10;Security Reference: STIG ARDC-CN-000315 (V-213188) Medium; STIG AADC-CN-000840 (V-213124) Medium</string>
+      <string id="bDisableTrustedFolders_Acrobat_Explain">Disable and lock trusted folders and files.&#10;&#10;Prevents users from adding folder or file privileged locations. Values: 0 or null = allowed; 1 = disabled and locked.</string>
       <string id="bDisableTrustedSites_Acrobat">Lock Trusted Host Sites</string>
-      <string id="bDisableTrustedSites_Acrobat_Explain">Disable and lock host-based privileged locations.&#10;&#10;Values: 0 or null = enable and lock host-based locations; 1 = disable and lock host-based locations.&#10;&#10;Security Reference: STIG ARDC-CN-000320 (V-213189) Medium; STIG AADC-CN-001325 (V-213139) Low</string>
+      <string id="bDisableTrustedSites_Acrobat_Explain">Disable and lock host-based privileged locations.&#10;&#10;Values: 0 or null = enable and lock host-based locations; 1 = disable and lock host-based locations.</string>
       <string id="bEnableCEFBasedUI_Acrobat">Modern Digital Signature UI</string>
       <string id="bEnableCEFBasedUI_Acrobat_Explain">Modern CEF-based digital signature UI.&#10;&#10;All values disable the user preference toggle. Block self-signed ID creation (post-June 2016) with bSelfSignCertGen=0 and bEnableCEFBasedUI=0. Values: 0 = legacy UI; 1 = modern UI.</string>
       <string id="bUseTSAsSigningTime_Acrobat">Show Timestamp in Signature</string>
@@ -254,7 +254,7 @@
       <string id="bEnableCertificateBasedTrust_Acrobat">Trust Certified Documents</string>
       <string id="bEnableCertificateBasedTrust_Acrobat_Explain">Trust certified documents as privileged locations (admin lock).&#10;&#10;Lockable counterpart to bTrustCertifiedDocuments. Does not apply in Protected View. Values: 0 or null = not trusted; 1 = trusted.</string>
       <string id="iUnknownURLPerms_Acrobat">Unknown URL Access Policy</string>
-      <string id="iUnknownURLPerms_Acrobat_Explain">Access policy for URLs not in the user list.&#10;&#10;Overrides privileged location host settings in some versions. Values: 1 = ask; 2 = allow; 3 = block.&#10;&#10;Security Reference: STIG ARDC-CN-000030 (V-213173) Medium; STIG AADC-CN-000280 (V-213120) Low</string>
+      <string id="iUnknownURLPerms_Acrobat_Explain">Access policy for URLs not in the user list.&#10;&#10;Overrides privileged location host settings in some versions. Values: 1 = ask; 2 = allow; 3 = block.</string>
       <string id="iUnknownURLPerms_Acrobat_opt0">Always ask</string>
       <string id="iUnknownURLPerms_Acrobat_opt1">Always allow</string>
       <string id="iUnknownURLPerms_Acrobat_opt2">Always block</string>
@@ -266,15 +266,15 @@
       <!-- ======================================== -->
 
       <string id="bToggleAdobeSign_Acrobat">Adobe Acrobat Sign</string>
-      <string id="bToggleAdobeSign_Acrobat_Explain">Adobe Acrobat Sign (Send for Signature).&#10;&#10;On Continuous track, also set bToggleManageSign. Values: 0 = enabled; 1 = disabled.&#10;&#10;Security Reference: STIG ARDC-CN-000085 (V-213183) Low</string>
+      <string id="bToggleAdobeSign_Acrobat_Explain">Adobe Acrobat Sign (Send for Signature).&#10;&#10;On Continuous track, also set bToggleManageSign. Values: 0 = enabled; 1 = disabled.</string>
       <string id="bToggleSendAndTrack_Acrobat">Adobe Send &amp; Track</string>
       <string id="bToggleSendAndTrack_Acrobat_Explain">Disables Adobe Send and Track (some UI is renamed to &quot;Share&quot; since October, 2018)&#10;&#10;Possible values include: 0: Enable Adobe Send and Track. 1: Disable Adobe Send and Track.</string>
       <string id="bEnableRecipientMention_Acrobat">Allow @Mention Non-Reviewers</string>
       <string id="bEnableRecipientMention_Acrobat_Explain">Specifies whether to allow participants in a shared review to @mention people who are not review collaborators.&#10;&#10;Prior to this release, reviewers could only @mention other reviewers in the review comments. Possible values include: 0: Don't allow mentioning non-reviewers. 1: Allow mentioning non-reviewers.</string>
       <string id="bDisableSharePointFeatures_Acrobat">Disable SharePoint &amp; Office 365 Integration</string>
-      <string id="bDisableSharePointFeatures_Acrobat_Explain">Disable SharePoint and Office 365 integration.&#10;&#10;Disables SharePoint detection, check-out prompt, and SharePoint menu items. Values: 0 or null = enabled; 1 = disabled.&#10;&#10;Security Reference: STIG ARDC-CN-000100 (V-213185) Medium; STIG AADC-CN-001315 (V-213137) Low</string>
+      <string id="bDisableSharePointFeatures_Acrobat_Explain">Disable SharePoint and Office 365 integration.&#10;&#10;Disables SharePoint detection, check-out prompt, and SharePoint menu items. Values: 0 or null = enabled; 1 = disabled.</string>
       <string id="bDisableWebmail_Acrobat">Disable WebMail Integration</string>
-      <string id="bDisableWebmail_Acrobat_Explain">Disable WebMail integration.&#10;&#10;Values: 0 = enable WebMail profiles; 1 = disable. With bSendMailShareRedirection=1, the email icon attaches the PDF directly.&#10;&#10;Security Reference: STIG ARDC-CN-000090 (V-213184) Medium; STIG AADC-CN-001305 (V-213135) Low</string>
+      <string id="bDisableWebmail_Acrobat_Explain">Disable WebMail integration.&#10;&#10;Values: 0 = enable WebMail profiles; 1 = disable. With bSendMailShareRedirection=1, the email icon attaches the PDF directly.</string>
       <string id="bToggleAdobeReview_Acrobat">Document Cloud Review Service</string>
       <string id="bToggleAdobeReview_Acrobat_Explain">Document Cloud Review service UI.&#10;&#10;When disabled, removes cloud review UI and legacy review types are used. Values: 0 or null = enabled; 1 = disabled.</string>
       <string id="bSendMailShareRedirection_Acrobat">Email Icon Attach to Email Behavior</string>
@@ -284,7 +284,7 @@
       <string id="bToggleFSSSignatureSaving_Acrobat">Save Signature to Cloud</string>
       <string id="bToggleFSSSignatureSaving_Acrobat_Explain">Specifies whether to save a newly created signature in the cloud.&#10;&#10;When a user creates a new signature, the dialog offers the option to store the signature in the cloud for later use. This preference also controls saving user initials. Possible values include: 0: Show the Save Signature UI 1: Hide the Save Signature UI</string>
       <string id="bAdobeSendPluginToggle_Acrobat">Send &amp; Track Outlook Plugin</string>
-      <string id="bAdobeSendPluginToggle_Acrobat_Explain">Adobe Send and Track button in Outlook.&#10;&#10;Uploads attachments to Document Cloud and inserts public preview/download links in email. Values: 0 = enabled; 1 = disabled.&#10;&#10;Security Reference: STIG ARDC-CN-000055 (V-213177) Low; STIG AADC-CN-000295 (V-213123) Medium</string>
+      <string id="bAdobeSendPluginToggle_Acrobat_Explain">Adobe Send and Track button in Outlook.&#10;&#10;Uploads attachments to Document Cloud and inserts public preview/download links in email. Values: 0 = enabled; 1 = disabled.</string>
       <string id="bEnableReviewPromote_Acrobat">Share and Review Reminder Tip</string>
       <string id="bEnableReviewPromote_Acrobat_Explain">Specifies whether to display a Share/Review feature reminder message when users have used those features in the past.&#10;&#10;If the user has not used the review service for 30 days AND has previously opened a PDF with review comments, Acrobat displays a tip reminding the user the review/share service is available. Possible values include: 0: Don't show a tip. 1: Show tip.</string>
       <string id="bPreviouslyEnabledSharePointInChromeExtn_Acrobat">SharePoint Chrome Extension Previous State</string>
@@ -326,7 +326,7 @@
       <string id="bToggleNotifications_Acrobat">Desktop Notifications</string>
       <string id="bToggleNotifications_Acrobat_Explain">Specifies whether to disable all in-product and desktop notifications.&#10;&#10;When 0 (or null), feature-specific notifications are managed via the related service preference. When set to 1, this preference disables all notifications irrespective of the values of all other keys. Possible values include: 0: Enable desktop notifications. 1: Disable all desktop notifications.</string>
       <string id="bShowWelcomeScreen_Acrobat">Disable Welcome Screen</string>
-      <string id="bShowWelcomeScreen_Acrobat_Explain">Specifies whether to show the Welcome screen at product launch.&#10;&#10;When enabled (DWORD 0), the Welcome screen is disabled. Aligns with DISA STIG Reader V-213186 and Acrobat Pro V-213136. Possible values include: 0: Do not show Welcome screen. 1: Show Welcome screen.&#10;&#10;Security Reference: STIG ARDC-CN-000040 (V-213186) Medium; STIG AADC-CN-000260 (V-213136) Medium</string>
+      <string id="bShowWelcomeScreen_Acrobat_Explain">Specifies whether to show the Welcome screen at product launch.&#10;&#10;When enabled (DWORD 0), the Welcome screen is disabled. Possible values include: 0: Do not show Welcome screen. 1: Show Welcome screen.</string>
       <string id="bToggleFTE_Acrobat">First Time Experience</string>
       <string id="bToggleFTE_Acrobat_Explain">First Time Experience (welcome tour and page).&#10;&#10;Also disabled when bUpdater, bToggleAdobeDocumentServices, bToggleAdobeSign, bTogglePrefsSync, or bToggleWebConnectors is set. Values: 0 or null = enabled; 1 = disabled.</string>
       <string id="bDontShowMsgWhenViewingDoc_Acrobat">Hide Adobe Messages on Document Open</string>
@@ -369,7 +369,7 @@
       <string id="bSuppressMessageBar_Acrobat">Hide Document Message Bar</string>
       <string id="bSuppressMessageBar_Acrobat_Explain">Prevents the appearance of the document message bar.&#10;&#10;Adversely affects signing when preview mode is used.</string>
       <string id="bDisablePDFHandlerSwitching_Acrobat">Lock Default PDF Viewer</string>
-      <string id="bDisablePDFHandlerSwitching_Acrobat_Explain">Lock the default PDF viewer handler.&#10;&#10;Adobe PDF handler only; does not switch to or from non-Adobe products. UI changes invoke the installer (HKLM), not HKCU. Values: 0 or null = allow change; 1 = block change.&#10;&#10;Security Reference: STIG ARDC-CN-000050 (V-213176) Low; STIG AADC-CN-001280 (V-213130) Low</string>
+      <string id="bDisablePDFHandlerSwitching_Acrobat_Explain">Lock the default PDF viewer handler.&#10;&#10;Adobe PDF handler only; does not switch to or from non-Adobe products. UI changes invoke the installer (HKLM), not HKCU. Values: 0 or null = allow change; 1 = block change.</string>
       <string id="bDisableThumbnailPreviewHandler_Acrobat">Lock PDF Thumbnails in Explorer</string>
       <string id="bDisableThumbnailPreviewHandler_Acrobat_Explain">Lock Explorer PDF thumbnail preview checkbox.&#10;&#10;Values: 0 = users can enable via installer; 1 = disable and lock.</string>
       <string id="PatchCleanFlag_Acrobat">Patch Cache Cleanup</string>
@@ -403,7 +403,7 @@
       <string id="bToggleDCAppCenter_Acrobat">Show App Center UI</string>
       <string id="bToggleDCAppCenter_Acrobat_Explain">App Center and get-apps banner on Home.&#10;&#10;Values: 0 or null = show; 1 = hide.</string>
       <string id="bAcroSuppressUpsell_Acrobat">Show Upgrade Prompts</string>
-      <string id="bAcroSuppressUpsell_Acrobat_Explain">Disable upgrade and upsell messages (12.x+).&#10;&#10;Controls Reader tool purchase and Standard-to-Professional prompts. Values: 0 or null = show upsell; 1 = disable upsell.&#10;&#10;Security Reference: STIG ARDC-CN-000080 (V-213182) Low</string>
+      <string id="bAcroSuppressUpsell_Acrobat_Explain">Disable upgrade and upsell messages (12.x+).&#10;&#10;Controls Reader tool purchase and Standard-to-Professional prompts. Values: 0 or null = show upsell; 1 = disable upsell.</string>
       <string id="bEnableTrialistLaunchCard_Acrobat">Trial Purchase Prompt</string>
       <string id="bEnableTrialistLaunchCard_Acrobat_Explain">Specifies whether to prompt Acrobat trial users to complete the purchase.&#10;&#10;Possible values include: 0: Disable the purchase Acrobat prompt. 1: Don't disable the prompt.</string>
       <!-- ======================================== -->
@@ -421,7 +421,7 @@
       <string id="bBoxConnectorEnabled_Reader">Box Cloud Connector</string>
       <string id="bBoxConnectorEnabled_Reader_Explain">Specifies whether to enable connection to the Box cloud when bToggleWebConnectors is set to 1.&#10;&#10;Overrides a bToggleWebConnectors value of 1. Only supported on the Continuous track. Possible values include: 0: Disable connection to Box 1: Enable connection to Box</string>
       <string id="bToggleAdobeDocumentServices_Reader">Document Cloud Services</string>
-      <string id="bToggleAdobeDocumentServices_Reader_Explain">Enable Document Cloud services (except those controlled by other prefs).&#10;&#10;Does not affect Sign, prefs sync, or third-party connectors. Reader removes Create/Export/Organize/Combine without subscription. Use bUpdater to disable all services. Values: 0 = enabled; 1 = disabled.&#10;&#10;Security Reference: STIG ARDC-CN-000060 (V-213178) Medium</string>
+      <string id="bToggleAdobeDocumentServices_Reader_Explain">Enable Document Cloud services (except those controlled by other prefs).&#10;&#10;Does not affect Sign, prefs sync, or third-party connectors. Reader removes Create/Export/Organize/Combine without subscription. Use bUpdater to disable all services. Values: 0 = enabled; 1 = disabled.</string>
       <string id="bToggleDocumentCloud_Reader">Document Cloud Storage</string>
       <string id="bToggleDocumentCloud_Reader_Explain">Specifies whether to enable Document Cloud storage.&#10;&#10;DC storage is enabled by default. Possible values include: 0: Enable Document Cloud storage. 1: Disable Document Cloud storage.</string>
       <string id="bDropboxConnectorEnabled_Reader">Dropbox Cloud Connector</string>
@@ -437,11 +437,11 @@
       <string id="bOneDriveConnectorEnabled_Reader">OneDrive Connector</string>
       <string id="bOneDriveConnectorEnabled_Reader_Explain">Specifies whether to enable connection to the OneDrive cloud when bToggleWebConnectors is set to 1.&#10;&#10;Overrides a bToggleWebConnectors value of 1. Only supported on the Continuous track. Possible values include: 0: Disable connection to OneDrive 1: Enable connection to OneDrive</string>
       <string id="bTogglePrefsSync_Reader">Preferences Synchronization</string>
-      <string id="bTogglePrefsSync_Reader_Explain">Sync desktop preferences across signed-in devices.&#10;&#10;Values: 0 = enabled; 1 = disabled and locked.&#10;&#10;Security Reference: STIG ARDC-CN-000065 (V-213179) Medium; STIG AADC-CN-001290 (V-213132) Medium</string>
+      <string id="bTogglePrefsSync_Reader_Explain">Sync desktop preferences across signed-in devices.&#10;&#10;Values: 0 = enabled; 1 = disabled and locked.</string>
       <string id="bUpdater_Updates_Reader">Services &amp; Web-Plugin Updates</string>
-      <string id="bUpdater_Updates_Reader_Explain">Web-plugin updates and cloud services.&#10;&#10;Disables all services including sign-in. Not the same as FeatureLockDown\bUpdater (product updates). Values: 0 = disable services and component updates; 1 = enable.&#10;&#10;Security Reference: STIG ARDC-CN-000120 (V-213187) Low</string>
+      <string id="bUpdater_Updates_Reader_Explain">Web-plugin updates and cloud services.&#10;&#10;Disables all services including sign-in. Not the same as FeatureLockDown\bUpdater (product updates). Values: 0 = disable services and component updates; 1 = enable.</string>
       <string id="bToggleWebConnectors_Reader">Third-Party Cloud Connectors</string>
-      <string id="bToggleWebConnectors_Reader_Explain">Third-party cloud storage connectors (Continuous track).&#10;&#10;Controls Box, OneDrive, and Dropbox (not SharePoint). Disables Home, Add Account, and custom Open/Save entry points. Values: 0 = enabled; 1 = disabled.&#10;&#10;Security Reference: STIG ARDC-CN-000075 (V-213181) Medium; STIG AADC-CN-001300 (V-213134) Low</string>
+      <string id="bToggleWebConnectors_Reader_Explain">Third-party cloud storage connectors (Continuous track).&#10;&#10;Controls Box, OneDrive, and Dropbox (not SharePoint). Disables Home, Add Account, and custom Open/Save entry points. Values: 0 = enabled; 1 = disabled.</string>
 
       <!-- ======================================== -->
       <!--        Context, Tools and Search         -->
@@ -520,19 +520,19 @@
       <string id="bDisableJavaScript_Reader">Block JavaScript Execution</string>
       <string id="bDisableJavaScript_Reader_Explain">Blocks and locks JavaScript execution in PDF documents, preventing users from bypassing via privileged locations.&#10;&#10;This lockable setting overrides bEnableJS and prevents users from re-enabling JavaScript through the Yellow Message Bar or Trusted Locations. Possible values include: 0 or null: Don't disable JS. 1: Disable and lock JS.</string>
       <string id="iFileAttachmentPerms_Reader">Block non-PDF file attachments</string>
-      <string id="iFileAttachmentPerms_Reader_Explain">Block opening non-PDF/FDF file attachments.&#10;&#10;Values: 0 = allow (not STIG-compliant); 1 = block (recommended; DISA STIG and NSA hardening guidance).&#10;&#10;Security Reference: STIG ARDC-CN-000035 (V-213174) Medium; STIG AADC-CN-000275 (V-213119) Medium</string>
+      <string id="iFileAttachmentPerms_Reader_Explain">Block opening non-PDF/FDF file attachments.&#10;&#10;Values: 0 = allow; 1 = block.</string>
       <string id="bDisablePDFRedirectionActions_Reader">Block PDF Link Actions</string>
       <string id="bDisablePDFRedirectionActions_Reader_Explain">Specifies whether to block specific PDF actions (listed below) which result in opening a link.&#10;&#10;This preference does not block regular web links. Enabling this feature blocks PDF actions that open links, including GoToE, GoToR, Launch, Thread, Import Data, Export Form Data, Submit Form, and Reset Form. Possible values include: 0 or null: Don't block these opening links. 1: Block links.</string>
       <string id="bEnablePVCertificateBasedTrust_Reader">Certification Status in Protected View</string>
       <string id="bEnablePVCertificateBasedTrust_Reader_Explain">Specifies whether a document's certification status should appear in the Protected View document message bar.&#10;&#10;Possible values include: 0: Don't show the document's certification status. 1: Do show the document's certification status.</string>
       <string id="bEnhancedSecurityInBrowser_Reader">Enhanced Security in Browser</string>
-      <string id="bEnhancedSecurityInBrowser_Reader_Explain">Enhanced security when running in the browser.&#10;&#10;GUI checkbox sets this with bEnhancedSecurityStandalone. On 8.x, use bEnhancedSecurityStandalone for both. Values: 0 = disabled; 1 = enabled.&#10;&#10;Security Reference: STIG ARDC-CN-000010 (V-213169) Medium; STIG AADC-CN-000210 (V-213118) Medium</string>
+      <string id="bEnhancedSecurityInBrowser_Reader_Explain">Enhanced security when running in the browser.&#10;&#10;GUI checkbox sets this with bEnhancedSecurityStandalone. On 8.x, use bEnhancedSecurityStandalone for both. Values: 0 = disabled; 1 = enabled.</string>
       <string id="bEnhancedSecurityStandalone_Reader">Enhanced Security Standalone</string>
-      <string id="bEnhancedSecurityStandalone_Reader_Explain">Enhanced security in the standalone application.&#10;&#10;GUI checkbox sets this with bEnhancedSecurityInBrowser. On 8.x, this controls both browser and standalone. Values: 0 = disabled; 1 = enabled.&#10;&#10;Security Reference: STIG ARDC-CN-000005 (V-213168) Medium; STIG AADC-CN-000205 (V-213117) Medium</string>
+      <string id="bEnhancedSecurityStandalone_Reader_Explain">Enhanced security in the standalone application.&#10;&#10;GUI checkbox sets this with bEnhancedSecurityInBrowser. On 8.x, this controls both browser and standalone. Values: 0 = disabled; 1 = enabled.</string>
       <string id="bEnableFlash_Reader">Flash Content in PDFs</string>
-      <string id="bEnableFlash_Reader_Explain">Render Flash content in PDFs.&#10;&#10;Privileged locations do not override this setting. Values: 0 = empty box and security warning; 1 = play if Flash player present.&#10;&#10;Security Reference: STIG ARDC-CN-000045 (V-213175) Medium; STIG AADC-CN-000290 (V-213122) Medium</string>
+      <string id="bEnableFlash_Reader_Explain">Render Flash content in PDFs.&#10;&#10;Privileged locations do not override this setting. Values: 0 = empty box and security warning; 1 = play if Flash player present.</string>
       <string id="bProtectedMode_Reader">Protected Mode Sandbox</string>
-      <string id="bProtectedMode_Reader_Explain">Enables Protected Mode which sandboxes Acrobat and Reader processes.&#10;&#10;Protected Mode should be enabled to protect user systems and data. Possible values include: 0: Don't enable protected mode. 1: Do enable protected mode.&#10;&#10;Security Reference: STIG ARDC-CN-000015 (V-213170) Medium; STIG AADC-CN-001010 (V-213127) Medium</string>
+      <string id="bProtectedMode_Reader_Explain">Enables Protected Mode which sandboxes Acrobat and Reader processes.&#10;&#10;Protected Mode should be enabled to protect user systems and data. Possible values include: 0: Don't enable protected mode. 1: Do enable protected mode.</string>
       <string id="bUseWhitelistConfigFile_Reader">Protected Mode Whitelist Config</string>
       <string id="bUseWhitelistConfigFile_Reader_Explain">Allows the use of the policy whitelist to allow behavior that Protected Mode would otherwise prevent.&#10;&#10;This preference just toggles the ability of the application to read policy files. For additional security-related details, refer to the Application Security Guide .</string>
       <string id="iUnlistedAttachmentTypePerm_Reader">Unlisted Attachment Type Permissions</string>
@@ -569,9 +569,9 @@
       <string id="bReasons_Reader">Lock Signing Reasons Settings</string>
       <string id="bReasons_Reader_Explain">Prevents users from modifying reason settings.&#10;&#10;v8.1: If locked and cReasons is empty, bAllowSigningReasons is 0 and read only. If locked and cReasons has values, then bAllowSigningReasons is true and read only.</string>
       <string id="bDisableTrustedFolders_Reader">Lock Trusted Folders and Files</string>
-      <string id="bDisableTrustedFolders_Reader_Explain">Disable and lock trusted folders and files.&#10;&#10;Prevents users from adding folder or file privileged locations. Values: 0 or null = allowed; 1 = disabled and locked.&#10;&#10;Security Reference: STIG ARDC-CN-000315 (V-213188) Medium; STIG AADC-CN-000840 (V-213124) Medium</string>
+      <string id="bDisableTrustedFolders_Reader_Explain">Disable and lock trusted folders and files.&#10;&#10;Prevents users from adding folder or file privileged locations. Values: 0 or null = allowed; 1 = disabled and locked.</string>
       <string id="bDisableTrustedSites_Reader">Lock Trusted Host Sites</string>
-      <string id="bDisableTrustedSites_Reader_Explain">Disable and lock host-based privileged locations.&#10;&#10;Values: 0 or null = enable and lock host-based locations; 1 = disable and lock host-based locations.&#10;&#10;Security Reference: STIG ARDC-CN-000320 (V-213189) Medium; STIG AADC-CN-001325 (V-213139) Low</string>
+      <string id="bDisableTrustedSites_Reader_Explain">Disable and lock host-based privileged locations.&#10;&#10;Values: 0 or null = enable and lock host-based locations; 1 = disable and lock host-based locations.</string>
       <string id="bEnableCEFBasedUI_Reader">Modern Digital Signature UI</string>
       <string id="bEnableCEFBasedUI_Reader_Explain">Modern CEF-based digital signature UI.&#10;&#10;All values disable the user preference toggle. Block self-signed ID creation (post-June 2016) with bSelfSignCertGen=0 and bEnableCEFBasedUI=0. Values: 0 = legacy UI; 1 = modern UI.</string>
       <string id="bUseTSAsSigningTime_Reader">Show Timestamp in Signature</string>
@@ -581,7 +581,7 @@
       <string id="bEnableCertificateBasedTrust_Reader">Trust Certified Documents</string>
       <string id="bEnableCertificateBasedTrust_Reader_Explain">Trust certified documents as privileged locations (admin lock).&#10;&#10;Lockable counterpart to bTrustCertifiedDocuments. Does not apply in Protected View. Values: 0 or null = not trusted; 1 = trusted.</string>
       <string id="iUnknownURLPerms_Reader">Unknown URL Access Policy</string>
-      <string id="iUnknownURLPerms_Reader_Explain">Access policy for URLs not in the user list.&#10;&#10;Overrides privileged location host settings in some versions. Values: 1 = ask; 2 = allow; 3 = block.&#10;&#10;Security Reference: STIG ARDC-CN-000030 (V-213173) Medium; STIG AADC-CN-000280 (V-213120) Low</string>
+      <string id="iUnknownURLPerms_Reader_Explain">Access policy for URLs not in the user list.&#10;&#10;Overrides privileged location host settings in some versions. Values: 1 = ask; 2 = allow; 3 = block.</string>
       <string id="iUnknownURLPerms_Reader_opt0">Always ask</string>
       <string id="iUnknownURLPerms_Reader_opt1">Always allow</string>
       <string id="iUnknownURLPerms_Reader_opt2">Always block</string>
@@ -593,13 +593,13 @@
       <!-- ======================================== -->
 
       <string id="bToggleAdobeSign_Reader">Adobe Acrobat Sign</string>
-      <string id="bToggleAdobeSign_Reader_Explain">Adobe Acrobat Sign (Send for Signature).&#10;&#10;On Continuous track, also set bToggleManageSign. Values: 0 = enabled; 1 = disabled.&#10;&#10;Security Reference: STIG ARDC-CN-000085 (V-213183) Low</string>
+      <string id="bToggleAdobeSign_Reader_Explain">Adobe Acrobat Sign (Send for Signature).&#10;&#10;On Continuous track, also set bToggleManageSign. Values: 0 = enabled; 1 = disabled.</string>
       <string id="bToggleSendAndTrack_Reader">Adobe Send &amp; Track</string>
       <string id="bToggleSendAndTrack_Reader_Explain">Disables Adobe Send and Track (some UI is renamed to &quot;Share&quot; since October, 2018)&#10;&#10;Possible values include: 0: Enable Adobe Send and Track. 1: Disable Adobe Send and Track.</string>
       <string id="bDisableSharePointFeatures_Reader">Disable SharePoint &amp; Office 365 Integration</string>
-      <string id="bDisableSharePointFeatures_Reader_Explain">Disable SharePoint and Office 365 integration.&#10;&#10;Disables SharePoint detection, check-out prompt, and SharePoint menu items. Values: 0 or null = enabled; 1 = disabled.&#10;&#10;Security Reference: STIG ARDC-CN-000100 (V-213185) Medium; STIG AADC-CN-001315 (V-213137) Low</string>
+      <string id="bDisableSharePointFeatures_Reader_Explain">Disable SharePoint and Office 365 integration.&#10;&#10;Disables SharePoint detection, check-out prompt, and SharePoint menu items. Values: 0 or null = enabled; 1 = disabled.</string>
       <string id="bDisableWebmail_Reader">Disable WebMail Integration</string>
-      <string id="bDisableWebmail_Reader_Explain">Disable WebMail integration.&#10;&#10;Values: 0 = enable WebMail profiles; 1 = disable. With bSendMailShareRedirection=1, the email icon attaches the PDF directly.&#10;&#10;Security Reference: STIG ARDC-CN-000090 (V-213184) Medium; STIG AADC-CN-001305 (V-213135) Low</string>
+      <string id="bDisableWebmail_Reader_Explain">Disable WebMail integration.&#10;&#10;Values: 0 = enable WebMail profiles; 1 = disable. With bSendMailShareRedirection=1, the email icon attaches the PDF directly.</string>
       <string id="bToggleAdobeReview_Reader">Document Cloud Review Service</string>
       <string id="bToggleAdobeReview_Reader_Explain">Document Cloud Review service UI.&#10;&#10;When disabled, removes cloud review UI and legacy review types are used. Values: 0 or null = enabled; 1 = disabled.</string>
       <string id="bSendMailShareRedirection_Reader">Email Icon Attach to Email Behavior</string>
@@ -609,7 +609,7 @@
       <string id="bToggleFSSSignatureSaving_Reader">Save Signature to Cloud</string>
       <string id="bToggleFSSSignatureSaving_Reader_Explain">Specifies whether to save a newly created signature in the cloud.&#10;&#10;When a user creates a new signature, the dialog offers the option to store the signature in the cloud for later use. This preference also controls saving user initials. Possible values include: 0: Show the Save Signature UI 1: Hide the Save Signature UI</string>
       <string id="bAdobeSendPluginToggle_Reader">Send &amp; Track Outlook Plugin</string>
-      <string id="bAdobeSendPluginToggle_Reader_Explain">Adobe Send and Track button in Outlook.&#10;&#10;Uploads attachments to Document Cloud and inserts public preview/download links in email. Values: 0 = enabled; 1 = disabled.&#10;&#10;Security Reference: STIG ARDC-CN-000055 (V-213177) Low; STIG AADC-CN-000295 (V-213123) Medium</string>
+      <string id="bAdobeSendPluginToggle_Reader_Explain">Adobe Send and Track button in Outlook.&#10;&#10;Uploads attachments to Document Cloud and inserts public preview/download links in email. Values: 0 = enabled; 1 = disabled.</string>
       <string id="bPreviouslyEnabledSharePointInChromeExtn_Reader">SharePoint Chrome Extension Previous State</string>
       <string id="bPreviouslyEnabledSharePointInChromeExtn_Reader_Explain">Stores the previous state of the SharePoint FeatureLockDown settings.&#10;&#10;Possible values include: Same as bEnableSharePointInChromeExtn in FeatureLockDown.</string>
       <string id="bEnableSharePointInChromeExtn_Reader">SharePoint in Chrome Extension</string>
@@ -649,7 +649,7 @@
       <string id="bToggleNotifications_Reader">Desktop Notifications</string>
       <string id="bToggleNotifications_Reader_Explain">Specifies whether to disable all in-product and desktop notifications.&#10;&#10;When 0 (or null), feature-specific notifications are managed via the related service preference. When set to 1, this preference disables all notifications irrespective of the values of all other keys. Possible values include: 0: Enable desktop notifications. 1: Disable all desktop notifications.</string>
       <string id="bShowWelcomeScreen_Reader">Disable Welcome Screen</string>
-      <string id="bShowWelcomeScreen_Reader_Explain">Specifies whether to show the Welcome screen at product launch.&#10;&#10;When enabled (DWORD 0), the Welcome screen is disabled. Aligns with DISA STIG Reader V-213186 and Acrobat Pro V-213136. Possible values include: 0: Do not show Welcome screen. 1: Show Welcome screen.&#10;&#10;Security Reference: STIG ARDC-CN-000040 (V-213186) Medium; STIG AADC-CN-000260 (V-213136) Medium</string>
+      <string id="bShowWelcomeScreen_Reader_Explain">Specifies whether to show the Welcome screen at product launch.&#10;&#10;When enabled (DWORD 0), the Welcome screen is disabled. Possible values include: 0: Do not show Welcome screen. 1: Show Welcome screen.</string>
       <string id="bToggleFTE_Reader">First Time Experience</string>
       <string id="bToggleFTE_Reader_Explain">First Time Experience (welcome tour and page).&#10;&#10;Also disabled when bUpdater, bToggleAdobeDocumentServices, bToggleAdobeSign, bTogglePrefsSync, or bToggleWebConnectors is set. Values: 0 or null = enabled; 1 = disabled.</string>
       <string id="bDontShowMsgWhenViewingDoc_Reader">Hide Adobe Messages on Document Open</string>
@@ -688,7 +688,7 @@
       <string id="bSuppressMessageBar_Reader">Hide Document Message Bar</string>
       <string id="bSuppressMessageBar_Reader_Explain">Prevents the appearance of the document message bar.&#10;&#10;Adversely affects signing when preview mode is used.</string>
       <string id="bDisablePDFHandlerSwitching_Reader">Lock Default PDF Viewer</string>
-      <string id="bDisablePDFHandlerSwitching_Reader_Explain">Lock the default PDF viewer handler.&#10;&#10;Adobe PDF handler only; does not switch to or from non-Adobe products. UI changes invoke the installer (HKLM), not HKCU. Values: 0 or null = allow change; 1 = block change.&#10;&#10;Security Reference: STIG ARDC-CN-000050 (V-213176) Low; STIG AADC-CN-001280 (V-213130) Low</string>
+      <string id="bDisablePDFHandlerSwitching_Reader_Explain">Lock the default PDF viewer handler.&#10;&#10;Adobe PDF handler only; does not switch to or from non-Adobe products. UI changes invoke the installer (HKLM), not HKCU. Values: 0 or null = allow change; 1 = block change.</string>
       <string id="bDisableThumbnailPreviewHandler_Reader">Lock PDF Thumbnails in Explorer</string>
       <string id="bDisableThumbnailPreviewHandler_Reader_Explain">Lock Explorer PDF thumbnail preview checkbox.&#10;&#10;Values: 0 = users can enable via installer; 1 = disable and lock.</string>
       <string id="PatchCleanFlag_Reader">Patch Cache Cleanup</string>
@@ -715,7 +715,7 @@
       <string id="bShowRhpToolSearch_Reader">Show Purchasable Tools in Search</string>
       <string id="bShowRhpToolSearch_Reader_Explain">Specifies whether to show &quot;for purchase&quot; tools when searching for tools in Reader.&#10;&#10;When enabled, searching for tools in Reader shows all possible tool subscriptions. Possible values include: 0: Don't show tool subscriptions. 1: Show tools which can be purchased.</string>
       <string id="bAcroSuppressUpsell_Reader">Show Upgrade Prompts</string>
-      <string id="bAcroSuppressUpsell_Reader_Explain">Disable upgrade and upsell messages (12.x+).&#10;&#10;Controls Reader tool purchase and Standard-to-Professional prompts. Values: 0 or null = show upsell; 1 = disable upsell.&#10;&#10;Security Reference: STIG ARDC-CN-000080 (V-213182) Low</string>
+      <string id="bAcroSuppressUpsell_Reader_Explain">Disable upgrade and upsell messages (12.x+).&#10;&#10;Controls Reader tool purchase and Standard-to-Professional prompts. Values: 0 or null = show upsell; 1 = disable upsell.</string>
       <!-- ==================================================== -->
       <!--                                                      -->
       <!-- Non-Policy Settings - Acrobat and Reader DC (64-bit) -->
@@ -770,9 +770,9 @@
       <string id="EULA_AcrobatX64">Accept EULA for Updater</string>
       <string id="EULA_AcrobatX64_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time. Values: 0 = not accepted; 1 = accepted.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
       <string id="DisableMaintenance_AcrobatX64">Disable Repair for All Users</string>
-      <string id="DisableMaintenance_AcrobatX64_Explain">Disable Help ) Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.&#10;&#10;Security Reference: STIG ARDC-CN-000070 (V-213180) Low; STIG AADC-CN-001295 (V-213133) Low</string>
+      <string id="DisableMaintenance_AcrobatX64_Explain">Disable Help > Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
       <string id="Disable_Repair_AcrobatX64">Disable Repair for Standard Users</string>
-      <string id="Disable_Repair_AcrobatX64_Explain">Disable Help ) Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="Disable_Repair_AcrobatX64_Explain">Disable Help > Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
       <string id="IsAMTEnforced_AcrobatX64">Enforce AMT for AppV Deployment</string>
       <string id="IsAMTEnforced_AcrobatX64_Explain">Allows deployment of Acrobat on AppV for December, 2018 and later products.&#10;&#10;0: Do not use. 1: Required after December 2018 for Acrobat on AppV.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
       <string id="bMergeMenuBar_AcrobatX64">Merge Title and Menu Bar</string>
@@ -833,9 +833,9 @@
       <string id="iDisablePromptForUpgrade_AcrobatX86">Disable Major Version Upgrade Prompt</string>
       <string id="iDisablePromptForUpgrade_AcrobatX86_Explain">Suppress major-version upgrade prompt.&#10;&#10;Requires automatic update settings; if bUpdater=0, upgrades are also disabled. Values: 0 or null = no effect; 1 = disable prompt.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...&#10;&#10;Adobe ARM is a 32-bit component; on 64-bit Windows this policy writes to HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\...</string>
       <string id="DisableMaintenance_AcrobatX86">Disable Repair for All Users</string>
-      <string id="DisableMaintenance_AcrobatX86_Explain">Disable Help ) Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...&#10;&#10;Security Reference: STIG ARDC-CN-000070 (V-213180) Low; STIG AADC-CN-001295 (V-213133) Low</string>
+      <string id="DisableMaintenance_AcrobatX86_Explain">Disable Help > Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
       <string id="Disable_Repair_AcrobatX86">Disable Repair for Standard Users</string>
-      <string id="Disable_Repair_AcrobatX86_Explain">Disable Help ) Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="Disable_Repair_AcrobatX86_Explain">Disable Help > Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
       <string id="IsAMTEnforced_AcrobatX86">Enforce AMT for AppV Deployment</string>
       <string id="IsAMTEnforced_AcrobatX86_Explain">Allows deployment of Acrobat on AppV for December, 2018 and later products.&#10;&#10;0: Do not use. 1: Required after December 2018 for Acrobat on AppV.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
       <string id="bMergeMenuBar_AcrobatX86">Merge Title and Menu Bar</string>
@@ -888,9 +888,9 @@
       <string id="EULA_ReaderX86">Accept EULA for Updater</string>
       <string id="EULA_ReaderX86_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time. Values: 0 = not accepted; 1 = accepted.&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
       <string id="DisableMaintenance_ReaderX86">Disable Repair for All Users</string>
-      <string id="DisableMaintenance_ReaderX86_Explain">Disable Help ) Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...&#10;&#10;Security Reference: STIG ARDC-CN-000070 (V-213180) Low; STIG AADC-CN-001295 (V-213133) Low</string>
+      <string id="DisableMaintenance_ReaderX86_Explain">Disable Help > Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
       <string id="Disable_Repair_ReaderX86">Disable Repair for Standard Users</string>
-      <string id="Disable_Repair_ReaderX86_Explain">Disable Help ) Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="Disable_Repair_ReaderX86_Explain">Disable Help > Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
       <string id="bMergeMenuBar_ReaderX86">Merge Title and Menu Bar</string>
       <string id="bMergeMenuBar_ReaderX86_Explain">Specifies whether to merge the application's title bar and menu bar into a single bar.&#10;&#10;Note that &quot;Policies&quot; does not appear in the HKLM path. Possible values include: 0: Don't merge the title and menu bars 1: Merge the bars&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
       <!-- ======================================== -->
@@ -1206,7 +1206,7 @@
       <string id="bChooseDialogDC_User">External JS Editor (User)</string>
       <string id="bChooseDialogDC_User_Explain">Specifies wither or not to use the Acrobat editor or an external editor.&#10;&#10;When true, the &quot;Choose an external editor&quot; field becomes enabled.</string>
       <string id="bFIPSModeDC_User">FIPS Mode (User)</string>
-      <string id="bFIPSModeDC_User_Explain">Turns FIPS mode on and off thereby requiring stronger encryption algorithm and limiting certain application behavior.&#10;&#10;Security Reference: STIG ARDC-CN-000345 (V-213193) Medium; STIG AADC-CN-000955 (V-245874) Medium</string>
+      <string id="bFIPSModeDC_User_Explain">Turns FIPS mode on and off thereby requiring stronger encryption algorithm and limiting certain application behavior.</string>
       <string id="bConsoleInputDC_User">JS Console Input (User)</string>
       <string id="bConsoleInputDC_User_Explain">Toggles whether or not the console appears if script execution results in an error or message.</string>
       <string id="bConsoleOpenDC_User">JS Debugger Console (User)</string>
@@ -1304,9 +1304,9 @@
       <string id="cReasonsDC_User">List Of Signing Reasons (User)</string>
       <string id="cReasonsDC_User_Explain">Custom signing reason list.&#10;&#10;Entries named t0, t1, etc. Overridable by document seed value. Defaults: author, reviewed, approving, attest accuracy, agree terms, agree portions.</string>
       <string id="bLoadSettingsFromURLAdobeDC_User">Load Security Settings from Server (Adobe Certificates) (User)</string>
-      <string id="bLoadSettingsFromURLAdobeDC_User_Explain">Controls whether trust anchors are periodically downloaded from Adobe's certificate server.&#10;&#10;0: Don't load settings from a URL. 1: Do load settings from a URL.&#10;&#10;Security Reference: STIG ARDC-CN-000335 (V-213191) Low; STIG AADC-CN-001320 (V-213138) Low</string>
+      <string id="bLoadSettingsFromURLAdobeDC_User_Explain">Controls whether trust anchors are periodically downloaded from Adobe's certificate server.&#10;&#10;0: Don't load settings from a URL. 1: Do load settings from a URL.</string>
       <string id="bLoadSettingsFromURLEUTLDC_User">Load Security Settings from Server (European Certificates) (User)</string>
-      <string id="bLoadSettingsFromURLEUTLDC_User_Explain">Controls whether trust anchors are periodically downloaded from the European Union Trusted Lists (EUTL) server.&#10;&#10;0: Don't load settings from a URL. 1: Do load settings from a URL.&#10;&#10;Security Reference: STIG ARDC-CN-000330 (V-213190) Low; STIG AADC-CN-000990 (V-213126) Low</string>
+      <string id="bLoadSettingsFromURLEUTLDC_User_Explain">Controls whether trust anchors are periodically downloaded from the European Union Trusted Lists (EUTL) server.&#10;&#10;0: Don't load settings from a URL. 1: Do load settings from a URL.</string>
       <string id="tLoadSettingsNAMEDC_User">Load Settings NAME (User)</string>
       <string id="tLoadSettingsNAMEDC_User_Explain">Specifies the signing certificate for the imported settings file.&#10;&#10;Admins can specify specific certificates that must be used to sign a settings file. 0: Allow Any Certificate 1: Any user-specified certificate</string>
       <string id="bIsEnabledDC_User">Long Term Validation (User)</string>
@@ -1874,7 +1874,7 @@
       <string id="bEnableDebugger_User">Enable JS Debugger (User)</string>
       <string id="bEnableDebugger_User_Explain">Enables the debugger.&#10;&#10;Requires an application restart.</string>
       <string id="bFIPSMode_User">FIPS Mode (User)</string>
-      <string id="bFIPSMode_User_Explain">Turns FIPS mode on and off thereby requiring stronger encryption algorithm and limiting certain application behavior.&#10;&#10;Security Reference: STIG ARDC-CN-000345 (V-213193) Medium; STIG AADC-CN-000955 (V-245874) Medium</string>
+      <string id="bFIPSMode_User_Explain">Turns FIPS mode on and off thereby requiring stronger encryption algorithm and limiting certain application behavior.</string>
       <string id="bEnableGlobalSecurity_User">JS Global Security (User)</string>
       <string id="bEnableGlobalSecurity_User_Explain">Controls whether or not a script in one sandbox can access a script object in another sandbox.&#10;&#10;By default, scripts can not access objects outside the current document sandbox. With 9.x and later, such communication only works in the standalone application since both the Acrobat and Reader browser-based viewer opens each window in a discrete browser instance.</string>
       <string id="bEnableMenuItems_User">JS Menu Items (User)</string>
@@ -1959,9 +1959,9 @@
       <string id="cReasons_User">List Of Signing Reasons (User)</string>
       <string id="cReasons_User_Explain">Custom signing reason list.&#10;&#10;Entries named t0, t1, etc. Overridable by document seed value. Defaults: author, reviewed, approving, attest accuracy, agree terms, agree portions.</string>
       <string id="bLoadSettingsFromURLAdobe_User">Load Security Settings from Server (Adobe Certificates) (User)</string>
-      <string id="bLoadSettingsFromURLAdobe_User_Explain">Controls whether trust anchors are periodically downloaded from Adobe's certificate server.&#10;&#10;0: Don't load settings from a URL. 1: Do load settings from a URL.&#10;&#10;Security Reference: STIG ARDC-CN-000335 (V-213191) Low; STIG AADC-CN-001320 (V-213138) Low</string>
+      <string id="bLoadSettingsFromURLAdobe_User_Explain">Controls whether trust anchors are periodically downloaded from Adobe's certificate server.&#10;&#10;0: Don't load settings from a URL. 1: Do load settings from a URL.</string>
       <string id="bLoadSettingsFromURLEUTL_User">Load Security Settings from Server (European Certificates) (User)</string>
-      <string id="bLoadSettingsFromURLEUTL_User_Explain">Controls whether trust anchors are periodically downloaded from the European Union Trusted Lists (EUTL) server.&#10;&#10;0: Don't load settings from a URL. 1: Do load settings from a URL.&#10;&#10;Security Reference: STIG ARDC-CN-000330 (V-213190) Low; STIG AADC-CN-000990 (V-213126) Low</string>
+      <string id="bLoadSettingsFromURLEUTL_User_Explain">Controls whether trust anchors are periodically downloaded from the European Union Trusted Lists (EUTL) server.&#10;&#10;0: Don't load settings from a URL. 1: Do load settings from a URL.</string>
       <string id="tLoadSettingsNAME_User">Load Settings NAME (User)</string>
       <string id="tLoadSettingsNAME_User_Explain">Specifies the signing certificate for the imported settings file.&#10;&#10;Admins can specify specific certificates that must be used to sign a settings file. 0: Allow Any Certificate 1: Any user-specified certificate</string>
       <string id="bIsEnabled_User">Long Term Validation (User)</string>
