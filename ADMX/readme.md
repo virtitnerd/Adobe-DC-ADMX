@@ -37,7 +37,7 @@
 | **Policy inventory** | **831** policies — **306** machine + **525** user (ADMX `<policy>` entries; see note below) |
 | **Namespace** | `Adobe.Policies.AdobeDC` (replaces separate `Adobe.Policies.Adobe_User` user namespace) |
 | **Computer tree** | **Adobe DC** → **Acrobat & Reader DC** / **Reader DC (32-bit)** / **Non-Policy Settings** / **Web Browser Extension** |
-| **User tree** | **Adobe DC** → **Acrobat DC** / **Reader DC** — leaf display names retain ` (User)` suffix |
+| **User tree** | **Adobe DC** → **Acrobat DC** / **Reader DC** |
 | **OS requirement** | **64-bit Windows (x64) only.** The 32-bit application policies (Reader DC 32-bit, Acrobat DC 32-bit) configure 32-bit Adobe products running on a 64-bit OS — they rely on the `WOW6432Node` registry hive, which only exists on 64-bit Windows. Genuine 32-bit Windows is not supported. |
 | **De-duplication** | `HKLM\SOFTWARE\Policies` settings emit once per product hive (no redundant `WOW6432Node\Policies` copies) |
 | **Sources** | Device v2.21 + User v1.10 + Browser Extension schema.json |
