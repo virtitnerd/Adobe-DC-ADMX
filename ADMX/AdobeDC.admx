@@ -26,6 +26,7 @@
       <definition displayName="$(string.SupportedReaderX86)" name="SupportedReaderX86"/>
       <definition displayName="$(string.SupportedAcrobatDC_User)" name="SupportedAcrobatDC_User"/>
       <definition displayName="$(string.SupportedReaderDC_User)" name="SupportedReaderDC_User"/>
+      <definition displayName="$(string.SupportedBrowserExtension)" name="SupportedBrowserExtension"/>
     </definitions>
   </supportedOn>
 
@@ -39,6 +40,15 @@
     </category>
     <category displayName="$(string.NonPolicySettings)" name="NonPolicySettings">
       <parentCategory ref="AdobeCategory"/>
+    </category>
+    <category displayName="$(string.BrowserExtensionCategory)" name="BrowserExtensionCategory">
+      <parentCategory ref="AdobeCategory"/>
+    </category>
+    <category displayName="$(string.ChromeExtensionCategory)" name="ChromeExtensionCategory">
+      <parentCategory ref="BrowserExtensionCategory"/>
+    </category>
+    <category displayName="$(string.EdgeExtensionCategory)" name="EdgeExtensionCategory">
+      <parentCategory ref="BrowserExtensionCategory"/>
     </category>
     <category displayName="$(string.NonPol_AcrobatX64)" name="NonPol_AcrobatX64">
       <parentCategory ref="NonPolicySettings"/>
@@ -8788,6 +8798,138 @@
       <supportedOn ref="SupportedReaderDC_User"/>
       <enabledValue><decimal value="0" /></enabledValue>
       <disabledValue><decimal value="1" /></disabledValue>
+    </policy>
+
+
+    <!-- ============================================================= -->
+    <!--  Web Browser Extension policies (Adobe Acrobat extension for  -->
+    <!--  Chrome and Edge), configures the extension itself via the    -->
+    <!--  browser's own managed-storage policy mechanism. Does NOT     -->
+    <!--  control whether the extension is installed/force-installed;  -->
+    <!--  that remains the browser's own ExtensionInstallForcelist.    -->
+    <!--  Source: schema.json shipped inside the extension package     -->
+    <!--  (efaidnbmnnnibpcajpcglclefindmkaj on Chrome, mirrored on     -->
+    <!--  Edge as elhekieabhbkpmcefcoobjddigjcaadp).                   -->
+    <!-- ============================================================= -->
+
+    <!-- Open Help Tab on Install (Chrome) -->
+    <!-- OpenHelpx   extension schema.json -->
+    <policy class="Machine" displayName="$(string.OpenHelpxChrome)" explainText="$(string.OpenHelpxChrome_Explain)" key="SOFTWARE\Policies\Google\Chrome\3rdparty\extensions\efaidnbmnnnibpcajpcglclefindmkaj\policy"
+      name="OpenHelpxChrome" valueName="OpenHelpx">
+      <parentCategory ref="ChromeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Open Help Tab on Install (Edge) -->
+    <!-- OpenHelpx   extension schema.json -->
+    <policy class="Machine" displayName="$(string.OpenHelpxEdge)" explainText="$(string.OpenHelpxEdge_Explain)" key="SOFTWARE\Policies\Microsoft\Edge\3rdparty\extensions\elhekieabhbkpmcefcoobjddigjcaadp\policy"
+      name="OpenHelpxEdge" valueName="OpenHelpx">
+      <parentCategory ref="EdgeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Usage Analytics (Chrome) -->
+    <!-- UsageMeasurement   extension schema.json -->
+    <policy class="Machine" displayName="$(string.UsageMeasurementChrome)" explainText="$(string.UsageMeasurementChrome_Explain)" key="SOFTWARE\Policies\Google\Chrome\3rdparty\extensions\efaidnbmnnnibpcajpcglclefindmkaj\policy"
+      name="UsageMeasurementChrome" valueName="UsageMeasurement">
+      <parentCategory ref="ChromeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Usage Analytics (Edge) -->
+    <!-- UsageMeasurement   extension schema.json -->
+    <policy class="Machine" displayName="$(string.UsageMeasurementEdge)" explainText="$(string.UsageMeasurementEdge_Explain)" key="SOFTWARE\Policies\Microsoft\Edge\3rdparty\extensions\elhekieabhbkpmcefcoobjddigjcaadp\policy"
+      name="UsageMeasurementEdge" valueName="UsageMeasurement">
+      <parentCategory ref="EdgeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Uninstall Popup for Free Users (Chrome) -->
+    <!-- UninstallPopup   extension schema.json -->
+    <policy class="Machine" displayName="$(string.UninstallPopupChrome)" explainText="$(string.UninstallPopupChrome_Explain)" key="SOFTWARE\Policies\Google\Chrome\3rdparty\extensions\efaidnbmnnnibpcajpcglclefindmkaj\policy"
+      name="UninstallPopupChrome" valueName="UninstallPopup">
+      <parentCategory ref="ChromeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Uninstall Popup for Free Users (Edge) -->
+    <!-- UninstallPopup   extension schema.json -->
+    <policy class="Machine" displayName="$(string.UninstallPopupEdge)" explainText="$(string.UninstallPopupEdge_Explain)" key="SOFTWARE\Policies\Microsoft\Edge\3rdparty\extensions\elhekieabhbkpmcefcoobjddigjcaadp\policy"
+      name="UninstallPopupEdge" valueName="UninstallPopup">
+      <parentCategory ref="EdgeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Disable GenAI Features (Chrome) -->
+    <!-- DisableGenAI   extension schema.json -->
+    <policy class="Machine" displayName="$(string.DisableGenAIChrome)" explainText="$(string.DisableGenAIChrome_Explain)" key="SOFTWARE\Policies\Google\Chrome\3rdparty\extensions\efaidnbmnnnibpcajpcglclefindmkaj\policy"
+      name="DisableGenAIChrome" valueName="DisableGenAI">
+      <parentCategory ref="ChromeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Disable GenAI Features (Edge) -->
+    <!-- DisableGenAI   extension schema.json -->
+    <policy class="Machine" displayName="$(string.DisableGenAIEdge)" explainText="$(string.DisableGenAIEdge_Explain)" key="SOFTWARE\Policies\Microsoft\Edge\3rdparty\extensions\elhekieabhbkpmcefcoobjddigjcaadp\policy"
+      name="DisableGenAIEdge" valueName="DisableGenAI">
+      <parentCategory ref="EdgeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Disable What's New Auto-Open (Chrome) -->
+    <!-- DisableWhatsNewAutoOpen   extension schema.json -->
+    <policy class="Machine" displayName="$(string.DisableWhatsNewAutoOpenChrome)" explainText="$(string.DisableWhatsNewAutoOpenChrome_Explain)" key="SOFTWARE\Policies\Google\Chrome\3rdparty\extensions\efaidnbmnnnibpcajpcglclefindmkaj\policy"
+      name="DisableWhatsNewAutoOpenChrome" valueName="DisableWhatsNewAutoOpen">
+      <parentCategory ref="ChromeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Disable What's New Auto-Open (Edge) -->
+    <!-- DisableWhatsNewAutoOpen   extension schema.json -->
+    <policy class="Machine" displayName="$(string.DisableWhatsNewAutoOpenEdge)" explainText="$(string.DisableWhatsNewAutoOpenEdge_Explain)" key="SOFTWARE\Policies\Microsoft\Edge\3rdparty\extensions\elhekieabhbkpmcefcoobjddigjcaadp\policy"
+      name="DisableWhatsNewAutoOpenEdge" valueName="DisableWhatsNewAutoOpen">
+      <parentCategory ref="EdgeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Disable Express Features (Chrome) -->
+    <!-- DisableExpress   extension schema.json -->
+    <policy class="Machine" displayName="$(string.DisableExpressChrome)" explainText="$(string.DisableExpressChrome_Explain)" key="SOFTWARE\Policies\Google\Chrome\3rdparty\extensions\efaidnbmnnnibpcajpcglclefindmkaj\policy"
+      name="DisableExpressChrome" valueName="DisableExpress">
+      <parentCategory ref="ChromeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
+    </policy>
+
+    <!-- Disable Express Features (Edge) -->
+    <!-- DisableExpress   extension schema.json -->
+    <policy class="Machine" displayName="$(string.DisableExpressEdge)" explainText="$(string.DisableExpressEdge_Explain)" key="SOFTWARE\Policies\Microsoft\Edge\3rdparty\extensions\elhekieabhbkpmcefcoobjddigjcaadp\policy"
+      name="DisableExpressEdge" valueName="DisableExpress">
+      <parentCategory ref="EdgeExtensionCategory"/>
+      <supportedOn ref="SupportedBrowserExtension"/>
+      <enabledValue><string>true</string></enabledValue>
+      <disabledValue><string>false</string></disabledValue>
     </policy>
 
   </policies>
