@@ -976,6 +976,26 @@
       </elements>
     </policy>
 
+    <!-- URL Access Permissions - [iURLPerms] (Machine/HKLM — satisfies DISA STIG SCAP check AADC-CN-000285) -->
+    <policy class="Machine" displayName="$(string.iURLPerms_Acrobat)" explainText="$(string.iURLPerms_Acrobat_Explain)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cDefaultLaunchURLPerms"
+      name="iURLPerms_Acrobat" valueName="iURLPerms" presentation="$(presentation.iURLPerms_Acrobat_enum)">
+      <parentCategory ref="SecurityTrust_AcrobatCategory"/>
+      <supportedOn ref="SupportedAcrobatReaderPolicies"/>
+      <elements>
+        <enum id="iURLPerms_Acrobat_enum" valueName="iURLPerms">
+          <item displayName="$(string.iURLPerms_Acrobat_opt0)">
+            <value><decimal value="0" /></value>
+          </item>
+          <item displayName="$(string.iURLPerms_Acrobat_opt1)">
+            <value><decimal value="1" /></value>
+          </item>
+          <item displayName="$(string.iURLPerms_Acrobat_opt2)">
+            <value><decimal value="2" /></value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+
     <!-- Validate Signatures on Open - [bValidateOnOpen] -->
     <policy class="Machine" displayName="$(string.bValidateOnOpen_Acrobat)" explainText="$(string.bValidateOnOpen_Acrobat_Explain)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cSecurity\cDigSig"
       name="bValidateOnOpen_Acrobat" valueName="bValidateOnOpen">
@@ -2212,6 +2232,26 @@
           </item>
           <item displayName="$(string.iUnknownURLPerms_Reader_opt2)">
             <value><decimal value="3" /></value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+
+    <!-- URL Access Permissions - [iURLPerms] (Machine/HKLM — satisfies DISA STIG SCAP check ARDC-CN-000025) -->
+    <policy class="Machine" displayName="$(string.iURLPerms_Reader)" explainText="$(string.iURLPerms_Reader_Explain)" key="SOFTWARE\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown\cDefaultLaunchURLPerms"
+      name="iURLPerms_Reader" valueName="iURLPerms" presentation="$(presentation.iURLPerms_Reader_enum)">
+      <parentCategory ref="SecurityTrust_ReaderCategory"/>
+      <supportedOn ref="SupportedReaderPolicies"/>
+      <elements>
+        <enum id="iURLPerms_Reader_enum" valueName="iURLPerms">
+          <item displayName="$(string.iURLPerms_Reader_opt0)">
+            <value><decimal value="0" /></value>
+          </item>
+          <item displayName="$(string.iURLPerms_Reader_opt1)">
+            <value><decimal value="1" /></value>
+          </item>
+          <item displayName="$(string.iURLPerms_Reader_opt2)">
+            <value><decimal value="2" /></value>
           </item>
         </enum>
       </elements>

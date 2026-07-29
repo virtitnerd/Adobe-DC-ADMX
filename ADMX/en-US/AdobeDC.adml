@@ -258,6 +258,11 @@
       <string id="iUnknownURLPerms_Acrobat_opt0">Always ask</string>
       <string id="iUnknownURLPerms_Acrobat_opt1">Always allow</string>
       <string id="iUnknownURLPerms_Acrobat_opt2">Always block</string>
+      <string id="iURLPerms_Acrobat">URL Access Permissions</string>
+      <string id="iURLPerms_Acrobat_Explain">Allow, block, or custom website access from PDF files.&#10;&#10;Sets the HKLM FeatureLockDown registry path checked by the DISA STIG automated scan (V-213121 / AADC-CN-000285). Adobe Acrobat reads iURLPerms from the User-scope TrustManager path, not this Computer-scope location — also configure URL Access Permissions under User Configuration for functional enforcement.&#10;&#10;Allow or Block resets tHostPerms; Custom uses tHostPerms.&#10;&#10;Possible values include:&#10;0: Custom Setting (uses tHostPerms URL list)&#10;1: Block all websites&#10;2: Allow all websites</string>
+      <string id="iURLPerms_Acrobat_opt0">Custom Setting (uses tHostPerms URL list)</string>
+      <string id="iURLPerms_Acrobat_opt1">Block all websites</string>
+      <string id="iURLPerms_Acrobat_opt2">Allow all websites</string>
       <string id="bValidateOnOpen_Acrobat">Validate Signatures on Open</string>
       <string id="bValidateOnOpen_Acrobat_Explain">Specifies whether to automatically validate all signatures on document open.&#10;&#10;Note that the lockable setting does not configure the feature; instead, it locks what is set in HKCU and the user interface. 0: Don't validate signatures on document open. 1: Validate signatures on document open.</string>
 
@@ -585,6 +590,11 @@
       <string id="iUnknownURLPerms_Reader_opt0">Always ask</string>
       <string id="iUnknownURLPerms_Reader_opt1">Always allow</string>
       <string id="iUnknownURLPerms_Reader_opt2">Always block</string>
+      <string id="iURLPerms_Reader">URL Access Permissions</string>
+      <string id="iURLPerms_Reader_Explain">Allow, block, or custom website access from PDF files.&#10;&#10;Sets the HKLM FeatureLockDown registry path checked by the DISA STIG automated scan (V-213172 / ARDC-CN-000025). Adobe Reader reads iURLPerms from the User-scope TrustManager path, not this Computer-scope location — also configure URL Access Permissions under User Configuration for functional enforcement.&#10;&#10;Allow or Block resets tHostPerms; Custom uses tHostPerms.&#10;&#10;Possible values include:&#10;0: Custom Setting (uses tHostPerms URL list)&#10;1: Block all websites&#10;2: Allow all websites</string>
+      <string id="iURLPerms_Reader_opt0">Custom Setting (uses tHostPerms URL list)</string>
+      <string id="iURLPerms_Reader_opt1">Block all websites</string>
+      <string id="iURLPerms_Reader_opt2">Allow all websites</string>
       <string id="bValidateOnOpen_Reader">Validate Signatures on Open</string>
       <string id="bValidateOnOpen_Reader_Explain">Specifies whether to automatically validate all signatures on document open.&#10;&#10;Note that the lockable setting does not configure the feature; instead, it locks what is set in HKCU and the user interface. 0: Don't validate signatures on document open. 1: Validate signatures on document open.</string>
 
@@ -2281,6 +2291,9 @@
       <presentation id="iUnknownURLPerms_Acrobat_enum">
         <dropdownList defaultItem="0" refId="iUnknownURLPerms_Acrobat_enum">Unknown URL Access Policy:</dropdownList>
       </presentation>
+      <presentation id="iURLPerms_Acrobat_enum">
+        <dropdownList defaultItem="0" refId="iURLPerms_Acrobat_enum">URL Access Permissions:</dropdownList>
+      </presentation>
       <presentation id="iClientType_Gmail_Acrobat_enum">
         <dropdownList defaultItem="0" refId="iClientType_Gmail_Acrobat_enum">WebMail Client Type (Gmail):</dropdownList>
       </presentation>
@@ -2304,6 +2317,9 @@
       </presentation>
       <presentation id="iUnknownURLPerms_Reader_enum">
         <dropdownList defaultItem="0" refId="iUnknownURLPerms_Reader_enum">Unknown URL Access Policy:</dropdownList>
+      </presentation>
+      <presentation id="iURLPerms_Reader_enum">
+        <dropdownList defaultItem="0" refId="iURLPerms_Reader_enum">URL Access Permissions:</dropdownList>
       </presentation>
       <presentation id="iClientType_Gmail_Reader_enum">
         <dropdownList defaultItem="0" refId="iClientType_Gmail_Reader_enum">WebMail Client Type (Gmail):</dropdownList>
