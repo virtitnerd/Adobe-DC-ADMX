@@ -259,7 +259,7 @@
       <string id="iUnknownURLPerms_Acrobat_opt1">Always allow</string>
       <string id="iUnknownURLPerms_Acrobat_opt2">Always block</string>
       <string id="iURLPerms_Acrobat">URL Access Permissions</string>
-      <string id="iURLPerms_Acrobat_Explain">Allow, block, or custom website access from PDF files.&#10;&#10;Sets the HKLM FeatureLockDown registry path checked by the DISA STIG automated scan (V-213121 / AADC-CN-000285). Adobe Acrobat reads iURLPerms from the User-scope TrustManager path, not this Computer-scope location — also configure URL Access Permissions under User Configuration for functional enforcement.&#10;&#10;Allow or Block resets tHostPerms; Custom uses tHostPerms.&#10;&#10;Possible values include:&#10;0: Custom Setting (uses tHostPerms URL list)&#10;1: Block all websites&#10;2: Allow all websites</string>
+      <string id="iURLPerms_Acrobat_Explain">Allow, block, or custom website access from PDF files.&#10;&#10;This Computer-scope policy writes to HKLM FeatureLockDown and is the correct enforcement path. Setting this policy locks the Trust Manager dialog for all users and satisfies the DISA STIG automated scan (V-213121 / AADC-CN-000285). Allow or Block resets tHostPerms; Custom uses tHostPerms.&#10;&#10;Possible values include:&#10;0: Custom Setting (uses tHostPerms URL list)&#10;1: Block all websites&#10;2: Allow all websites</string>
       <string id="iURLPerms_Acrobat_opt0">Custom Setting (uses tHostPerms URL list)</string>
       <string id="iURLPerms_Acrobat_opt1">Block all websites</string>
       <string id="iURLPerms_Acrobat_opt2">Allow all websites</string>
@@ -591,7 +591,7 @@
       <string id="iUnknownURLPerms_Reader_opt1">Always allow</string>
       <string id="iUnknownURLPerms_Reader_opt2">Always block</string>
       <string id="iURLPerms_Reader">URL Access Permissions</string>
-      <string id="iURLPerms_Reader_Explain">Allow, block, or custom website access from PDF files.&#10;&#10;Sets the HKLM FeatureLockDown registry path checked by the DISA STIG automated scan (V-213172 / ARDC-CN-000025). Adobe Reader reads iURLPerms from the User-scope TrustManager path, not this Computer-scope location — also configure URL Access Permissions under User Configuration for functional enforcement.&#10;&#10;Allow or Block resets tHostPerms; Custom uses tHostPerms.&#10;&#10;Possible values include:&#10;0: Custom Setting (uses tHostPerms URL list)&#10;1: Block all websites&#10;2: Allow all websites</string>
+      <string id="iURLPerms_Reader_Explain">Allow, block, or custom website access from PDF files.&#10;&#10;This Computer-scope policy writes to HKLM FeatureLockDown and is the correct enforcement path. Setting this policy locks the Trust Manager dialog for all users and satisfies the DISA STIG automated scan (V-213172 / ARDC-CN-000025). Allow or Block resets tHostPerms; Custom uses tHostPerms.&#10;&#10;Possible values include:&#10;0: Custom Setting (uses tHostPerms URL list)&#10;1: Block all websites&#10;2: Allow all websites</string>
       <string id="iURLPerms_Reader_opt0">Custom Setting (uses tHostPerms URL list)</string>
       <string id="iURLPerms_Reader_opt1">Block all websites</string>
       <string id="iURLPerms_Reader_opt2">Allow all websites</string>

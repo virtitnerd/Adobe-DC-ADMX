@@ -24,10 +24,10 @@
 For 32-bit Reader on a 64-bit machine, policies appear under
 `Computer Configuration → Administrative Templates → Adobe → Acrobat Reader DC (32-bit)`.
 
-> **Note on V-213172 (iURLPerms):** The STIG lists this as a Computer-scope control under `FeatureLockDown`,
-> but Adobe's preference documentation marks `iURLPerms` as not lockable via HKLM. The correct registry path
-> is `HKCU\...\TrustManager\cDefaultLaunchURLPerms\iURLPerms` (User scope). An ADMX policy exists for this
-> path — use **URL Access Permissions** under *User Configuration*.
+> **Note on V-213172 (iURLPerms):** The STIG correctly lists this as a Computer-scope control under `FeatureLockDown`.
+> Adobe's preference documentation previously suggested this was not lockable via HKLM, but empirical testing
+> confirms that `HKLM\...\FeatureLockDown\cDefaultLaunchURLPerms\iURLPerms` locks the Trust Manager dialog and
+> enforces the setting for all users. Use **URL Access Permissions** under *Computer Configuration*.
 
 | VUL ID | STIG Rule | Severity | Requirement | ADMX Policy | Registry Value | Setting | Scope |
 |---|---|---|---|---|---|---|---|
@@ -36,7 +36,7 @@ For 32-bit Reader on a 64-bit machine, policies appear under
 | V-213169 | ARDC-CN-000010 | CAT II | Enhanced Security in browser mode must be enabled | Enhanced Security in Browser | `FeatureLockDown\bEnhancedSecurityInBrowser` | `1` | Computer |
 | V-213170 | ARDC-CN-000015 | CAT II | Protected Mode must be enabled | Protected Mode Sandbox | `FeatureLockDown\bProtectedMode` | `1` | Computer |
 | V-213171 | ARDC-CN-000020 | CAT II | Protected View must be enabled | Protected View Mode | `FeatureLockDown\iProtectedView` | `2` (All files) | Computer |
-| V-213172 | ARDC-CN-000025 | CAT II | Access to websites must be blocked | URL Access Permissions *(STIG scope error — is User, not Computer)* | `TrustManager\cDefaultLaunchURLPerms\iURLPerms` | `1` | User |
+| V-213172 | ARDC-CN-000025 | CAT II | Access to websites must be blocked | URL Access Permissions | `FeatureLockDown\cDefaultLaunchURLPerms\iURLPerms` | `1` | Computer |
 | V-213173 | ARDC-CN-000030 | CAT II | Access to unknown websites must be blocked | Unknown URL Access Policy | `FeatureLockDown\cDefaultLaunchURLPerms\iUnknownURLPerms` | `3` (Block) | Computer |
 | V-213174 | ARDC-CN-000035 | CAT II | Files other than PDF or FDF must be blocked | Block non-PDF file attachments | `FeatureLockDown\iFileAttachmentPerms` | `1` | Computer |
 | V-213175 | ARDC-CN-000045 | CAT II | Flash Content must be blocked | Flash Content in PDFs | `FeatureLockDown\bEnableFlash` | `0` | Computer |

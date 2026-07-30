@@ -20,10 +20,10 @@
 (`Computer Configuration → Administrative Templates → Adobe → Adobe Acrobat DC`; User-scope policies appear
 under `User Configuration → Administrative Templates → Adobe → Adobe Acrobat DC (User)`).
 
-> **Note on V-213121 (iURLPerms):** The STIG lists this as a Computer-scope control under `FeatureLockDown`,
-> but Adobe's preference documentation marks `iURLPerms` as not lockable via HKLM. The correct registry path
-> is `HKCU\...\TrustManager\cDefaultLaunchURLPerms\iURLPerms` (User scope). An ADMX policy exists for this
-> path — use **URL Access Permissions** under *User Configuration*.
+> **Note on V-213121 (iURLPerms):** The STIG correctly lists this as a Computer-scope control under `FeatureLockDown`.
+> Adobe's preference documentation previously suggested this was not lockable via HKLM, but empirical testing
+> confirms that `HKLM\...\FeatureLockDown\cDefaultLaunchURLPerms\iURLPerms` locks the Trust Manager dialog and
+> enforces the setting for all users. Use **URL Access Permissions** under *Computer Configuration*.
 
 | VUL ID | STIG Rule | Severity | Requirement | ADMX Policy | Registry Value | Setting | Scope |
 |---|---|---|---|---|---|---|---|
@@ -40,7 +40,7 @@ under `User Configuration → Administrative Templates → Adobe → Adobe Acrob
 | V-213132 | AADC-CN-001290 | CAT II | Cloud Synchronization must be disabled | Preferences Synchronization | `FeatureLockDown\cServices\bTogglePrefsSync` | `1` | Computer |
 | V-245874 | AADC-CN-000955 | CAT II | FIPS mode must be enabled | FIPS Mode | `AVGeneral\bFIPSMode` | `1` | User |
 | V-213120 | AADC-CN-000280 | CAT III | Access to unknown websites must be restricted | Unknown URL Access Policy | `FeatureLockDown\cDefaultLaunchURLPerms\iUnknownURLPerms` | `3` (Block) | Computer |
-| V-213121 | AADC-CN-000285 | CAT III | Access to websites must be blocked | URL Access Permissions *(STIG scope error — is User, not Computer)* | `TrustManager\cDefaultLaunchURLPerms\iURLPerms` | `1` | User |
+| V-213121 | AADC-CN-000285 | CAT III | Access to websites must be blocked | URL Access Permissions | `FeatureLockDown\cDefaultLaunchURLPerms\iURLPerms` | `1` | Computer |
 | V-213126 | AADC-CN-000990 | CAT III | Periodic downloading of Adobe European certificates must be disabled | Load Security Settings from Server (European Certificates) | `Security\cDigSig\cEUTLDownload\bLoadSettingsFromURL` | `0` | User |
 | V-213130 | AADC-CN-001280 | CAT III | Default Handler changes must be disabled | Lock Default PDF Viewer | `FeatureLockDown\bDisablePDFHandlerSwitching` | `1` | Computer |
 | V-213133 | AADC-CN-001295 | CAT III | Repair Installation must be disabled | Disable Repair for All Users | `Adobe Acrobat\DC\Installer\DisableMaintenance` | `1` | Computer |
