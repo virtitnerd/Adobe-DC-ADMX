@@ -737,54 +737,54 @@
       <!-- ======================================== -->
 
       <string id="ADC4275035_ClickEdit_AcrobatX64">Click-to-Edit Mode</string>
-      <string id="ADC4275035_ClickEdit_AcrobatX64_Explain">Auto-enter edit mode when the user clicks a PDF object.&#10;&#10;Clicking image or text opens edit tools; clicking a form field enables form authoring.&#10;&#10;Values:&#10;0 or null = disabled&#10;1 = enabled</string>
+      <string id="ADC4275035_ClickEdit_AcrobatX64_Explain">Controls whether clicking a PDF object automatically enters edit mode (clicking image or text opens edit tools; clicking a form field enables form authoring).&#10;&#10;Enabled writes 1 = click-to-edit on. Disabled writes 0 = click-to-edit off.&#10;&#10;0 = click-to-edit disabled&#10;1 = click-to-edit enabled&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="ADC4275034_AcrobatX64">Fill &amp; Sign Color Picker</string>
-      <string id="ADC4275034_AcrobatX64_Explain">Specifies whether to disable the color picker in the Fill and Sign tool.&#10;&#10;The color picker is only supported on the Continuous track.&#10;&#10;Possible values include:&#10;0: Disable the color picker&#10;1: Enable the color picker</string>
+      <string id="ADC4275034_AcrobatX64_Explain">Controls whether the color picker is available in the Fill and Sign tool (Continuous track only).&#10;&#10;Enabled writes 1 = color picker shown. Disabled writes 0 = color picker hidden.&#10;&#10;0 = color picker disabled&#10;1 = color picker enabled&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="ProtectOldExperience_AcrobatX64">Legacy Protect Tool Menu</string>
-      <string id="ProtectOldExperience_AcrobatX64_Explain">Use legacy Protect tool menus instead of the new UI.&#10;&#10;Values:&#10;0 or null = new UI&#10;1 = pre-Oct 2019 menus</string>
+      <string id="ProtectOldExperience_AcrobatX64_Explain">Controls whether the pre-2019 Protect tool menus are used instead of the redesigned Protection UI.&#10;&#10;Enabled writes 1 = legacy Protect menus active. Disabled writes 0 = new Protection UI active.&#10;&#10;0 = new Protection UI&#10;1 = legacy Protect tool menus&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="ADC4302862_AcrobatX64">Paste in Place</string>
-      <string id="ADC4302862_AcrobatX64_Explain">Paste copied elements to the same location as the source.&#10;&#10;Applies to form fields, annotations, and links.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
+      <string id="ADC4302862_AcrobatX64_Explain">Controls whether copied elements (form fields, annotations, links) are pasted at their original source coordinates rather than offset from the cursor.&#10;&#10;Enabled writes 1 = paste-to-same-location on. Disabled writes 0 = paste-to-same-location off.&#10;&#10;0 = paste offset from cursor (default)&#10;1 = paste at original source location&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="ADC4275035_AcrobatX64">Remove Form Editing Tools (2019)</string>
-      <string id="ADC4275035_AcrobatX64_Explain">Remove Oct 2019 AddText and EditText form tools from the UI.&#10;&#10;Form editing moved into the Prepare Form toolbar.&#10;&#10;Values:&#10;0 or null = no change&#10;1 = remove AddText and EditText tools</string>
+      <string id="ADC4275035_AcrobatX64_Explain">Controls whether the AddText and EditText form tools are removed from the UI (these tools were superseded by the Prepare Form toolbar).&#10;&#10;Enabled writes 1 = AddText and EditText tools removed. Disabled writes 0 = tools not removed.&#10;&#10;0 = AddText and EditText tools present&#10;1 = AddText and EditText tools removed from UI&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
 
       <!-- ======================================== -->
       <!--   Documents, Editing and Accessibility   -->
       <!-- ======================================== -->
 
       <string id="BlockEMFParsing_AcrobatX64">Block EMF to PDF Conversion</string>
-      <string id="BlockEMFParsing_AcrobatX64_Explain">Block EMF to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, EMF-to-PDF conversion is blocked. When Disabled, conversion is allowed.</string>
+      <string id="BlockEMFParsing_AcrobatX64_Explain">Controls whether EMF-to-PDF conversion is blocked; when blocked, an unsupported-format dialog appears instead of converting.&#10;&#10;Enabled writes 1 = EMF conversion blocked. Disabled writes 0 = EMF conversion allowed.&#10;&#10;0 = EMF-to-PDF conversion allowed&#10;1 = EMF-to-PDF conversion blocked&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="BlockXPSParsing_AcrobatX64">Block XPS to PDF Conversion</string>
-      <string id="BlockXPSParsing_AcrobatX64_Explain">Block XPS to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, XPS-to-PDF conversion is blocked. When Disabled, conversion is allowed.</string>
+      <string id="BlockXPSParsing_AcrobatX64_Explain">Controls whether XPS-to-PDF conversion is blocked; when blocked, an unsupported-format dialog appears instead of converting.&#10;&#10;Enabled writes 1 = XPS conversion blocked. Disabled writes 0 = XPS conversion allowed.&#10;&#10;0 = XPS-to-PDF conversion allowed&#10;1 = XPS-to-PDF conversion blocked&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="DisableScannedDocumentEditing_AcrobatX64">Disable Scanned PDF Text Recognition</string>
-      <string id="DisableScannedDocumentEditing_AcrobatX64_Explain">Specifies whether to disable text recognition while editing scanned PDFs.&#10;&#10;Possible values include:&#10;0: Text recognition will be performed when invoking editing on scanned PDFs&#10;1: Text recognition will not be performed when invoking editing on scanned PDFs</string>
+      <string id="DisableScannedDocumentEditing_AcrobatX64_Explain">Controls whether OCR text recognition runs automatically when a scanned PDF is opened for editing.&#10;&#10;Enabled writes 1 = text recognition disabled when editing scanned PDFs. Disabled writes 0 = text recognition runs when editing scanned PDFs.&#10;&#10;0 = OCR runs when editing scanned PDFs&#10;1 = OCR suppressed when editing scanned PDFs&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX64">PDFMaker Grouped Image Tag Fix</string>
-      <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX64_Explain">Specifies whether to disable accessibility fixes for tagging grouped images.&#10;&#10;0: Disable. 1: Enable.</string>
+      <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX64_Explain">Controls whether PDFMaker applies accessibility tag corrections for grouped images when creating tagged PDFs.&#10;&#10;Enabled writes 1 = grouped-image tag correction on. Disabled writes 0 = grouped-image tag correction off.&#10;&#10;0 = grouped-image tag correction disabled&#10;1 = grouped-image tag correction enabled&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX64">PDFMaker Table Header Tag Fix</string>
-      <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX64_Explain">Specifies whether to disable accessibility fixes for tagging table headers.&#10;&#10;0: Disable. 1: Enable.</string>
+      <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX64_Explain">Controls whether PDFMaker applies accessibility tag fixes for table header cells and scope attributes when creating tagged PDFs.&#10;&#10;Enabled writes 1 = table header tag fix on. Disabled writes 0 = table header tag fix off.&#10;&#10;0 = table header tag fix disabled&#10;1 = table header tag fix enabled&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX64">PDFMaker Text Path Tag Fix</string>
-      <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX64_Explain">Fix Text Path rendering bug in PDFMaker tags.&#10;&#10;Mitigates incorrect border/alt-text rendering from a 2020 bug. Enabled by default.&#10;&#10;Values:&#10;0 = disable correction&#10;1 = enable</string>
+      <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX64_Explain">Controls whether PDFMaker applies a correction for incorrect border and alt-text rendering caused by a text path element tagging bug.&#10;&#10;Enabled writes 1 = text path correction on. Disabled writes 0 = text path correction off.&#10;&#10;0 = text path tag correction disabled&#10;1 = text path tag correction enabled&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
 
       <!-- ======================================== -->
       <!--    Security: Execution and Protection    -->
       <!-- ======================================== -->
 
       <string id="EnableFlashEditing_AcrobatX64">Flash Editing Tools</string>
-      <string id="EnableFlashEditing_AcrobatX64_Explain">Specifies whether to enable the Flash tools for adding annotations or Flash in the Rich Media app.&#10;&#10;Possible values include:&#10;0 or null: Remove &quot;Disable Flash ) Add SWF menu item.&quot;&#10;1: Show the menu item</string>
+      <string id="EnableFlashEditing_AcrobatX64_Explain">Controls whether Flash annotation tools appear in the Rich Media toolbar, including the Add SWF menu item.&#10;&#10;Enabled writes 1 = Flash tools shown. Disabled writes 0 = Flash tools hidden.&#10;&#10;0 = Flash Rich Media tools hidden&#10;1 = Flash Rich Media tools shown&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="bEnablePVSwitchoutShortcut_AcrobatX64">Protected View Exit Shortcut Key</string>
-      <string id="bEnablePVSwitchoutShortcut_AcrobatX64_Explain">Shortcut key to exit Protected View for the current document.&#10;&#10;Allows Protected View by default with on-demand exit.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
+      <string id="bEnablePVSwitchoutShortcut_AcrobatX64_Explain">Controls whether a keyboard shortcut is available to exit Protected View for the current document on demand.&#10;&#10;Enabled writes 1 = exit-Protected-View shortcut available. Disabled writes 0 = shortcut not available.&#10;&#10;0 = exit-Protected-View shortcut disabled&#10;1 = exit-Protected-View shortcut enabled&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\Installer</string>
 
       <!-- ======================================== -->
       <!--     Updates and Desktop Integration      -->
       <!-- ======================================== -->
 
       <string id="EULA_AcrobatX64">Accept EULA for Updater</string>
-      <string id="EULA_AcrobatX64_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time.&#10;&#10;Values:&#10;0 = not accepted&#10;1 = accepted</string>
+      <string id="EULA_AcrobatX64_Explain">Controls whether the end-user license agreement is accepted for the built-in updater, equivalent to passing EULA_ACCEPT=YES at install time.&#10;&#10;Enabled writes 1 = EULA accepted. Disabled writes 0 = EULA not accepted.&#10;&#10;0 = EULA not accepted&#10;1 = EULA accepted&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\AdobeViewer</string>
       <string id="DisableMaintenance_AcrobatX64">Disable Repair for All Users</string>
-      <string id="DisableMaintenance_AcrobatX64_Explain">Disable Help &gt; Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.</string>
+      <string id="DisableMaintenance_AcrobatX64_Explain">Controls whether the Help &gt; Repair menu item is disabled for all users on all installation types.&#10;&#10;Enabled writes 1 = Repair menu item disabled for all users. Disabled writes 0 = Repair menu item available.&#10;&#10;0 = Help &gt; Repair available&#10;1 = Help &gt; Repair disabled for all users&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\Installer</string>
       <string id="Disable_Repair_AcrobatX64">Disable Repair for Standard Users</string>
-      <string id="Disable_Repair_AcrobatX64_Explain">Disable Help &gt; Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.</string>
+      <string id="Disable_Repair_AcrobatX64_Explain">Controls whether the Help &gt; Repair menu item is restricted to administrators only on virtual deployments (Citrix and Windows Terminal Server); use DisableMaintenance to disable Repair on all installation types.&#10;&#10;Enabled writes 1 = Repair restricted to admins on virtual installs. Disabled writes 0 = Repair available to all users.&#10;&#10;0 = Help &gt; Repair available to all users&#10;1 = Help &gt; Repair restricted to administrators on virtual installs&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\Installer</string>
       <string id="IsAMTEnforced_AcrobatX64">Enforce AMT for AppV Deployment</string>
-      <string id="IsAMTEnforced_AcrobatX64_Explain">Allows deployment of Acrobat on AppV for December, 2018 and later products.&#10;&#10;0: Do not use. 1: Required after December 2018 for Acrobat on AppV.</string>
+      <string id="IsAMTEnforced_AcrobatX64_Explain">Controls whether App-V deployments use the updated AMT licensing enforcement required for Acrobat DC 2019 and later.&#10;&#10;Enabled writes 1 = AMT enforcement active. Disabled writes 0 = AMT enforcement not applied.&#10;&#10;0 = AMT enforcement not applied&#10;1 = AMT enforcement active (required for App-V deployments)&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\Activation</string>
       <string id="bMergeMenuBar_AcrobatX64">Merge Title and Menu Bar</string>
       <string id="bMergeMenuBar_AcrobatX64_Explain">Merges the application title bar and menu bar into a single combined bar.&#10;&#10;Enabled writes 1 = merged. Disabled writes 0 = separate bars.&#10;&#10;0 = separate title and menu bars&#10;1 = merged into one bar&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureLockDown</string>
       <string id="ARMLegacyMode_AcrobatX64">ARM Updater: Auto-Update Mode (Acrobat)</string>
@@ -811,56 +811,56 @@
       <!-- ======================================== -->
 
       <string id="ADC4275035_ClickEdit_AcrobatX86">Click-to-Edit Mode</string>
-      <string id="ADC4275035_ClickEdit_AcrobatX86_Explain">Auto-enter edit mode when the user clicks a PDF object.&#10;&#10;Clicking image or text opens edit tools; clicking a form field enables form authoring.&#10;&#10;Values:&#10;0 or null = disabled&#10;1 = enabled</string>
+      <string id="ADC4275035_ClickEdit_AcrobatX86_Explain">Controls whether clicking a PDF object automatically enters edit mode (clicking image or text opens edit tools; clicking a form field enables form authoring).&#10;&#10;Enabled writes 1 = click-to-edit on. Disabled writes 0 = click-to-edit off.&#10;&#10;0 = click-to-edit disabled&#10;1 = click-to-edit enabled&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="ADC4275034_AcrobatX86">Fill &amp; Sign Color Picker</string>
-      <string id="ADC4275034_AcrobatX86_Explain">Specifies whether to disable the color picker in the Fill and Sign tool.&#10;&#10;The color picker is only supported on the Continuous track.&#10;&#10;Possible values include:&#10;0: Disable the color picker&#10;1: Enable the color picker</string>
+      <string id="ADC4275034_AcrobatX86_Explain">Controls whether the color picker is available in the Fill and Sign tool (Continuous track only).&#10;&#10;Enabled writes 1 = color picker shown. Disabled writes 0 = color picker hidden.&#10;&#10;0 = color picker disabled&#10;1 = color picker enabled&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="ProtectOldExperience_AcrobatX86">Legacy Protect Tool Menu</string>
-      <string id="ProtectOldExperience_AcrobatX86_Explain">Use legacy Protect tool menus instead of the new UI.&#10;&#10;Values:&#10;0 or null = new UI&#10;1 = pre-Oct 2019 menus</string>
+      <string id="ProtectOldExperience_AcrobatX86_Explain">Controls whether the pre-2019 Protect tool menus are used instead of the redesigned Protection UI.&#10;&#10;Enabled writes 1 = legacy Protect menus active. Disabled writes 0 = new Protection UI active.&#10;&#10;0 = new Protection UI&#10;1 = legacy Protect tool menus&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="ADC4302862_AcrobatX86">Paste in Place</string>
-      <string id="ADC4302862_AcrobatX86_Explain">Paste copied elements to the same location as the source.&#10;&#10;Applies to form fields, annotations, and links.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
+      <string id="ADC4302862_AcrobatX86_Explain">Controls whether copied elements (form fields, annotations, links) are pasted at their original source coordinates rather than offset from the cursor.&#10;&#10;Enabled writes 1 = paste-to-same-location on. Disabled writes 0 = paste-to-same-location off.&#10;&#10;0 = paste offset from cursor (default)&#10;1 = paste at original source location&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="ADC4275035_AcrobatX86">Remove Form Editing Tools (2019)</string>
-      <string id="ADC4275035_AcrobatX86_Explain">Remove Oct 2019 AddText and EditText form tools from the UI.&#10;&#10;Form editing moved into the Prepare Form toolbar.&#10;&#10;Values:&#10;0 or null = no change&#10;1 = remove AddText and EditText tools</string>
+      <string id="ADC4275035_AcrobatX86_Explain">Controls whether the AddText and EditText form tools are removed from the UI (these tools were superseded by the Prepare Form toolbar).&#10;&#10;Enabled writes 1 = AddText and EditText tools removed. Disabled writes 0 = tools not removed.&#10;&#10;0 = AddText and EditText tools present&#10;1 = AddText and EditText tools removed from UI&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
 
       <!-- ======================================== -->
       <!--   Documents, Editing and Accessibility   -->
       <!-- ======================================== -->
 
       <string id="BlockEMFParsing_AcrobatX86">Block EMF to PDF Conversion</string>
-      <string id="BlockEMFParsing_AcrobatX86_Explain">Block EMF to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, EMF-to-PDF conversion is blocked. When Disabled, conversion is allowed.</string>
+      <string id="BlockEMFParsing_AcrobatX86_Explain">Controls whether EMF-to-PDF conversion is blocked; when blocked, an unsupported-format dialog appears instead of converting.&#10;&#10;Enabled writes 1 = EMF conversion blocked. Disabled writes 0 = EMF conversion allowed.&#10;&#10;0 = EMF-to-PDF conversion allowed&#10;1 = EMF-to-PDF conversion blocked&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="BlockXPSParsing_AcrobatX86">Block XPS to PDF Conversion</string>
-      <string id="BlockXPSParsing_AcrobatX86_Explain">Block XPS to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, XPS-to-PDF conversion is blocked. When Disabled, conversion is allowed.</string>
+      <string id="BlockXPSParsing_AcrobatX86_Explain">Controls whether XPS-to-PDF conversion is blocked; when blocked, an unsupported-format dialog appears instead of converting.&#10;&#10;Enabled writes 1 = XPS conversion blocked. Disabled writes 0 = XPS conversion allowed.&#10;&#10;0 = XPS-to-PDF conversion allowed&#10;1 = XPS-to-PDF conversion blocked&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="DisableScannedDocumentEditing_AcrobatX86">Disable Scanned PDF Text Recognition</string>
-      <string id="DisableScannedDocumentEditing_AcrobatX86_Explain">Specifies whether to disable text recognition while editing scanned PDFs.&#10;&#10;Possible values include:&#10;0: Text recognition will be performed when invoking editing on scanned PDFs&#10;1: Text recognition will not be performed when invoking editing on scanned PDFs</string>
+      <string id="DisableScannedDocumentEditing_AcrobatX86_Explain">Controls whether OCR text recognition runs automatically when a scanned PDF is opened for editing.&#10;&#10;Enabled writes 1 = text recognition disabled when editing scanned PDFs. Disabled writes 0 = text recognition runs when editing scanned PDFs.&#10;&#10;0 = OCR runs when editing scanned PDFs&#10;1 = OCR suppressed when editing scanned PDFs&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX86">PDFMaker Grouped Image Tag Fix</string>
-      <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX86_Explain">Specifies whether to disable accessibility fixes for tagging grouped images.&#10;&#10;0: Disable. 1: Enable.</string>
+      <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX86_Explain">Controls whether PDFMaker applies accessibility tag corrections for grouped images when creating tagged PDFs.&#10;&#10;Enabled writes 1 = grouped-image tag correction on. Disabled writes 0 = grouped-image tag correction off.&#10;&#10;0 = grouped-image tag correction disabled&#10;1 = grouped-image tag correction enabled&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX86">PDFMaker Table Header Tag Fix</string>
-      <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX86_Explain">Specifies whether to disable accessibility fixes for tagging table headers.&#10;&#10;0: Disable. 1: Enable.</string>
+      <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX86_Explain">Controls whether PDFMaker applies accessibility tag fixes for table header cells and scope attributes when creating tagged PDFs.&#10;&#10;Enabled writes 1 = table header tag fix on. Disabled writes 0 = table header tag fix off.&#10;&#10;0 = table header tag fix disabled&#10;1 = table header tag fix enabled&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX86">PDFMaker Text Path Tag Fix</string>
-      <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX86_Explain">Fix Text Path rendering bug in PDFMaker tags.&#10;&#10;Mitigates incorrect border/alt-text rendering from a 2020 bug. Enabled by default.&#10;&#10;Values:&#10;0 = disable correction&#10;1 = enable</string>
+      <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX86_Explain">Controls whether PDFMaker applies a correction for incorrect border and alt-text rendering caused by a text path element tagging bug.&#10;&#10;Enabled writes 1 = text path correction on. Disabled writes 0 = text path correction off.&#10;&#10;0 = text path tag correction disabled&#10;1 = text path tag correction enabled&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
 
       <!-- ======================================== -->
       <!--    Security: Execution and Protection    -->
       <!-- ======================================== -->
 
       <string id="EnableFlashEditing_AcrobatX86">Flash Editing Tools</string>
-      <string id="EnableFlashEditing_AcrobatX86_Explain">Specifies whether to enable the Flash tools for adding annotations or Flash in the Rich Media app.&#10;&#10;Possible values include:&#10;0 or null: Remove &quot;Disable Flash ) Add SWF menu item.&quot;&#10;1: Show the menu item</string>
+      <string id="EnableFlashEditing_AcrobatX86_Explain">Controls whether Flash annotation tools appear in the Rich Media toolbar, including the Add SWF menu item.&#10;&#10;Enabled writes 1 = Flash tools shown. Disabled writes 0 = Flash tools hidden.&#10;&#10;0 = Flash Rich Media tools hidden&#10;1 = Flash Rich Media tools shown&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState</string>
       <string id="bEnablePVSwitchoutShortcut_AcrobatX86">Protected View Exit Shortcut Key</string>
-      <string id="bEnablePVSwitchoutShortcut_AcrobatX86_Explain">Shortcut key to exit Protected View for the current document.&#10;&#10;Allows Protected View by default with on-demand exit.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
+      <string id="bEnablePVSwitchoutShortcut_AcrobatX86_Explain">Controls whether a keyboard shortcut is available to exit Protected View for the current document on demand.&#10;&#10;Enabled writes 1 = exit-Protected-View shortcut available. Disabled writes 0 = shortcut not available.&#10;&#10;0 = exit-Protected-View shortcut disabled&#10;1 = exit-Protected-View shortcut enabled&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\Installer</string>
 
       <!-- ======================================== -->
       <!--     Updates and Desktop Integration      -->
       <!-- ======================================== -->
 
       <string id="EULA_AcrobatX86">Accept EULA for Updater</string>
-      <string id="EULA_AcrobatX86_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time.&#10;&#10;Values:&#10;0 = not accepted&#10;1 = accepted</string>
+      <string id="EULA_AcrobatX86_Explain">Controls whether the end-user license agreement is accepted for the built-in updater, equivalent to passing EULA_ACCEPT=YES at install time.&#10;&#10;Enabled writes 1 = EULA accepted. Disabled writes 0 = EULA not accepted.&#10;&#10;0 = EULA not accepted&#10;1 = EULA accepted&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\AdobeViewer</string>
       <string id="iDisablePromptForUpgrade_AcrobatX86">Disable Major Version Upgrade Prompt</string>
       <string id="iDisablePromptForUpgrade_AcrobatX86_Explain">Suppress major-version upgrade prompt.&#10;&#10;Requires automatic update settings; if bUpdater=0, upgrades are also disabled.&#10;&#10;Values:&#10;0 or null = no effect&#10;1 = disable prompt&#10;&#10;Adobe ARM is a 32-bit component; on 64-bit Windows this policy writes to HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\...</string>
       <string id="DisableMaintenance_AcrobatX86">Disable Repair for All Users</string>
-      <string id="DisableMaintenance_AcrobatX86_Explain">Disable Help &gt; Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.</string>
+      <string id="DisableMaintenance_AcrobatX86_Explain">Controls whether the Help &gt; Repair menu item is disabled for all users on all installation types.&#10;&#10;Enabled writes 1 = Repair menu item disabled for all users. Disabled writes 0 = Repair menu item available.&#10;&#10;0 = Help &gt; Repair available&#10;1 = Help &gt; Repair disabled for all users&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\Installer</string>
       <string id="Disable_Repair_AcrobatX86">Disable Repair for Standard Users</string>
-      <string id="Disable_Repair_AcrobatX86_Explain">Disable Help &gt; Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.</string>
+      <string id="Disable_Repair_AcrobatX86_Explain">Controls whether the Help &gt; Repair menu item is restricted to administrators only on virtual deployments (Citrix and Windows Terminal Server); use DisableMaintenance to disable Repair on all installation types.&#10;&#10;Enabled writes 1 = Repair restricted to admins on virtual installs. Disabled writes 0 = Repair available to all users.&#10;&#10;0 = Help &gt; Repair available to all users&#10;1 = Help &gt; Repair restricted to administrators on virtual installs&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\Installer</string>
       <string id="IsAMTEnforced_AcrobatX86">Enforce AMT for AppV Deployment</string>
-      <string id="IsAMTEnforced_AcrobatX86_Explain">Allows deployment of Acrobat on AppV for December, 2018 and later products.&#10;&#10;0: Do not use. 1: Required after December 2018 for Acrobat on AppV.</string>
+      <string id="IsAMTEnforced_AcrobatX86_Explain">Controls whether App-V deployments use the updated AMT licensing enforcement required for Acrobat DC 2019 and later.&#10;&#10;Enabled writes 1 = AMT enforcement active. Disabled writes 0 = AMT enforcement not applied.&#10;&#10;0 = AMT enforcement not applied&#10;1 = AMT enforcement active (required for App-V deployments)&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\Activation</string>
       <string id="bMergeMenuBar_AcrobatX86">Merge Title and Menu Bar</string>
       <string id="bMergeMenuBar_AcrobatX86_Explain">Merges the application title bar and menu bar into a single combined bar.&#10;&#10;Enabled writes 1 = merged. Disabled writes 0 = separate bars.&#10;&#10;0 = separate title and menu bars&#10;1 = merged into one bar&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureLockDown</string>
       <string id="iInterval_AcrobatX86">Update Watchdog Interval (Days)</string>
@@ -888,36 +888,36 @@
       <!-- ======================================== -->
 
       <string id="ProtectOldExperience_ReaderX86">Legacy Protect Tool Menu</string>
-      <string id="ProtectOldExperience_ReaderX86_Explain">Use legacy Protect tool menus instead of the new UI.&#10;&#10;Values:&#10;0 or null = new UI&#10;1 = pre-Oct 2019 menus</string>
+      <string id="ProtectOldExperience_ReaderX86_Explain">Controls whether the pre-2019 Protect tool menus are used instead of the redesigned Protection UI.&#10;&#10;Enabled writes 1 = legacy Protect menus active. Disabled writes 0 = new Protection UI active.&#10;&#10;0 = new Protection UI&#10;1 = legacy Protect tool menus&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Acrobat Reader\DC\FeatureState</string>
       <string id="ADC4302862_ReaderX86">Paste in Place</string>
-      <string id="ADC4302862_ReaderX86_Explain">Paste copied elements to the same location as the source.&#10;&#10;Applies to form fields, annotations, and links.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
+      <string id="ADC4302862_ReaderX86_Explain">Controls whether copied elements (form fields, annotations, links) are pasted at their original source coordinates rather than offset from the cursor.&#10;&#10;Enabled writes 1 = paste-to-same-location on. Disabled writes 0 = paste-to-same-location off.&#10;&#10;0 = paste offset from cursor (default)&#10;1 = paste at original source location&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Acrobat Reader\DC\FeatureState</string>
 
       <!-- ======================================== -->
       <!--   Documents, Editing and Accessibility   -->
       <!-- ======================================== -->
 
       <string id="DisableScannedDocumentEditing_ReaderX86">Disable Scanned PDF Text Recognition</string>
-      <string id="DisableScannedDocumentEditing_ReaderX86_Explain">Specifies whether to disable text recognition while editing scanned PDFs.&#10;&#10;Possible values include:&#10;0: Text recognition will be performed when invoking editing on scanned PDFs&#10;1: Text recognition will not be performed when invoking editing on scanned PDFs</string>
+      <string id="DisableScannedDocumentEditing_ReaderX86_Explain">Controls whether OCR text recognition runs automatically when a scanned PDF is opened for editing.&#10;&#10;Enabled writes 1 = text recognition disabled when editing scanned PDFs. Disabled writes 0 = text recognition runs when editing scanned PDFs.&#10;&#10;0 = OCR runs when editing scanned PDFs&#10;1 = OCR suppressed when editing scanned PDFs&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Acrobat Reader\DC\FeatureState</string>
 
       <!-- ======================================== -->
       <!--    Security: Execution and Protection    -->
       <!-- ======================================== -->
 
       <string id="EnableFlashEditing_ReaderX86">Flash Editing Tools</string>
-      <string id="EnableFlashEditing_ReaderX86_Explain">Specifies whether to enable the Flash tools for adding annotations or Flash in the Rich Media app.&#10;&#10;Possible values include:&#10;0 or null: Remove &quot;Disable Flash ) Add SWF menu item.&quot;&#10;1: Show the menu item</string>
+      <string id="EnableFlashEditing_ReaderX86_Explain">Controls whether Flash annotation tools appear in the Rich Media toolbar, including the Add SWF menu item.&#10;&#10;Enabled writes 1 = Flash tools shown. Disabled writes 0 = Flash tools hidden.&#10;&#10;0 = Flash Rich Media tools hidden&#10;1 = Flash Rich Media tools shown&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Acrobat Reader\DC\FeatureState</string>
       <string id="bEnablePVSwitchoutShortcut_ReaderX86">Protected View Exit Shortcut Key</string>
-      <string id="bEnablePVSwitchoutShortcut_ReaderX86_Explain">Shortcut key to exit Protected View for the current document.&#10;&#10;Allows Protected View by default with on-demand exit.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
+      <string id="bEnablePVSwitchoutShortcut_ReaderX86_Explain">Controls whether a keyboard shortcut is available to exit Protected View for the current document on demand.&#10;&#10;Enabled writes 1 = exit-Protected-View shortcut available. Disabled writes 0 = shortcut not available.&#10;&#10;0 = exit-Protected-View shortcut disabled&#10;1 = exit-Protected-View shortcut enabled&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Acrobat Reader\DC\Installer</string>
 
       <!-- ======================================== -->
       <!--     Updates and Desktop Integration      -->
       <!-- ======================================== -->
 
       <string id="EULA_ReaderX86">Accept EULA for Updater</string>
-      <string id="EULA_ReaderX86_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time.&#10;&#10;Values:&#10;0 = not accepted&#10;1 = accepted</string>
+      <string id="EULA_ReaderX86_Explain">Controls whether the end-user license agreement is accepted for the built-in updater, equivalent to passing EULA_ACCEPT=YES at install time.&#10;&#10;Enabled writes 1 = EULA accepted. Disabled writes 0 = EULA not accepted.&#10;&#10;0 = EULA not accepted&#10;1 = EULA accepted&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Acrobat Reader\DC\AdobeViewer</string>
       <string id="DisableMaintenance_ReaderX86">Disable Repair for All Users</string>
-      <string id="DisableMaintenance_ReaderX86_Explain">Disable Help &gt; Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.</string>
+      <string id="DisableMaintenance_ReaderX86_Explain">Controls whether the Help &gt; Repair menu item is disabled for all users on all installation types.&#10;&#10;Enabled writes 1 = Repair menu item disabled for all users. Disabled writes 0 = Repair menu item available.&#10;&#10;0 = Help &gt; Repair available&#10;1 = Help &gt; Repair disabled for all users&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Acrobat Reader\DC\Installer</string>
       <string id="Disable_Repair_ReaderX86">Disable Repair for Standard Users</string>
-      <string id="Disable_Repair_ReaderX86_Explain">Disable Help &gt; Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.</string>
+      <string id="Disable_Repair_ReaderX86_Explain">Controls whether the Help &gt; Repair menu item is restricted to administrators only on virtual deployments (Citrix and Windows Terminal Server); use DisableMaintenance to disable Repair on all installation types.&#10;&#10;Enabled writes 1 = Repair restricted to admins on virtual installs. Disabled writes 0 = Repair available to all users.&#10;&#10;0 = Help &gt; Repair available to all users&#10;1 = Help &gt; Repair restricted to administrators on virtual installs&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Acrobat Reader\DC\Installer</string>
       <string id="bMergeMenuBar_ReaderX86">Merge Title and Menu Bar</string>
       <string id="bMergeMenuBar_ReaderX86_Explain">Merges the application title bar and menu bar into a single combined bar.&#10;&#10;Enabled writes 1 = merged. Disabled writes 0 = separate bars.&#10;&#10;0 = separate title and menu bars&#10;1 = merged into one bar&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Acrobat Reader\DC\FeatureLockDown</string>
       <string id="ARMLegacyMode_ReaderX86">ARM Updater: Auto-Update Mode</string>
