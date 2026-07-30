@@ -22,12 +22,7 @@
 
 26 total. The **ADMX Policy** column shows the display name as it appears in GPMC and Intune Admin Templates.
 For 32-bit Reader on a 64-bit machine, policies appear under
-`Computer Configuration → Administrative Templates → Adobe → Acrobat Reader DC (32-bit)`.
-
-> **Note on V-213172 (iURLPerms):** The STIG correctly lists this as a Computer-scope control under `FeatureLockDown`.
-> Adobe's preference documentation previously suggested this was not lockable via HKLM, but empirical testing
-> confirms that `HKLM\...\FeatureLockDown\cDefaultLaunchURLPerms\iURLPerms` locks the Trust Manager dialog and
-> enforces the setting for all users. Use **URL Access Permissions** under *Computer Configuration*.
+`Computer Configuration → Administrative Templates → Adobe DC → Reader DC (32-bit)`.
 
 | VUL ID | STIG Rule | Severity | Requirement | ADMX Policy | Registry Value | Setting | Scope |
 |---|---|---|---|---|---|---|---|

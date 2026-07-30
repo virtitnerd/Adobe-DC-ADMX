@@ -34,7 +34,7 @@
 | Area | Detail |
 |------|--------|
 | **Packaging** | Single `AdobeDC.admx`/ADML pair for **Computer + User** configuration under one namespace |
-| **Policy inventory** | **831** policies — **306** machine + **525** user (ADMX `<policy>` entries; see note below) |
+| **Policy inventory** | **833** policies — **308** machine + **525** user (ADMX `<policy>` entries; see note below) |
 | **Namespace** | `Adobe.Policies.AdobeDC` (replaces separate `Adobe.Policies.Adobe_User` user namespace) |
 | **Computer tree** | **Adobe DC** → **Acrobat & Reader DC** / **Reader DC (32-bit)** / **Non-Policy Settings** / **Web Browser Extension** |
 | **User tree** | **Adobe DC** → **Acrobat DC** / **Reader DC** |
@@ -67,9 +67,9 @@ If you migrated Intune exports from v2.19, Reader-only x64 upsell settings alrea
 
 | File | Scope | Policies |
 |------|-------|----------|
-| `AdobeDC.admx` + `en-US/AdobeDC.adml` | Machine + User | **831** (306 machine + 525 user) |
+| `AdobeDC.admx` + `en-US/AdobeDC.adml` | Machine + User | **833** (308 machine + 525 user) |
 
-*306 machine = ADMX policy entries (includes 12 Web Browser Extension policies); 155 unique machine settings from Adobe PrefRef; product-scoped reference tables total 124 Reader + 170 Acrobat.*
+*308 machine = ADMX policy entries (includes 12 Web Browser Extension policies and 2 Machine-scope URL Access Permissions policies); 155 unique machine settings from Adobe PrefRef; product-scoped reference tables total 124 Reader + 170 Acrobat.*
 
 Published policy reference tables: [Documentation](../README.md).
 

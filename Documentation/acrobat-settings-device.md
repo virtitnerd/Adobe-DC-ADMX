@@ -136,6 +136,7 @@ Complete list of 170 Acrobat DC policies in the combined v3.5 ADMX templates, so
 | Signing Reason UI | ``bAllowReasonWhenSigning`` | Specifies whether the reason UI will appear during signing. |
 | Trust Certified Documents | ``bEnableCertificateBasedTrust`` | Trust certified documents as privileged locations (admin lock). |
 | Unknown URL Access Policy | ``iUnknownURLPerms`` | Access policy for URLs not in the user list. |
+| URL Access Permissions | ``iURLPerms`` | Allow, block, or custom website access from PDF files (HKLM FeatureLockDown — locks Trust Manager for all users). |
 | Validate Signatures on Open | ``bValidateOnOpen`` | Automatically validate all signatures on document open. |
 
 ## Sharing & Features

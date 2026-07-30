@@ -17,13 +17,8 @@
 ## Controls
 
 23 total. The **ADMX Policy** column shows the display name as it appears in GPMC and Intune Admin Templates
-(`Computer Configuration → Administrative Templates → Adobe → Adobe Acrobat DC`; User-scope policies appear
-under `User Configuration → Administrative Templates → Adobe → Adobe Acrobat DC (User)`).
-
-> **Note on V-213121 (iURLPerms):** The STIG correctly lists this as a Computer-scope control under `FeatureLockDown`.
-> Adobe's preference documentation previously suggested this was not lockable via HKLM, but empirical testing
-> confirms that `HKLM\...\FeatureLockDown\cDefaultLaunchURLPerms\iURLPerms` locks the Trust Manager dialog and
-> enforces the setting for all users. Use **URL Access Permissions** under *Computer Configuration*.
+(`Computer Configuration → Administrative Templates → Adobe DC → Acrobat & Reader DC`; User-scope policies appear
+under `User Configuration → Administrative Templates → Adobe DC → Acrobat DC`).
 
 | VUL ID | STIG Rule | Severity | Requirement | ADMX Policy | Registry Value | Setting | Scope |
 |---|---|---|---|---|---|---|---|
