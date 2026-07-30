@@ -83,7 +83,7 @@
       <string id="bToggleSendACopy_Acrobat">Hide Fill &amp; Sign Send a Copy Button</string>
       <string id="bToggleSendACopy_Acrobat_Explain">Specifies whether to hide the Send a Copy button from the Fill &amp; Sign tool in Acrobat and Reader.&#10;&#10;Possible values include:&#10;0: Hide the button&#10;1: Show the button</string>
       <string id="bSuppressSignOut_Acrobat">Hide Sign Out Menu Item</string>
-      <string id="bSuppressSignOut_Acrobat_Explain">Specifies whether the sign-in and sign-out Help menu item should be enabled.&#10;&#10;Possible values include:&#10;0 or null: Don't disable the menu item&#10;1: Disable the Help menu item</string>
+      <string id="bSuppressSignOut_Acrobat_Explain">Hides the sign-in and sign-out items from the Help menu.&#10;&#10;Enabled writes 1 = menu items hidden. Disabled writes 0 = menu items visible.&#10;&#10;0 = sign-in/sign-out items visible&#10;1 = sign-in/sign-out items hidden</string>
       <string id="bOneDriveConnectorEnabled_Acrobat">OneDrive Connector</string>
       <string id="bOneDriveConnectorEnabled_Acrobat_Explain">Specifies whether to enable connection to the OneDrive cloud when bToggleWebConnectors is set to 1.&#10;&#10;Overrides a bToggleWebConnectors value of 1. Only supported on the Continuous track.&#10;&#10;Possible values include:&#10;0: Disable connection to OneDrive&#10;1: Enable connection to OneDrive</string>
       <string id="bTogglePrefsSync_Acrobat">Preferences Synchronization</string>
@@ -112,7 +112,7 @@
       <string id="bDisableAcrobatShortcutCustomization_Acrobat">Lock Tool Shortcut Customization</string>
       <string id="bDisableAcrobatShortcutCustomization_Acrobat_Explain">Prevents end users from modifying the tool shortcuts in the right hand pane.&#10;&#10;Possible values include:&#10;0: Don't disable shortcuts&#10;1: Disable shortcuts</string>
       <string id="bEnableAV2Enterprise_Acrobat">Modern Viewer</string>
-      <string id="bEnableAV2Enterprise_Acrobat_Explain">Specifies whether to enable the Modern Viewer.&#10;&#10;The new app UI is rolling out in phases over 2023. As of June, 25% of users will see the updated user interface. This preference may interact with bShownViewerOnboarding and bEnableAV2 .&#10;&#10;Possible values include:&#10;0: Don't show the Modern Viewer&#10;1: Show the Modern Viewer</string>
+      <string id="bEnableAV2Enterprise_Acrobat_Explain">Controls whether the Modern Viewer UI is shown; interacts with bShownViewerOnboarding and bEnableAV2.&#10;&#10;Enabled writes 1 = Modern Viewer active. Disabled writes 0 = classic UI.&#10;&#10;0 = classic viewer&#10;1 = modern viewer</string>
       <string id="bEnableRCMNewPOPUp_Acrobat">New Right-Click Context Menu</string>
       <string id="bEnableRCMNewPOPUp_Acrobat_Explain">Specifies whether to disable the new context menu and use the legacy version.&#10;&#10;A new right-click context menu displays icons and additional menu options. 0: Disable the new context menu. 1: Enable the new menu.</string>
       <string id="bFindMoreWorkflowsOnline_Acrobat">Online Actions Library Link</string>
@@ -216,29 +216,29 @@
       <!-- ======================================== -->
 
       <string id="bMSStoreTrusted_Acrobat">Allow Changes to Windows Certificate Store Trust</string>
-      <string id="bMSStoreTrusted_Acrobat_Explain">Locks the UI so that end users cannot change the value set by iMSStoreTrusted.&#10;&#10;Set iMSStoreTrusted first, then use this preference to lock it. Allowable values include: 0: Lock the UI. 1: Same as null. Don't lock the UI.</string>
+      <string id="bMSStoreTrusted_Acrobat_Explain">Controls whether users can change Windows Certificate Store trust settings (iMSStoreTrusted) via the UI.&#10;&#10;Set the desired iMSStoreTrusted value before deploying this lock.&#10;&#10;Enabled writes 1 = UI changes allowed (iMSStoreTrusted user-configurable). Disabled writes 0 = UI locked (iMSStoreTrusted locked).&#10;&#10;0 = iMSStoreTrusted locked, UI disabled&#10;1 = iMSStoreTrusted user-configurable</string>
       <string id="bAllowInvisibleSig_Acrobat">Allow Invisible Signatures</string>
-      <string id="bAllowInvisibleSig_Acrobat_Explain">Specifies whether to allow invisible certification signatures.&#10;&#10;False disables the menu option, prevents signing and certifying with invisible signatures, and limits JavaScript support by signature fields.</string>
+      <string id="bAllowInvisibleSig_Acrobat_Explain">Controls whether invisible certification signatures are permitted.&#10;&#10;Enabled writes 1 = invisible signatures allowed. Disabled writes 0 = invisible signatures blocked (menu option hidden, JavaScript signature field support limited).&#10;&#10;0 = invisible signatures blocked&#10;1 = invisible signatures allowed</string>
       <string id="bAllowPasswordSaving_Acrobat">Allow Password Caching</string>
-      <string id="bAllowPasswordSaving_Acrobat_Explain">Controls whether certain passwords can be cached to disk; for example, passwords for digital IDs.&#10;&#10;If false, users are prompted to enter a password every time one is required. Not all passwords are affected by this setting.</string>
+      <string id="bAllowPasswordSaving_Acrobat_Explain">Controls whether passwords such as digital ID passwords can be cached to disk.&#10;&#10;Enabled writes 1 = caching allowed. Disabled writes 0 = passwords not cached (user prompted each time). Not all application passwords are subject to this setting.&#10;&#10;0 = no caching; user must enter password each time&#10;1 = passwords cached to disk</string>
       <string id="bEnableSignatureClear_Acrobat">Allow Signature Clearing</string>
-      <string id="bEnableSignatureClear_Acrobat_Explain">Specifies whether to disable and lock the ability for a signer to clear their own signature.&#10;&#10;Possible values include:&#10;0: Disable signature clearing&#10;1: Enable signature clearing</string>
+      <string id="bEnableSignatureClear_Acrobat_Explain">Controls whether signers can clear their own signatures.&#10;&#10;Enabled writes 1 = signature clearing allowed. Disabled writes 0 = signature clearing blocked.&#10;&#10;0 = signature clearing disabled&#10;1 = signature clearing enabled</string>
       <string id="bVerifyUseAlways_Acrobat">Always Use Specified Verify Handler</string>
-      <string id="bVerifyUseAlways_Acrobat_Explain">Qualifies the use of aVerify.&#10;&#10;If true and aVerify is set to a handler name, then this handler is used to verify all signatures. If false, then the aVerify handler is used only to verify signatures when the handler specified by the signature dictionary Filter attribute is not present.</string>
+      <string id="bVerifyUseAlways_Acrobat_Explain">Controls whether the aVerify handler is used for all signature verification or only as a fallback when the signature's declared Filter handler is unavailable.&#10;&#10;Enabled writes 1 = aVerify always used (requires aVerify to be set). Disabled writes 0 = aVerify used only when the Filter handler is absent.&#10;&#10;0 = aVerify is a fallback handler only&#10;1 = aVerify used to verify all signatures</string>
       <string id="bDisableExpandEnvironmentVariables_Acrobat">Block User Library Trust in Protected View</string>
       <string id="bDisableExpandEnvironmentVariables_Acrobat_Explain">Allow user-specific paths as trusted locations in Protected View.&#10;&#10;When off, only static org-wide trusted locations apply. Paths like C:\Users\%username%\Desktop can be trusted when enabled.&#10;&#10;Values:&#10;0 = trust user locations&#10;1 = do not trust user locations</string>
       <string id="bWinCacheSessionHandles_Acrobat">Cache Digital ID Session Handles</string>
-      <string id="bWinCacheSessionHandles_Acrobat_Explain">Specifies whether to retain cryptographic service provider (CSP) handles when a user authenticates to a digital ID.&#10;&#10;If true, a user does not have to re-authenticate to use the ID unless they log out or the session ends. The impact of this preference will vary based on the CSP in use; however, the setting does not affect the Windows CSPs.</string>
+      <string id="bWinCacheSessionHandles_Acrobat_Explain">Controls whether CSP session handles are retained after digital ID authentication, avoiding repeated authentication prompts within the same session.&#10;&#10;Enabled writes 1 = handles cached for session. Disabled writes 0 = handles not cached. Behavior varies by CSP; Windows built-in CSPs are not affected.&#10;&#10;0 = user must authenticate each time the digital ID is used&#10;1 = CSP handles cached until logout or session end</string>
       <string id="bDisableADCFileStore_Acrobat">Disable Acrobat.com File Storage</string>
       <string id="bDisableADCFileStore_Acrobat_Explain">Disables Acrobat.com file storage integration.&#10;&#10;When enabled, disables storage of files on Acrobat.com (Adobe Document Cloud).&#10;&#10;Possible values include:&#10;0: Allow Acrobat.com file storage&#10;1: Disable Acrobat.com file storage</string>
       <string id="bDisableOSTrustedSites_Acrobat">Disable IE Trusted Sites as Privileged Locations</string>
-      <string id="bDisableOSTrustedSites_Acrobat_Explain">Locks the ability to treat IE trusted sites as privileged locations either on or off so the users can't change the bTrustOSTrustedSites value via the user interface.&#10;&#10;If set, bTrustOSTrustedSites is simply ignored.&#10;&#10;Possible values include:&#10;0 or null: Enables and locks trusting sites from IE&#10;1: Disables and locks trusting sites from IE</string>
+      <string id="bDisableOSTrustedSites_Acrobat_Explain">Controls whether sites in Internet Explorer's Trusted Sites zone are treated as privileged locations. When this policy is set, bTrustOSTrustedSites is overridden.&#10;&#10;Enabled writes 1 = IE Trusted Sites not honored. Disabled writes 0 = IE Trusted Sites treated as privileged locations.&#10;&#10;0 = IE Trusted Sites honored as privileged locations&#10;1 = IE Trusted Sites not honored as privileged locations</string>
       <string id="bAllowAPSConfig_Acrobat">LiveCycle RMS Server Config</string>
-      <string id="bAllowAPSConfig_Acrobat_Explain">Prevents a LiveCycle Right Management Server from being configured by disabling the menu option in the Security Settings Console.&#10;&#10;By default, configuration is allowed.</string>
+      <string id="bAllowAPSConfig_Acrobat_Explain">Controls whether a LiveCycle Rights Management Server can be configured via the Security Settings Console.&#10;&#10;Enabled writes 1 = configuration allowed. Disabled writes 0 = configuration prevented (menu option disabled).&#10;&#10;0 = LiveCycle RMS configuration blocked&#10;1 = LiveCycle RMS configuration allowed</string>
       <string id="bReqRevCheck_Acrobat">Lock Revocation Check Setting</string>
-      <string id="bReqRevCheck_Acrobat_Explain">Locks Security\cASPKI\cASPKI\cVerify\iReqRevCheck and disables the user interface item.</string>
+      <string id="bReqRevCheck_Acrobat_Explain">Locks the revocation check setting (iReqRevCheck) and prevents users from changing it via the UI.&#10;&#10;This policy locks whatever value is in iReqRevCheck — configure that preference before deploying this lock.&#10;&#10;Enabled writes 1 = revocation check setting locked. Disabled writes 0 = revocation check setting user-configurable.&#10;&#10;0 = iReqRevCheck unlocked&#10;1 = iReqRevCheck locked and UI disabled</string>
       <string id="bReasons_Acrobat">Lock Signing Reasons Settings</string>
-      <string id="bReasons_Acrobat_Explain">Prevents users from modifying reason settings.&#10;&#10;v8.1: If locked and cReasons is empty, bAllowSigningReasons is 0 and read only. If locked and cReasons has values, then bAllowSigningReasons is true and read only.</string>
+      <string id="bReasons_Acrobat_Explain">Locks signing reason settings and prevents users from modifying them.&#10;&#10;Enabled writes 1 = reason settings locked. Disabled writes 0 = user can change reason settings.&#10;&#10;0 = signing reason settings user-configurable&#10;1 = signing reason settings locked (if cReasons is empty, reason UI disabled; if cReasons has values, those reasons are enforced read-only)</string>
       <string id="bDisableTrustedFolders_Acrobat">Lock Trusted Folders and Files</string>
       <string id="bDisableTrustedFolders_Acrobat_Explain">Disable and lock trusted folders and files.&#10;&#10;Prevents users from adding folder or file privileged locations.&#10;&#10;Values:&#10;0 or null = allowed&#10;1 = disabled and locked</string>
       <string id="bDisableTrustedSites_Acrobat">Lock Trusted Host Sites</string>
@@ -248,9 +248,9 @@
       <string id="bUseTSAsSigningTime_Acrobat">Show Timestamp in Signature</string>
       <string id="bUseTSAsSigningTime_Acrobat_Explain">Show timestamp server time in signature appearance.&#10;&#10;Default uses local clock. Requires bReqSigPropRetrieval=1 (HKCU). Verify time against iMaxClockSkew (default 65 min).&#10;&#10;Values:&#10;0 = hide timestamp&#10;1 = show timestamp</string>
       <string id="bShowSignMenu_Acrobat">Sign Menu in Menu Bar</string>
-      <string id="bShowSignMenu_Acrobat_Explain">Specifies whether to show the Sign menu in Acrobat's top level menu bar.&#10;&#10;Possible values include:&#10;0 or null: Disable the Sign menu item&#10;1: Enable the menu item</string>
+      <string id="bShowSignMenu_Acrobat_Explain">Controls whether the Sign menu appears in Acrobat's top-level menu bar.&#10;&#10;Enabled writes 1 = Sign menu shown. Disabled writes 0 = Sign menu hidden.&#10;&#10;0 = Sign menu hidden&#10;1 = Sign menu shown</string>
       <string id="bAllowReasonWhenSigning_Acrobat">Signing Reason UI</string>
-      <string id="bAllowReasonWhenSigning_Acrobat_Explain">Specifies whether the reason UI will appear during signing.&#10;&#10;The preference can be overridden by a document seed value set on a field. For 8.1 and later, if cReasons is locked and is empty, bAllowSigningReasons is 0 and read only (The UI is turned off). If cReasons is locked and has values, then bAllowSigningReasons is true and read only.</string>
+      <string id="bAllowReasonWhenSigning_Acrobat_Explain">Controls whether the signing reason dialog appears during the signature workflow.&#10;&#10;Enabled writes 1 = reason UI shown. Disabled writes 0 = reason UI hidden. Document seed values on signature fields can override this setting. Interacts with cReasons and the bReasons lock policy.&#10;&#10;0 = reason dialog not shown during signing&#10;1 = reason dialog shown during signing</string>
       <string id="bEnableCertificateBasedTrust_Acrobat">Trust Certified Documents</string>
       <string id="bEnableCertificateBasedTrust_Acrobat_Explain">Trust certified documents as privileged locations (admin lock).&#10;&#10;Lockable counterpart to bTrustCertifiedDocuments. Does not apply in Protected View.&#10;&#10;Values:&#10;0 or null = not trusted&#10;1 = trusted</string>
       <string id="iUnknownURLPerms_Acrobat">Unknown URL Access Policy</string>
@@ -264,7 +264,7 @@
       <string id="iURLPerms_Acrobat_opt1">Block all websites</string>
       <string id="iURLPerms_Acrobat_opt2">Allow all websites</string>
       <string id="bValidateOnOpen_Acrobat">Validate Signatures on Open</string>
-      <string id="bValidateOnOpen_Acrobat_Explain">Specifies whether to automatically validate all signatures on document open.&#10;&#10;Note that the lockable setting does not configure the feature; instead, it locks what is set in HKCU and the user interface. 0: Don't validate signatures on document open. 1: Validate signatures on document open.</string>
+      <string id="bValidateOnOpen_Acrobat_Explain">Locks the signature validation on open setting and prevents users from changing it.&#10;&#10;This policy locks whatever value is currently in HKCU — it does not independently configure validation. Set the desired HKCU value before deploying this lock.&#10;&#10;Enabled writes 1 = validate on open (locked). Disabled writes 0 = do not validate on open (locked).&#10;&#10;0 = do not validate signatures on open&#10;1 = validate signatures on open</string>
 
       <!-- ======================================== -->
       <!--           Sharing and Features           -->
@@ -273,9 +273,9 @@
       <string id="bToggleAdobeSign_Acrobat">Adobe Acrobat Sign</string>
       <string id="bToggleAdobeSign_Acrobat_Explain">Adobe Acrobat Sign (Send for Signature).&#10;&#10;On Continuous track, also set bToggleManageSign.&#10;&#10;Values:&#10;0 = enabled&#10;1 = disabled</string>
       <string id="bToggleSendAndTrack_Acrobat">Adobe Send &amp; Track</string>
-      <string id="bToggleSendAndTrack_Acrobat_Explain">Disables Adobe Send and Track (some UI is renamed to &quot;Share&quot; since October, 2018)&#10;&#10;Possible values include:&#10;0: Enable Adobe Send and Track&#10;1: Disable Adobe Send and Track</string>
+      <string id="bToggleSendAndTrack_Acrobat_Explain">Controls whether Adobe Send and Track is available in the application.&#10;&#10;Enabled writes 0 = Send and Track on. Disabled writes 1 = Send and Track off. Uses cServices semantics: 0 enables the service, 1 disables it.&#10;&#10;0 = Send and Track enabled&#10;1 = Send and Track disabled</string>
       <string id="bEnableRecipientMention_Acrobat">Allow @Mention Non-Reviewers</string>
-      <string id="bEnableRecipientMention_Acrobat_Explain">Specifies whether to allow participants in a shared review to @mention people who are not review collaborators.&#10;&#10;Prior to this release, reviewers could only @mention other reviewers in the review comments.&#10;&#10;Possible values include:&#10;0: Don't allow mentioning non-reviewers&#10;1: Allow mentioning non-reviewers</string>
+      <string id="bEnableRecipientMention_Acrobat_Explain">Controls whether participants in a shared review can @mention people who are not current review collaborators.&#10;&#10;Enabled writes 1 = @mention of non-reviewers allowed. Disabled writes 0 = @mention limited to current reviewers only.&#10;&#10;0 = can only @mention current reviewers&#10;1 = can @mention any person</string>
       <string id="bDisableSharePointFeatures_Acrobat">Disable SharePoint &amp; Office 365 Integration</string>
       <string id="bDisableSharePointFeatures_Acrobat_Explain">Disable SharePoint and Office 365 integration.&#10;&#10;Disables SharePoint detection, check-out prompt, and SharePoint menu items.&#10;&#10;Values:&#10;0 or null = enabled&#10;1 = disabled</string>
       <string id="bDisableWebmail_Acrobat">Disable WebMail Integration</string>
@@ -287,19 +287,19 @@
       <string id="bMixRecentFilesFeatureLockDown_Acrobat">Hide Shared Files from Recent List</string>
       <string id="bMixRecentFilesFeatureLockDown_Acrobat_Explain">Show shared files in the Recent list.&#10;&#10;Covers shares, reviews, signing, and Send and Track workflows.&#10;&#10;Values:&#10;0 = add to Recent&#10;1 = do not add</string>
       <string id="bToggleFSSSignatureSaving_Acrobat">Save Signature to Cloud</string>
-      <string id="bToggleFSSSignatureSaving_Acrobat_Explain">Specifies whether to save a newly created signature in the cloud.&#10;&#10;When a user creates a new signature, the dialog offers the option to store the signature in the cloud for later use. This preference also controls saving user initials.&#10;&#10;Possible values include:&#10;0: Show the Save Signature UI&#10;1: Hide the Save Signature UI</string>
+      <string id="bToggleFSSSignatureSaving_Acrobat_Explain">Controls whether the option to save a newly created signature to the cloud is shown. Also applies to user initials.&#10;&#10;Enabled writes 0 = save-to-cloud UI shown (cServices: 0 enables the feature). Disabled writes 1 = save-to-cloud UI hidden.&#10;&#10;0 = save signature to cloud UI shown&#10;1 = save signature to cloud UI hidden</string>
       <string id="bAdobeSendPluginToggle_Acrobat">Send &amp; Track Outlook Plugin</string>
       <string id="bAdobeSendPluginToggle_Acrobat_Explain">Adobe Send and Track button in Outlook.&#10;&#10;Uploads attachments to Document Cloud and inserts public preview/download links in email.&#10;&#10;Values:&#10;0 = enabled&#10;1 = disabled</string>
       <string id="bEnableReviewPromote_Acrobat">Share and Review Reminder Tip</string>
-      <string id="bEnableReviewPromote_Acrobat_Explain">Specifies whether to display a Share/Review feature reminder message when users have used those features in the past.&#10;&#10;If the user has not used the review service for 30 days AND has previously opened a PDF with review comments, Acrobat displays a tip reminding the user the review/share service is available.&#10;&#10;Possible values include:&#10;0: Don't show a tip&#10;1: Show tip</string>
+      <string id="bEnableReviewPromote_Acrobat_Explain">Controls whether a Share/Review reminder tip is shown to users who have previously used those features.&#10;&#10;Enabled writes 1 = reminder tip shown. Disabled writes 0 = reminder tip suppressed.&#10;&#10;0 = no reminder tip shown&#10;1 = reminder tip shown to eligible users</string>
       <string id="bPreviouslyEnabledSharePointInChromeExtn_Acrobat">SharePoint Chrome Extension Previous State</string>
-      <string id="bPreviouslyEnabledSharePointInChromeExtn_Acrobat_Explain">Stores the previous state of the SharePoint FeatureLockDown settings.&#10;&#10;Possible values include: Same as bEnableSharePointInChromeExtn in FeatureLockDown.</string>
+      <string id="bPreviouslyEnabledSharePointInChromeExtn_Acrobat_Explain">Tracks the prior state of the bEnableSharePointInChromeExtn setting. Used internally by the application; not intended as a primary admin control.&#10;&#10;Enabled writes 1 = SharePoint was previously enabled. Disabled writes 0 = SharePoint was not previously enabled.</string>
       <string id="bEnableSharePointInChromeExtn_Acrobat">SharePoint in Chrome Extension</string>
-      <string id="bEnableSharePointInChromeExtn_Acrobat_Explain">Specifies whether to integrate SharePoint into the Acrobat's Chrome extension.&#10;&#10;Possible values include:&#10;0: Don't enable SharePoint integration&#10;1: Enable</string>
+      <string id="bEnableSharePointInChromeExtn_Acrobat_Explain">Controls whether SharePoint integration is active in the Acrobat Chrome browser extension.&#10;&#10;Enabled writes 1 = SharePoint integration on. Disabled writes 0 = SharePoint integration off.&#10;&#10;0 = SharePoint integration disabled&#10;1 = SharePoint integration enabled in Chrome extension</string>
       <string id="bToggleManageSign_Acrobat">Show Acrobat Sign Tracking Tab</string>
       <string id="bToggleManageSign_Acrobat_Explain">Signature tab on Home, notifications, and sign tracking.&#10;&#10;Hides agreements, notifications, and To Do sign cards when disabled.&#10;&#10;Values:&#10;0 = show&#10;1 = hide</string>
       <string id="bDisableOnBehalfOfText_Acrobat">Show Comment Author in Shared Review</string>
-      <string id="bDisableOnBehalfOfText_Acrobat_Explain">If false, the string &quot;On behalf of&quot; does not append the author's name in the comment when another person opens the document in a shared-review workflow.&#10;&#10;This preference is only used in shared review workflows.&#10;&#10;Possible values include:&#10;0: Don't display the comment author's name&#10;1: Do display the comment author's name</string>
+      <string id="bDisableOnBehalfOfText_Acrobat_Explain">Controls whether the comment author's name appears as 'On behalf of [name]' in shared review comments.&#10;&#10;Enabled writes 1 = author name shown. Disabled writes 0 = author name not shown. Applies to shared review workflows only.&#10;&#10;0 = comment author name not displayed&#10;1 = 'On behalf of [name]' shown in shared review comments</string>
       <string id="iClientType_Gmail_Acrobat">WebMail Client Type (Gmail)</string>
       <string id="iClientType_Gmail_Acrobat_Explain">Identifies the Gmail Mail client type for WebMail.&#10;&#10;The value can only be: 1</string>
       <string id="iClientType_Gmail_Acrobat_opt0">Locked value: 1 (per Adobe PrefRef)</string>
@@ -438,7 +438,7 @@
       <string id="bToggleSendACopy_Reader">Hide Fill &amp; Sign Send a Copy Button</string>
       <string id="bToggleSendACopy_Reader_Explain">Specifies whether to hide the Send a Copy button from the Fill &amp; Sign tool in Acrobat and Reader.&#10;&#10;Possible values include:&#10;0: Hide the button&#10;1: Show the button</string>
       <string id="bSuppressSignOut_Reader">Hide Sign Out Menu Item</string>
-      <string id="bSuppressSignOut_Reader_Explain">Specifies whether the sign-in and sign-out Help menu item should be enabled.&#10;&#10;Possible values include:&#10;0 or null: Don't disable the menu item&#10;1: Disable the Help menu item</string>
+      <string id="bSuppressSignOut_Reader_Explain">Hides the sign-in and sign-out items from the Help menu.&#10;&#10;Enabled writes 1 = menu items hidden. Disabled writes 0 = menu items visible.&#10;&#10;0 = sign-in/sign-out items visible&#10;1 = sign-in/sign-out items hidden</string>
       <string id="bOneDriveConnectorEnabled_Reader">OneDrive Connector</string>
       <string id="bOneDriveConnectorEnabled_Reader_Explain">Specifies whether to enable connection to the OneDrive cloud when bToggleWebConnectors is set to 1.&#10;&#10;Overrides a bToggleWebConnectors value of 1. Only supported on the Continuous track.&#10;&#10;Possible values include:&#10;0: Disable connection to OneDrive&#10;1: Enable connection to OneDrive</string>
       <string id="bTogglePrefsSync_Reader">Preferences Synchronization</string>
@@ -463,7 +463,7 @@
       <string id="bDisableAcrobatShortcutCustomization_Reader">Lock Tool Shortcut Customization</string>
       <string id="bDisableAcrobatShortcutCustomization_Reader_Explain">Prevents end users from modifying the tool shortcuts in the right hand pane.&#10;&#10;Possible values include:&#10;0: Don't disable shortcuts&#10;1: Disable shortcuts</string>
       <string id="bEnableAV2Enterprise_Reader">Modern Viewer</string>
-      <string id="bEnableAV2Enterprise_Reader_Explain">Specifies whether to enable the Modern Viewer.&#10;&#10;The new app UI is rolling out in phases over 2023. As of June, 25% of users will see the updated user interface. This preference may interact with bShownViewerOnboarding and bEnableAV2 .&#10;&#10;Possible values include:&#10;0: Don't show the Modern Viewer&#10;1: Show the Modern Viewer</string>
+      <string id="bEnableAV2Enterprise_Reader_Explain">Controls whether the Modern Viewer UI is shown; interacts with bShownViewerOnboarding and bEnableAV2.&#10;&#10;Enabled writes 1 = Modern Viewer active. Disabled writes 0 = classic UI.&#10;&#10;0 = classic viewer&#10;1 = modern viewer</string>
       <string id="bEnableRCMNewPOPUp_Reader">New Right-Click Context Menu</string>
       <string id="bEnableRCMNewPOPUp_Reader_Explain">Specifies whether to disable the new context menu and use the legacy version.&#10;&#10;A new right-click context menu displays icons and additional menu options. 0: Disable the new context menu. 1: Enable the new menu.</string>
       <string id="bFindMoreWorkflowsOnline_Reader">Online Actions Library Link</string>
@@ -552,27 +552,27 @@
       <!-- ======================================== -->
 
       <string id="bMSStoreTrusted_Reader">Allow Changes to Windows Certificate Store Trust</string>
-      <string id="bMSStoreTrusted_Reader_Explain">Locks the UI so that end users cannot change the value set by iMSStoreTrusted.&#10;&#10;Set iMSStoreTrusted first, then use this preference to lock it. Allowable values include: 0: Lock the UI. 1: Same as null. Don't lock the UI.</string>
+      <string id="bMSStoreTrusted_Reader_Explain">Controls whether users can change Windows Certificate Store trust settings (iMSStoreTrusted) via the UI.&#10;&#10;Set the desired iMSStoreTrusted value before deploying this lock.&#10;&#10;Enabled writes 1 = UI changes allowed (iMSStoreTrusted user-configurable). Disabled writes 0 = UI locked (iMSStoreTrusted locked).&#10;&#10;0 = iMSStoreTrusted locked, UI disabled&#10;1 = iMSStoreTrusted user-configurable</string>
       <string id="bAllowInvisibleSig_Reader">Allow Invisible Signatures</string>
-      <string id="bAllowInvisibleSig_Reader_Explain">Specifies whether to allow invisible certification signatures.&#10;&#10;False disables the menu option, prevents signing and certifying with invisible signatures, and limits JavaScript support by signature fields.</string>
+      <string id="bAllowInvisibleSig_Reader_Explain">Controls whether invisible certification signatures are permitted.&#10;&#10;Enabled writes 1 = invisible signatures allowed. Disabled writes 0 = invisible signatures blocked (menu option hidden, JavaScript signature field support limited).&#10;&#10;0 = invisible signatures blocked&#10;1 = invisible signatures allowed</string>
       <string id="bAllowPasswordSaving_Reader">Allow Password Caching</string>
-      <string id="bAllowPasswordSaving_Reader_Explain">Controls whether certain passwords can be cached to disk; for example, passwords for digital IDs.&#10;&#10;If false, users are prompted to enter a password every time one is required. Not all passwords are affected by this setting.</string>
+      <string id="bAllowPasswordSaving_Reader_Explain">Controls whether passwords such as digital ID passwords can be cached to disk.&#10;&#10;Enabled writes 1 = caching allowed. Disabled writes 0 = passwords not cached (user prompted each time). Not all application passwords are subject to this setting.&#10;&#10;0 = no caching; user must enter password each time&#10;1 = passwords cached to disk</string>
       <string id="bEnableSignatureClear_Reader">Allow Signature Clearing</string>
-      <string id="bEnableSignatureClear_Reader_Explain">Specifies whether to disable and lock the ability for a signer to clear their own signature.&#10;&#10;Possible values include:&#10;0: Disable signature clearing&#10;1: Enable signature clearing</string>
+      <string id="bEnableSignatureClear_Reader_Explain">Controls whether signers can clear their own signatures.&#10;&#10;Enabled writes 1 = signature clearing allowed. Disabled writes 0 = signature clearing blocked.&#10;&#10;0 = signature clearing disabled&#10;1 = signature clearing enabled</string>
       <string id="bVerifyUseAlways_Reader">Always Use Specified Verify Handler</string>
-      <string id="bVerifyUseAlways_Reader_Explain">Qualifies the use of aVerify.&#10;&#10;If true and aVerify is set to a handler name, then this handler is used to verify all signatures. If false, then the aVerify handler is used only to verify signatures when the handler specified by the signature dictionary Filter attribute is not present.</string>
+      <string id="bVerifyUseAlways_Reader_Explain">Controls whether the aVerify handler is used for all signature verification or only as a fallback when the signature's declared Filter handler is unavailable.&#10;&#10;Enabled writes 1 = aVerify always used (requires aVerify to be set). Disabled writes 0 = aVerify used only when the Filter handler is absent.&#10;&#10;0 = aVerify is a fallback handler only&#10;1 = aVerify used to verify all signatures</string>
       <string id="bDisableExpandEnvironmentVariables_Reader">Block User Library Trust in Protected View</string>
       <string id="bDisableExpandEnvironmentVariables_Reader_Explain">Allow user-specific paths as trusted locations in Protected View.&#10;&#10;When off, only static org-wide trusted locations apply. Paths like C:\Users\%username%\Desktop can be trusted when enabled.&#10;&#10;Values:&#10;0 = trust user locations&#10;1 = do not trust user locations</string>
       <string id="bWinCacheSessionHandles_Reader">Cache Digital ID Session Handles</string>
-      <string id="bWinCacheSessionHandles_Reader_Explain">Specifies whether to retain cryptographic service provider (CSP) handles when a user authenticates to a digital ID.&#10;&#10;If true, a user does not have to re-authenticate to use the ID unless they log out or the session ends. The impact of this preference will vary based on the CSP in use; however, the setting does not affect the Windows CSPs.</string>
+      <string id="bWinCacheSessionHandles_Reader_Explain">Controls whether CSP session handles are retained after digital ID authentication, avoiding repeated authentication prompts within the same session.&#10;&#10;Enabled writes 1 = handles cached for session. Disabled writes 0 = handles not cached. Behavior varies by CSP; Windows built-in CSPs are not affected.&#10;&#10;0 = user must authenticate each time the digital ID is used&#10;1 = CSP handles cached until logout or session end</string>
       <string id="bDisableOSTrustedSites_Reader">Disable IE Trusted Sites as Privileged Locations</string>
-      <string id="bDisableOSTrustedSites_Reader_Explain">Locks the ability to treat IE trusted sites as privileged locations either on or off so the users can't change the bTrustOSTrustedSites value via the user interface.&#10;&#10;If set, bTrustOSTrustedSites is simply ignored.&#10;&#10;Possible values include:&#10;0 or null: Enables and locks trusting sites from IE&#10;1: Disables and locks trusting sites from IE</string>
+      <string id="bDisableOSTrustedSites_Reader_Explain">Controls whether sites in Internet Explorer's Trusted Sites zone are treated as privileged locations. When this policy is set, bTrustOSTrustedSites is overridden.&#10;&#10;Enabled writes 1 = IE Trusted Sites not honored. Disabled writes 0 = IE Trusted Sites treated as privileged locations.&#10;&#10;0 = IE Trusted Sites honored as privileged locations&#10;1 = IE Trusted Sites not honored as privileged locations</string>
       <string id="bAllowAPSConfig_Reader">LiveCycle RMS Server Config</string>
-      <string id="bAllowAPSConfig_Reader_Explain">Prevents a LiveCycle Right Management Server from being configured by disabling the menu option in the Security Settings Console.&#10;&#10;By default, configuration is allowed.</string>
+      <string id="bAllowAPSConfig_Reader_Explain">Controls whether a LiveCycle Rights Management Server can be configured via the Security Settings Console.&#10;&#10;Enabled writes 1 = configuration allowed. Disabled writes 0 = configuration prevented (menu option disabled).&#10;&#10;0 = LiveCycle RMS configuration blocked&#10;1 = LiveCycle RMS configuration allowed</string>
       <string id="bReqRevCheck_Reader">Lock Revocation Check Setting</string>
-      <string id="bReqRevCheck_Reader_Explain">Locks Security\cASPKI\cASPKI\cVerify\iReqRevCheck and disables the user interface item.</string>
+      <string id="bReqRevCheck_Reader_Explain">Locks the revocation check setting (iReqRevCheck) and prevents users from changing it via the UI.&#10;&#10;This policy locks whatever value is in iReqRevCheck — configure that preference before deploying this lock.&#10;&#10;Enabled writes 1 = revocation check setting locked. Disabled writes 0 = revocation check setting user-configurable.&#10;&#10;0 = iReqRevCheck unlocked&#10;1 = iReqRevCheck locked and UI disabled</string>
       <string id="bReasons_Reader">Lock Signing Reasons Settings</string>
-      <string id="bReasons_Reader_Explain">Prevents users from modifying reason settings.&#10;&#10;v8.1: If locked and cReasons is empty, bAllowSigningReasons is 0 and read only. If locked and cReasons has values, then bAllowSigningReasons is true and read only.</string>
+      <string id="bReasons_Reader_Explain">Locks signing reason settings and prevents users from modifying them.&#10;&#10;Enabled writes 1 = reason settings locked. Disabled writes 0 = user can change reason settings.&#10;&#10;0 = signing reason settings user-configurable&#10;1 = signing reason settings locked (if cReasons is empty, reason UI disabled; if cReasons has values, those reasons are enforced read-only)</string>
       <string id="bDisableTrustedFolders_Reader">Lock Trusted Folders and Files</string>
       <string id="bDisableTrustedFolders_Reader_Explain">Disable and lock trusted folders and files.&#10;&#10;Prevents users from adding folder or file privileged locations.&#10;&#10;Values:&#10;0 or null = allowed&#10;1 = disabled and locked</string>
       <string id="bDisableTrustedSites_Reader">Lock Trusted Host Sites</string>
@@ -582,7 +582,7 @@
       <string id="bUseTSAsSigningTime_Reader">Show Timestamp in Signature</string>
       <string id="bUseTSAsSigningTime_Reader_Explain">Show timestamp server time in signature appearance.&#10;&#10;Default uses local clock. Requires bReqSigPropRetrieval=1 (HKCU). Verify time against iMaxClockSkew (default 65 min).&#10;&#10;Values:&#10;0 = hide timestamp&#10;1 = show timestamp</string>
       <string id="bAllowReasonWhenSigning_Reader">Signing Reason UI</string>
-      <string id="bAllowReasonWhenSigning_Reader_Explain">Specifies whether the reason UI will appear during signing.&#10;&#10;The preference can be overridden by a document seed value set on a field. For 8.1 and later, if cReasons is locked and is empty, bAllowSigningReasons is 0 and read only (The UI is turned off). If cReasons is locked and has values, then bAllowSigningReasons is true and read only.</string>
+      <string id="bAllowReasonWhenSigning_Reader_Explain">Controls whether the signing reason dialog appears during the signature workflow.&#10;&#10;Enabled writes 1 = reason UI shown. Disabled writes 0 = reason UI hidden. Document seed values on signature fields can override this setting. Interacts with cReasons and the bReasons lock policy.&#10;&#10;0 = reason dialog not shown during signing&#10;1 = reason dialog shown during signing</string>
       <string id="bEnableCertificateBasedTrust_Reader">Trust Certified Documents</string>
       <string id="bEnableCertificateBasedTrust_Reader_Explain">Trust certified documents as privileged locations (admin lock).&#10;&#10;Lockable counterpart to bTrustCertifiedDocuments. Does not apply in Protected View.&#10;&#10;Values:&#10;0 or null = not trusted&#10;1 = trusted</string>
       <string id="iUnknownURLPerms_Reader">Unknown URL Access Policy</string>
@@ -596,7 +596,7 @@
       <string id="iURLPerms_Reader_opt1">Block all websites</string>
       <string id="iURLPerms_Reader_opt2">Allow all websites</string>
       <string id="bValidateOnOpen_Reader">Validate Signatures on Open</string>
-      <string id="bValidateOnOpen_Reader_Explain">Specifies whether to automatically validate all signatures on document open.&#10;&#10;Note that the lockable setting does not configure the feature; instead, it locks what is set in HKCU and the user interface. 0: Don't validate signatures on document open. 1: Validate signatures on document open.</string>
+      <string id="bValidateOnOpen_Reader_Explain">Locks the signature validation on open setting and prevents users from changing it.&#10;&#10;This policy locks whatever value is currently in HKCU — it does not independently configure validation. Set the desired HKCU value before deploying this lock.&#10;&#10;Enabled writes 1 = validate on open (locked). Disabled writes 0 = do not validate on open (locked).&#10;&#10;0 = do not validate signatures on open&#10;1 = validate signatures on open</string>
 
       <!-- ======================================== -->
       <!--           Sharing and Features           -->
@@ -605,7 +605,7 @@
       <string id="bToggleAdobeSign_Reader">Adobe Acrobat Sign</string>
       <string id="bToggleAdobeSign_Reader_Explain">Adobe Acrobat Sign (Send for Signature).&#10;&#10;On Continuous track, also set bToggleManageSign.&#10;&#10;Values:&#10;0 = enabled&#10;1 = disabled</string>
       <string id="bToggleSendAndTrack_Reader">Adobe Send &amp; Track</string>
-      <string id="bToggleSendAndTrack_Reader_Explain">Disables Adobe Send and Track (some UI is renamed to &quot;Share&quot; since October, 2018)&#10;&#10;Possible values include:&#10;0: Enable Adobe Send and Track&#10;1: Disable Adobe Send and Track</string>
+      <string id="bToggleSendAndTrack_Reader_Explain">Controls whether Adobe Send and Track is available in the application.&#10;&#10;Enabled writes 0 = Send and Track on. Disabled writes 1 = Send and Track off. Uses cServices semantics: 0 enables the service, 1 disables it.&#10;&#10;0 = Send and Track enabled&#10;1 = Send and Track disabled</string>
       <string id="bDisableSharePointFeatures_Reader">Disable SharePoint &amp; Office 365 Integration</string>
       <string id="bDisableSharePointFeatures_Reader_Explain">Disable SharePoint and Office 365 integration.&#10;&#10;Disables SharePoint detection, check-out prompt, and SharePoint menu items.&#10;&#10;Values:&#10;0 or null = enabled&#10;1 = disabled</string>
       <string id="bDisableWebmail_Reader">Disable WebMail Integration</string>
@@ -617,17 +617,17 @@
       <string id="bMixRecentFilesFeatureLockDown_Reader">Hide Shared Files from Recent List</string>
       <string id="bMixRecentFilesFeatureLockDown_Reader_Explain">Show shared files in the Recent list.&#10;&#10;Covers shares, reviews, signing, and Send and Track workflows.&#10;&#10;Values:&#10;0 = add to Recent&#10;1 = do not add</string>
       <string id="bToggleFSSSignatureSaving_Reader">Save Signature to Cloud</string>
-      <string id="bToggleFSSSignatureSaving_Reader_Explain">Specifies whether to save a newly created signature in the cloud.&#10;&#10;When a user creates a new signature, the dialog offers the option to store the signature in the cloud for later use. This preference also controls saving user initials.&#10;&#10;Possible values include:&#10;0: Show the Save Signature UI&#10;1: Hide the Save Signature UI</string>
+      <string id="bToggleFSSSignatureSaving_Reader_Explain">Controls whether the option to save a newly created signature to the cloud is shown. Also applies to user initials.&#10;&#10;Enabled writes 0 = save-to-cloud UI shown (cServices: 0 enables the feature). Disabled writes 1 = save-to-cloud UI hidden.&#10;&#10;0 = save signature to cloud UI shown&#10;1 = save signature to cloud UI hidden</string>
       <string id="bAdobeSendPluginToggle_Reader">Send &amp; Track Outlook Plugin</string>
       <string id="bAdobeSendPluginToggle_Reader_Explain">Adobe Send and Track button in Outlook.&#10;&#10;Uploads attachments to Document Cloud and inserts public preview/download links in email.&#10;&#10;Values:&#10;0 = enabled&#10;1 = disabled</string>
       <string id="bPreviouslyEnabledSharePointInChromeExtn_Reader">SharePoint Chrome Extension Previous State</string>
-      <string id="bPreviouslyEnabledSharePointInChromeExtn_Reader_Explain">Stores the previous state of the SharePoint FeatureLockDown settings.&#10;&#10;Possible values include: Same as bEnableSharePointInChromeExtn in FeatureLockDown.</string>
+      <string id="bPreviouslyEnabledSharePointInChromeExtn_Reader_Explain">Tracks the prior state of the bEnableSharePointInChromeExtn setting. Used internally by the application; not intended as a primary admin control.&#10;&#10;Enabled writes 1 = SharePoint was previously enabled. Disabled writes 0 = SharePoint was not previously enabled.</string>
       <string id="bEnableSharePointInChromeExtn_Reader">SharePoint in Chrome Extension</string>
-      <string id="bEnableSharePointInChromeExtn_Reader_Explain">Specifies whether to integrate SharePoint into the Acrobat's Chrome extension.&#10;&#10;Possible values include:&#10;0: Don't enable SharePoint integration&#10;1: Enable</string>
+      <string id="bEnableSharePointInChromeExtn_Reader_Explain">Controls whether SharePoint integration is active in the Acrobat Chrome browser extension.&#10;&#10;Enabled writes 1 = SharePoint integration on. Disabled writes 0 = SharePoint integration off.&#10;&#10;0 = SharePoint integration disabled&#10;1 = SharePoint integration enabled in Chrome extension</string>
       <string id="bToggleManageSign_Reader">Show Acrobat Sign Tracking Tab</string>
       <string id="bToggleManageSign_Reader_Explain">Signature tab on Home, notifications, and sign tracking.&#10;&#10;Hides agreements, notifications, and To Do sign cards when disabled.&#10;&#10;Values:&#10;0 = show&#10;1 = hide</string>
       <string id="bDisableOnBehalfOfText_Reader">Show Comment Author in Shared Review</string>
-      <string id="bDisableOnBehalfOfText_Reader_Explain">If false, the string &quot;On behalf of&quot; does not append the author's name in the comment when another person opens the document in a shared-review workflow.&#10;&#10;This preference is only used in shared review workflows.&#10;&#10;Possible values include:&#10;0: Don't display the comment author's name&#10;1: Do display the comment author's name</string>
+      <string id="bDisableOnBehalfOfText_Reader_Explain">Controls whether the comment author's name appears as 'On behalf of [name]' in shared review comments.&#10;&#10;Enabled writes 1 = author name shown. Disabled writes 0 = author name not shown. Applies to shared review workflows only.&#10;&#10;0 = comment author name not displayed&#10;1 = 'On behalf of [name]' shown in shared review comments</string>
       <string id="iClientType_Gmail_Reader">WebMail Client Type (Gmail)</string>
       <string id="iClientType_Gmail_Reader_Explain">Identifies the Gmail Mail client type for WebMail.&#10;&#10;The value can only be: 1</string>
       <string id="iClientType_Gmail_Reader_opt0">Locked value: 1 (per Adobe PrefRef)</string>
@@ -737,56 +737,56 @@
       <!-- ======================================== -->
 
       <string id="ADC4275035_ClickEdit_AcrobatX64">Click-to-Edit Mode</string>
-      <string id="ADC4275035_ClickEdit_AcrobatX64_Explain">Auto-enter edit mode when the user clicks a PDF object.&#10;&#10;Clicking image or text opens edit tools; clicking a form field enables form authoring.&#10;&#10;Values:&#10;0 or null = disabled&#10;1 = enabled&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="ADC4275035_ClickEdit_AcrobatX64_Explain">Auto-enter edit mode when the user clicks a PDF object.&#10;&#10;Clicking image or text opens edit tools; clicking a form field enables form authoring.&#10;&#10;Values:&#10;0 or null = disabled&#10;1 = enabled</string>
       <string id="ADC4275034_AcrobatX64">Fill &amp; Sign Color Picker</string>
-      <string id="ADC4275034_AcrobatX64_Explain">Specifies whether to disable the color picker in the Fill and Sign tool.&#10;&#10;The color picker is only supported on the Continuous track.&#10;&#10;Possible values include:&#10;0: Disable the color picker&#10;1: Enable the color picker&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="ADC4275034_AcrobatX64_Explain">Specifies whether to disable the color picker in the Fill and Sign tool.&#10;&#10;The color picker is only supported on the Continuous track.&#10;&#10;Possible values include:&#10;0: Disable the color picker&#10;1: Enable the color picker</string>
       <string id="ProtectOldExperience_AcrobatX64">Legacy Protect Tool Menu</string>
-      <string id="ProtectOldExperience_AcrobatX64_Explain">Use legacy Protect tool menus instead of the new UI.&#10;&#10;Values:&#10;0 or null = new UI&#10;1 = pre-Oct 2019 menus&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="ProtectOldExperience_AcrobatX64_Explain">Use legacy Protect tool menus instead of the new UI.&#10;&#10;Values:&#10;0 or null = new UI&#10;1 = pre-Oct 2019 menus</string>
       <string id="ADC4302862_AcrobatX64">Paste in Place</string>
-      <string id="ADC4302862_AcrobatX64_Explain">Paste copied elements to the same location as the source.&#10;&#10;Applies to form fields, annotations, and links.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="ADC4302862_AcrobatX64_Explain">Paste copied elements to the same location as the source.&#10;&#10;Applies to form fields, annotations, and links.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
       <string id="ADC4275035_AcrobatX64">Remove Form Editing Tools (2019)</string>
-      <string id="ADC4275035_AcrobatX64_Explain">Remove Oct 2019 AddText and EditText form tools from the UI.&#10;&#10;Form editing moved into the Prepare Form toolbar.&#10;&#10;Values:&#10;0 or null = no change&#10;1 = remove AddText and EditText tools&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="ADC4275035_AcrobatX64_Explain">Remove Oct 2019 AddText and EditText form tools from the UI.&#10;&#10;Form editing moved into the Prepare Form toolbar.&#10;&#10;Values:&#10;0 or null = no change&#10;1 = remove AddText and EditText tools</string>
 
       <!-- ======================================== -->
       <!--   Documents, Editing and Accessibility   -->
       <!-- ======================================== -->
 
       <string id="BlockEMFParsing_AcrobatX64">Block EMF to PDF Conversion</string>
-      <string id="BlockEMFParsing_AcrobatX64_Explain">Block EMF to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, EMF-to-PDF conversion is blocked. When Disabled, conversion is allowed.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="BlockEMFParsing_AcrobatX64_Explain">Block EMF to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, EMF-to-PDF conversion is blocked. When Disabled, conversion is allowed.</string>
       <string id="BlockXPSParsing_AcrobatX64">Block XPS to PDF Conversion</string>
-      <string id="BlockXPSParsing_AcrobatX64_Explain">Block XPS to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, XPS-to-PDF conversion is blocked. When Disabled, conversion is allowed.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="BlockXPSParsing_AcrobatX64_Explain">Block XPS to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, XPS-to-PDF conversion is blocked. When Disabled, conversion is allowed.</string>
       <string id="DisableScannedDocumentEditing_AcrobatX64">Disable Scanned PDF Text Recognition</string>
-      <string id="DisableScannedDocumentEditing_AcrobatX64_Explain">Specifies whether to disable text recognition while editing scanned PDFs.&#10;&#10;Possible values include:&#10;0: Text recognition will be performed when invoking editing on scanned PDFs&#10;1: Text recognition will not be performed when invoking editing on scanned PDFs&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="DisableScannedDocumentEditing_AcrobatX64_Explain">Specifies whether to disable text recognition while editing scanned PDFs.&#10;&#10;Possible values include:&#10;0: Text recognition will be performed when invoking editing on scanned PDFs&#10;1: Text recognition will not be performed when invoking editing on scanned PDFs</string>
       <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX64">PDFMaker Grouped Image Tag Fix</string>
-      <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX64_Explain">Specifies whether to disable accessibility fixes for tagging grouped images.&#10;&#10;0: Disable. 1: Enable.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX64_Explain">Specifies whether to disable accessibility fixes for tagging grouped images.&#10;&#10;0: Disable. 1: Enable.</string>
       <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX64">PDFMaker Table Header Tag Fix</string>
-      <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX64_Explain">Specifies whether to disable accessibility fixes for tagging table headers.&#10;&#10;0: Disable. 1: Enable.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX64_Explain">Specifies whether to disable accessibility fixes for tagging table headers.&#10;&#10;0: Disable. 1: Enable.</string>
       <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX64">PDFMaker Text Path Tag Fix</string>
-      <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX64_Explain">Fix Text Path rendering bug in PDFMaker tags.&#10;&#10;Mitigates incorrect border/alt-text rendering from a 2020 bug. Enabled by default.&#10;&#10;Values:&#10;0 = disable correction&#10;1 = enable&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX64_Explain">Fix Text Path rendering bug in PDFMaker tags.&#10;&#10;Mitigates incorrect border/alt-text rendering from a 2020 bug. Enabled by default.&#10;&#10;Values:&#10;0 = disable correction&#10;1 = enable</string>
 
       <!-- ======================================== -->
       <!--    Security: Execution and Protection    -->
       <!-- ======================================== -->
 
       <string id="EnableFlashEditing_AcrobatX64">Flash Editing Tools</string>
-      <string id="EnableFlashEditing_AcrobatX64_Explain">Specifies whether to enable the Flash tools for adding annotations or Flash in the Rich Media app.&#10;&#10;Possible values include:&#10;0 or null: Remove &quot;Disable Flash ) Add SWF menu item.&quot;&#10;1: Show the menu item&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="EnableFlashEditing_AcrobatX64_Explain">Specifies whether to enable the Flash tools for adding annotations or Flash in the Rich Media app.&#10;&#10;Possible values include:&#10;0 or null: Remove &quot;Disable Flash ) Add SWF menu item.&quot;&#10;1: Show the menu item</string>
       <string id="bEnablePVSwitchoutShortcut_AcrobatX64">Protected View Exit Shortcut Key</string>
-      <string id="bEnablePVSwitchoutShortcut_AcrobatX64_Explain">Shortcut key to exit Protected View for the current document.&#10;&#10;Allows Protected View by default with on-demand exit.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="bEnablePVSwitchoutShortcut_AcrobatX64_Explain">Shortcut key to exit Protected View for the current document.&#10;&#10;Allows Protected View by default with on-demand exit.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
 
       <!-- ======================================== -->
       <!--     Updates and Desktop Integration      -->
       <!-- ======================================== -->
 
       <string id="EULA_AcrobatX64">Accept EULA for Updater</string>
-      <string id="EULA_AcrobatX64_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time.&#10;&#10;Values:&#10;0 = not accepted&#10;1 = accepted&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="EULA_AcrobatX64_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time.&#10;&#10;Values:&#10;0 = not accepted&#10;1 = accepted</string>
       <string id="DisableMaintenance_AcrobatX64">Disable Repair for All Users</string>
-      <string id="DisableMaintenance_AcrobatX64_Explain">Disable Help &gt; Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="DisableMaintenance_AcrobatX64_Explain">Disable Help &gt; Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.</string>
       <string id="Disable_Repair_AcrobatX64">Disable Repair for Standard Users</string>
-      <string id="Disable_Repair_AcrobatX64_Explain">Disable Help &gt; Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="Disable_Repair_AcrobatX64_Explain">Disable Help &gt; Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.</string>
       <string id="IsAMTEnforced_AcrobatX64">Enforce AMT for AppV Deployment</string>
-      <string id="IsAMTEnforced_AcrobatX64_Explain">Allows deployment of Acrobat on AppV for December, 2018 and later products.&#10;&#10;0: Do not use. 1: Required after December 2018 for Acrobat on AppV.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="IsAMTEnforced_AcrobatX64_Explain">Allows deployment of Acrobat on AppV for December, 2018 and later products.&#10;&#10;0: Do not use. 1: Required after December 2018 for Acrobat on AppV.</string>
       <string id="bMergeMenuBar_AcrobatX64">Merge Title and Menu Bar</string>
-      <string id="bMergeMenuBar_AcrobatX64_Explain">Specifies whether to merge the application's title bar and menu bar into a single bar.&#10;&#10;Note that &quot;Policies&quot; does not appear in the HKLM path.&#10;&#10;Possible values include:&#10;0: Don't merge the title and menu bars&#10;1: Merge the bars&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="bMergeMenuBar_AcrobatX64_Explain">Merges the application title bar and menu bar into a single combined bar.&#10;&#10;Enabled writes 1 = merged. Disabled writes 0 = separate bars.&#10;&#10;0 = separate title and menu bars&#10;1 = merged into one bar&#10;&#10;Registry: HKLM\SOFTWARE\Adobe\Adobe Acrobat\DC\FeatureLockDown</string>
       <string id="ARMLegacyMode_AcrobatX64">ARM Updater: Auto-Update Mode (Acrobat)</string>
       <string id="ARMLegacyMode_AcrobatX64_Explain">Controls the Adobe ARM service's automatic update mode for Acrobat (64-bit).&#10;&#10;FeatureLockDown\bUpdater takes precedence over this value — if bUpdater is set via policy, this key has no effect. Use this as a secondary lockdown for machines where the FeatureLockDown policy has not yet applied.&#10;&#10;Adobe ARM is a 32-bit service; this key is always under WOW6432Node regardless of product bitness.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-BC15014EA700}\Mode&#10;&#10;Values:&#10;0: Do not download or install updates automatically&#10;2: Download updates automatically; prompt user to install&#10;3: Download and install updates automatically&#10;4: Notify user of available updates; do not download</string>
       <string id="ARMLegacyCheck_AcrobatX64">ARM Updater: Disable Update Checks (Acrobat)</string>
@@ -811,72 +811,72 @@
       <!-- ======================================== -->
 
       <string id="ADC4275035_ClickEdit_AcrobatX86">Click-to-Edit Mode</string>
-      <string id="ADC4275035_ClickEdit_AcrobatX86_Explain">Auto-enter edit mode when the user clicks a PDF object.&#10;&#10;Clicking image or text opens edit tools; clicking a form field enables form authoring.&#10;&#10;Values:&#10;0 or null = disabled&#10;1 = enabled&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ADC4275035_ClickEdit_AcrobatX86_Explain">Auto-enter edit mode when the user clicks a PDF object.&#10;&#10;Clicking image or text opens edit tools; clicking a form field enables form authoring.&#10;&#10;Values:&#10;0 or null = disabled&#10;1 = enabled</string>
       <string id="ADC4275034_AcrobatX86">Fill &amp; Sign Color Picker</string>
-      <string id="ADC4275034_AcrobatX86_Explain">Specifies whether to disable the color picker in the Fill and Sign tool.&#10;&#10;The color picker is only supported on the Continuous track.&#10;&#10;Possible values include:&#10;0: Disable the color picker&#10;1: Enable the color picker&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ADC4275034_AcrobatX86_Explain">Specifies whether to disable the color picker in the Fill and Sign tool.&#10;&#10;The color picker is only supported on the Continuous track.&#10;&#10;Possible values include:&#10;0: Disable the color picker&#10;1: Enable the color picker</string>
       <string id="ProtectOldExperience_AcrobatX86">Legacy Protect Tool Menu</string>
-      <string id="ProtectOldExperience_AcrobatX86_Explain">Use legacy Protect tool menus instead of the new UI.&#10;&#10;Values:&#10;0 or null = new UI&#10;1 = pre-Oct 2019 menus&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ProtectOldExperience_AcrobatX86_Explain">Use legacy Protect tool menus instead of the new UI.&#10;&#10;Values:&#10;0 or null = new UI&#10;1 = pre-Oct 2019 menus</string>
       <string id="ADC4302862_AcrobatX86">Paste in Place</string>
-      <string id="ADC4302862_AcrobatX86_Explain">Paste copied elements to the same location as the source.&#10;&#10;Applies to form fields, annotations, and links.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ADC4302862_AcrobatX86_Explain">Paste copied elements to the same location as the source.&#10;&#10;Applies to form fields, annotations, and links.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
       <string id="ADC4275035_AcrobatX86">Remove Form Editing Tools (2019)</string>
-      <string id="ADC4275035_AcrobatX86_Explain">Remove Oct 2019 AddText and EditText form tools from the UI.&#10;&#10;Form editing moved into the Prepare Form toolbar.&#10;&#10;Values:&#10;0 or null = no change&#10;1 = remove AddText and EditText tools&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ADC4275035_AcrobatX86_Explain">Remove Oct 2019 AddText and EditText form tools from the UI.&#10;&#10;Form editing moved into the Prepare Form toolbar.&#10;&#10;Values:&#10;0 or null = no change&#10;1 = remove AddText and EditText tools</string>
 
       <!-- ======================================== -->
       <!--   Documents, Editing and Accessibility   -->
       <!-- ======================================== -->
 
       <string id="BlockEMFParsing_AcrobatX86">Block EMF to PDF Conversion</string>
-      <string id="BlockEMFParsing_AcrobatX86_Explain">Block EMF to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, EMF-to-PDF conversion is blocked. When Disabled, conversion is allowed.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="BlockEMFParsing_AcrobatX86_Explain">Block EMF to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, EMF-to-PDF conversion is blocked. When Disabled, conversion is allowed.</string>
       <string id="BlockXPSParsing_AcrobatX86">Block XPS to PDF Conversion</string>
-      <string id="BlockXPSParsing_AcrobatX86_Explain">Block XPS to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, XPS-to-PDF conversion is blocked. When Disabled, conversion is allowed.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="BlockXPSParsing_AcrobatX86_Explain">Block XPS to PDF conversion.&#10;&#10;Shows an unsupported dialog when blocked.&#10;&#10;Values:&#10;0 = allow&#10;1 = block&#10;&#10;When this policy is Enabled, XPS-to-PDF conversion is blocked. When Disabled, conversion is allowed.</string>
       <string id="DisableScannedDocumentEditing_AcrobatX86">Disable Scanned PDF Text Recognition</string>
-      <string id="DisableScannedDocumentEditing_AcrobatX86_Explain">Specifies whether to disable text recognition while editing scanned PDFs.&#10;&#10;Possible values include:&#10;0: Text recognition will be performed when invoking editing on scanned PDFs&#10;1: Text recognition will not be performed when invoking editing on scanned PDFs&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="DisableScannedDocumentEditing_AcrobatX86_Explain">Specifies whether to disable text recognition while editing scanned PDFs.&#10;&#10;Possible values include:&#10;0: Text recognition will be performed when invoking editing on scanned PDFs&#10;1: Text recognition will not be performed when invoking editing on scanned PDFs</string>
       <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX86">PDFMaker Grouped Image Tag Fix</string>
-      <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX86_Explain">Specifies whether to disable accessibility fixes for tagging grouped images.&#10;&#10;0: Disable. 1: Enable.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="EnablePDFMakerGroupImagesTagCorrectionFeature_AcrobatX86_Explain">Specifies whether to disable accessibility fixes for tagging grouped images.&#10;&#10;0: Disable. 1: Enable.</string>
       <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX86">PDFMaker Table Header Tag Fix</string>
-      <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX86_Explain">Specifies whether to disable accessibility fixes for tagging table headers.&#10;&#10;0: Disable. 1: Enable.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="EnablePDFMakerTableHeaderCellTagAndScopeUpdateFeature_AcrobatX86_Explain">Specifies whether to disable accessibility fixes for tagging table headers.&#10;&#10;0: Disable. 1: Enable.</string>
       <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX86">PDFMaker Text Path Tag Fix</string>
-      <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX86_Explain">Fix Text Path rendering bug in PDFMaker tags.&#10;&#10;Mitigates incorrect border/alt-text rendering from a 2020 bug. Enabled by default.&#10;&#10;Values:&#10;0 = disable correction&#10;1 = enable&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="EnablePDFMakerSplitTextPathElemsFeature_AcrobatX86_Explain">Fix Text Path rendering bug in PDFMaker tags.&#10;&#10;Mitigates incorrect border/alt-text rendering from a 2020 bug. Enabled by default.&#10;&#10;Values:&#10;0 = disable correction&#10;1 = enable</string>
 
       <!-- ======================================== -->
       <!--    Security: Execution and Protection    -->
       <!-- ======================================== -->
 
       <string id="EnableFlashEditing_AcrobatX86">Flash Editing Tools</string>
-      <string id="EnableFlashEditing_AcrobatX86_Explain">Specifies whether to enable the Flash tools for adding annotations or Flash in the Rich Media app.&#10;&#10;Possible values include:&#10;0 or null: Remove &quot;Disable Flash ) Add SWF menu item.&quot;&#10;1: Show the menu item&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="EnableFlashEditing_AcrobatX86_Explain">Specifies whether to enable the Flash tools for adding annotations or Flash in the Rich Media app.&#10;&#10;Possible values include:&#10;0 or null: Remove &quot;Disable Flash ) Add SWF menu item.&quot;&#10;1: Show the menu item</string>
       <string id="bEnablePVSwitchoutShortcut_AcrobatX86">Protected View Exit Shortcut Key</string>
-      <string id="bEnablePVSwitchoutShortcut_AcrobatX86_Explain">Shortcut key to exit Protected View for the current document.&#10;&#10;Allows Protected View by default with on-demand exit.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="bEnablePVSwitchoutShortcut_AcrobatX86_Explain">Shortcut key to exit Protected View for the current document.&#10;&#10;Allows Protected View by default with on-demand exit.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
 
       <!-- ======================================== -->
       <!--     Updates and Desktop Integration      -->
       <!-- ======================================== -->
 
       <string id="EULA_AcrobatX86">Accept EULA for Updater</string>
-      <string id="EULA_AcrobatX86_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time.&#10;&#10;Values:&#10;0 = not accepted&#10;1 = accepted&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="EULA_AcrobatX86_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time.&#10;&#10;Values:&#10;0 = not accepted&#10;1 = accepted</string>
       <string id="iDisablePromptForUpgrade_AcrobatX86">Disable Major Version Upgrade Prompt</string>
-      <string id="iDisablePromptForUpgrade_AcrobatX86_Explain">Suppress major-version upgrade prompt.&#10;&#10;Requires automatic update settings; if bUpdater=0, upgrades are also disabled.&#10;&#10;Values:&#10;0 or null = no effect&#10;1 = disable prompt&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...&#10;&#10;Adobe ARM is a 32-bit component; on 64-bit Windows this policy writes to HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\...</string>
+      <string id="iDisablePromptForUpgrade_AcrobatX86_Explain">Suppress major-version upgrade prompt.&#10;&#10;Requires automatic update settings; if bUpdater=0, upgrades are also disabled.&#10;&#10;Values:&#10;0 or null = no effect&#10;1 = disable prompt&#10;&#10;Adobe ARM is a 32-bit component; on 64-bit Windows this policy writes to HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\...</string>
       <string id="DisableMaintenance_AcrobatX86">Disable Repair for All Users</string>
-      <string id="DisableMaintenance_AcrobatX86_Explain">Disable Help &gt; Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="DisableMaintenance_AcrobatX86_Explain">Disable Help &gt; Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.</string>
       <string id="Disable_Repair_AcrobatX86">Disable Repair for Standard Users</string>
-      <string id="Disable_Repair_AcrobatX86_Explain">Disable Help &gt; Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="Disable_Repair_AcrobatX86_Explain">Disable Help &gt; Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.</string>
       <string id="IsAMTEnforced_AcrobatX86">Enforce AMT for AppV Deployment</string>
-      <string id="IsAMTEnforced_AcrobatX86_Explain">Allows deployment of Acrobat on AppV for December, 2018 and later products.&#10;&#10;0: Do not use. 1: Required after December 2018 for Acrobat on AppV.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="IsAMTEnforced_AcrobatX86_Explain">Allows deployment of Acrobat on AppV for December, 2018 and later products.&#10;&#10;0: Do not use. 1: Required after December 2018 for Acrobat on AppV.</string>
       <string id="bMergeMenuBar_AcrobatX86">Merge Title and Menu Bar</string>
-      <string id="bMergeMenuBar_AcrobatX86_Explain">Specifies whether to merge the application's title bar and menu bar into a single bar.&#10;&#10;Note that &quot;Policies&quot; does not appear in the HKLM path.&#10;&#10;Possible values include:&#10;0: Don't merge the title and menu bars&#10;1: Merge the bars&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="bMergeMenuBar_AcrobatX86_Explain">Merges the application title bar and menu bar into a single combined bar.&#10;&#10;Enabled writes 1 = merged. Disabled writes 0 = separate bars.&#10;&#10;0 = separate title and menu bars&#10;1 = merged into one bar&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureLockDown</string>
       <string id="iInterval_AcrobatX86">Update Watchdog Interval (Days)</string>
-      <string id="iInterval_AcrobatX86_Explain">Days before Watchdog prompts manual update after a failed update.&#10;&#10;Internal key; default 135 days after a successful manifest download.&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...&#10;&#10;Adobe ARM is a 32-bit component; on 64-bit Windows this policy writes to HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\...</string>
+      <string id="iInterval_AcrobatX86_Explain">Days before Watchdog prompts manual update after a failed update.&#10;&#10;Internal key; default 135 days after a successful manifest download.&#10;&#10;Adobe ARM is a 32-bit component; on 64-bit Windows this policy writes to HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\...</string>
       <string id="iInterval_AcrobatX86_opt0">90 days</string>
       <string id="iInterval_AcrobatX86_opt1">135 days (default)</string>
       <string id="iInterval_AcrobatX86_opt2">180 days</string>
       <string id="iInterval_AcrobatX86_opt3">365 days</string>
       <string id="iLogLevel_AcrobatX86">Updater Log Level</string>
-      <string id="iLogLevel_AcrobatX86_Explain">Updater log verbosity.&#10;&#10;Logs truncated at 1 MB (backed up as AdobeARM-backup). Path: %LOCALAPPDATA%\Temp\AdobeARM.log.&#10;&#10;Values:&#10;0 = brief&#10;1 = verbose&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...&#10;&#10;Adobe ARM is a 32-bit component; on 64-bit Windows this policy writes to HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\...</string>
+      <string id="iLogLevel_AcrobatX86_Explain">Updater log verbosity.&#10;&#10;Logs truncated at 1 MB (backed up as AdobeARM-backup). Path: %LOCALAPPDATA%\Temp\AdobeARM.log.&#10;&#10;Values:&#10;0 = brief&#10;1 = verbose&#10;&#10;Adobe ARM is a 32-bit component; on 64-bit Windows this policy writes to HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\...</string>
       <string id="iLogLevel_AcrobatX86_opt0">Brief</string>
       <string id="iLogLevel_AcrobatX86_opt1">Verbose</string>
       <string id="ARMLegacyMode_AcrobatX86">ARM Updater: Auto-Update Mode</string>
-      <string id="ARMLegacyMode_AcrobatX86_Explain">Controls the Adobe ARM service's automatic update mode for Acrobat (32-bit).&#10;&#10;FeatureLockDown\bUpdater takes precedence over this value — if bUpdater is set via policy, this key has no effect.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-0C0F074E4100}\Mode&#10;&#10;Values:&#10;0: Do not download or install updates automatically&#10;2: Download updates automatically; prompt user to install&#10;3: Download and install updates automatically&#10;4: Notify user of available updates; do not download&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ARMLegacyMode_AcrobatX86_Explain">Controls the Adobe ARM service's automatic update mode for Acrobat (32-bit).&#10;&#10;FeatureLockDown\bUpdater takes precedence over this value — if bUpdater is set via policy, this key has no effect.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-0C0F074E4100}\Mode&#10;&#10;Values:&#10;0: Do not download or install updates automatically&#10;2: Download updates automatically; prompt user to install&#10;3: Download and install updates automatically&#10;4: Notify user of available updates; do not download</string>
       <string id="ARMLegacyCheck_AcrobatX86">ARM Updater: Disable Update Checks</string>
-      <string id="ARMLegacyCheck_AcrobatX86_Explain">Suppresses update checks by the Adobe ARM service for Acrobat (32-bit). Enabled writes check = 0.&#10;&#10;FeatureLockDown\bUpdater takes precedence — use this as a secondary lockdown.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-0C0F074E4100}\check&#10;&#10;Values:&#10;0 = disable update checks&#10;1 = allow update checks&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ARMLegacyCheck_AcrobatX86_Explain">Suppresses update checks by the Adobe ARM service for Acrobat (32-bit). Enabled writes check = 0.&#10;&#10;FeatureLockDown\bUpdater takes precedence — use this as a secondary lockdown.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-0C0F074E4100}\check&#10;&#10;Values:&#10;0 = disable update checks&#10;1 = allow update checks</string>
       <!-- ======================================== -->
       <!--                                          -->
       <!-- Non-Policy Settings - Reader DC (32-bit) -->
@@ -888,42 +888,42 @@
       <!-- ======================================== -->
 
       <string id="ProtectOldExperience_ReaderX86">Legacy Protect Tool Menu</string>
-      <string id="ProtectOldExperience_ReaderX86_Explain">Use legacy Protect tool menus instead of the new UI.&#10;&#10;Values:&#10;0 or null = new UI&#10;1 = pre-Oct 2019 menus&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ProtectOldExperience_ReaderX86_Explain">Use legacy Protect tool menus instead of the new UI.&#10;&#10;Values:&#10;0 or null = new UI&#10;1 = pre-Oct 2019 menus</string>
       <string id="ADC4302862_ReaderX86">Paste in Place</string>
-      <string id="ADC4302862_ReaderX86_Explain">Paste copied elements to the same location as the source.&#10;&#10;Applies to form fields, annotations, and links.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ADC4302862_ReaderX86_Explain">Paste copied elements to the same location as the source.&#10;&#10;Applies to form fields, annotations, and links.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
 
       <!-- ======================================== -->
       <!--   Documents, Editing and Accessibility   -->
       <!-- ======================================== -->
 
       <string id="DisableScannedDocumentEditing_ReaderX86">Disable Scanned PDF Text Recognition</string>
-      <string id="DisableScannedDocumentEditing_ReaderX86_Explain">Specifies whether to disable text recognition while editing scanned PDFs.&#10;&#10;Possible values include:&#10;0: Text recognition will be performed when invoking editing on scanned PDFs&#10;1: Text recognition will not be performed when invoking editing on scanned PDFs&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="DisableScannedDocumentEditing_ReaderX86_Explain">Specifies whether to disable text recognition while editing scanned PDFs.&#10;&#10;Possible values include:&#10;0: Text recognition will be performed when invoking editing on scanned PDFs&#10;1: Text recognition will not be performed when invoking editing on scanned PDFs</string>
 
       <!-- ======================================== -->
       <!--    Security: Execution and Protection    -->
       <!-- ======================================== -->
 
       <string id="EnableFlashEditing_ReaderX86">Flash Editing Tools</string>
-      <string id="EnableFlashEditing_ReaderX86_Explain">Specifies whether to enable the Flash tools for adding annotations or Flash in the Rich Media app.&#10;&#10;Possible values include:&#10;0 or null: Remove &quot;Disable Flash ) Add SWF menu item.&quot;&#10;1: Show the menu item&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="EnableFlashEditing_ReaderX86_Explain">Specifies whether to enable the Flash tools for adding annotations or Flash in the Rich Media app.&#10;&#10;Possible values include:&#10;0 or null: Remove &quot;Disable Flash ) Add SWF menu item.&quot;&#10;1: Show the menu item</string>
       <string id="bEnablePVSwitchoutShortcut_ReaderX86">Protected View Exit Shortcut Key</string>
-      <string id="bEnablePVSwitchoutShortcut_ReaderX86_Explain">Shortcut key to exit Protected View for the current document.&#10;&#10;Allows Protected View by default with on-demand exit.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="bEnablePVSwitchoutShortcut_ReaderX86_Explain">Shortcut key to exit Protected View for the current document.&#10;&#10;Allows Protected View by default with on-demand exit.&#10;&#10;Values:&#10;0 = disabled&#10;1 = enabled</string>
 
       <!-- ======================================== -->
       <!--     Updates and Desktop Integration      -->
       <!-- ======================================== -->
 
       <string id="EULA_ReaderX86">Accept EULA for Updater</string>
-      <string id="EULA_ReaderX86_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time.&#10;&#10;Values:&#10;0 = not accepted&#10;1 = accepted&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="EULA_ReaderX86_Explain">Accept EULA for the built-in updater.&#10;&#10;Alternative to EULA_ACCEPT=YES at install time.&#10;&#10;Values:&#10;0 = not accepted&#10;1 = accepted</string>
       <string id="DisableMaintenance_ReaderX86">Disable Repair for All Users</string>
-      <string id="DisableMaintenance_ReaderX86_Explain">Disable Help &gt; Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="DisableMaintenance_ReaderX86_Explain">Disable Help &gt; Repair for all users.&#10;&#10;See Disable_Repair. Registry: HKLM\...\Installer.</string>
       <string id="Disable_Repair_ReaderX86">Disable Repair for Standard Users</string>
-      <string id="Disable_Repair_ReaderX86_Explain">Disable Help &gt; Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="Disable_Repair_ReaderX86_Explain">Disable Help &gt; Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.</string>
       <string id="bMergeMenuBar_ReaderX86">Merge Title and Menu Bar</string>
-      <string id="bMergeMenuBar_ReaderX86_Explain">Specifies whether to merge the application's title bar and menu bar into a single bar.&#10;&#10;Note that &quot;Policies&quot; does not appear in the HKLM path.&#10;&#10;Possible values include:&#10;0: Don't merge the title and menu bars&#10;1: Merge the bars&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="bMergeMenuBar_ReaderX86_Explain">Merges the application title bar and menu bar into a single combined bar.&#10;&#10;Enabled writes 1 = merged. Disabled writes 0 = separate bars.&#10;&#10;0 = separate title and menu bars&#10;1 = merged into one bar&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Acrobat Reader\DC\FeatureLockDown</string>
       <string id="ARMLegacyMode_ReaderX86">ARM Updater: Auto-Update Mode</string>
-      <string id="ARMLegacyMode_ReaderX86_Explain">Controls the Adobe ARM service's automatic update mode for Reader (32-bit).&#10;&#10;FeatureLockDown\bUpdater takes precedence over this value — if bUpdater is set via policy, this key has no effect.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-7AD7-1033-7B44-AC0F074E4100}\Mode&#10;&#10;Values:&#10;0: Do not download or install updates automatically&#10;2: Download updates automatically; prompt user to install&#10;3: Download and install updates automatically&#10;4: Notify user of available updates; do not download&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ARMLegacyMode_ReaderX86_Explain">Controls the Adobe ARM service's automatic update mode for Reader (32-bit).&#10;&#10;FeatureLockDown\bUpdater takes precedence over this value — if bUpdater is set via policy, this key has no effect.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-7AD7-1033-7B44-AC0F074E4100}\Mode&#10;&#10;Values:&#10;0: Do not download or install updates automatically&#10;2: Download updates automatically; prompt user to install&#10;3: Download and install updates automatically&#10;4: Notify user of available updates; do not download</string>
       <string id="ARMLegacyCheck_ReaderX86">ARM Updater: Disable Update Checks</string>
-      <string id="ARMLegacyCheck_ReaderX86_Explain">Suppresses update checks by the Adobe ARM service for Reader (32-bit). Enabled writes check = 0.&#10;&#10;FeatureLockDown\bUpdater takes precedence — use this as a secondary lockdown.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-7AD7-1033-7B44-AC0F074E4100}\check&#10;&#10;Values:&#10;0 = disable update checks&#10;1 = allow update checks&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ARMLegacyCheck_ReaderX86_Explain">Suppresses update checks by the Adobe ARM service for Reader (32-bit). Enabled writes check = 0.&#10;&#10;FeatureLockDown\bUpdater takes precedence — use this as a secondary lockdown.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-7AD7-1033-7B44-AC0F074E4100}\check&#10;&#10;Values:&#10;0 = disable update checks&#10;1 = allow update checks</string>
       <!-- ======================================== -->
       <!--                                          -->
       <!-- Adobe Acrobat DC (User) - policy strings -->
@@ -937,7 +937,7 @@
       <string id="tBaseFolderNameDC_User">Base Folder Name</string>
       <string id="tBaseFolderNameDC_User_Explain">An alias referring to a particular folder.&#10;&#10;The two standard values are &quot;install&quot; and &quot;user&quot;, which refer to the application-level Sequences folder and the user-level Sequences folders, respectively. The name can also refer to an administrator-specified folder.&#10;&#10;Possible values include: install user</string>
       <string id="iColumnSelectHaloDC_User">Column Select Halo</string>
-      <string id="iColumnSelectHaloDC_User_Explain">Adobe's preference reference does not describe this value; use the URL column for the documentation link.</string>
+      <string id="iColumnSelectHaloDC_User_Explain">Sets the pixel halo width used for column text selection.
       <string id="DisableSignInOfficeDC_User">Disable Sign in Office</string>
       <string id="DisableSignInOfficeDC_User_Explain">Specifies whether to install PDFMaker's Acrobat Sign integration component so that the sign user interface appears in Microsoft Office products.&#10;&#10;Possible values include:&#10;0: Enable the Office plugin&#10;1: Disable the plugin</string>
       <string id="EnableSignInOfficeDC_User">Enable Sign in Office</string>
@@ -947,7 +947,7 @@
       <string id="bAlwaysUseFileNameAsDocTitleDC_User">Filename as Title</string>
       <string id="bAlwaysUseFileNameAsDocTitleDC_User_Explain">Specifies whether to use the PDF file name as the display name in the application's title bar.&#10;&#10;PDF documents have an Initial View property that's set to &quot;Document Title&quot; by default. Enabling this preference overrides any document-level setting with the app-level setting.&#10;&#10;Possible values include:&#10;0: Don't use file names&#10;1: Use file names for the PDF title</string>
       <string id="bUseFixedSnapshotResolutionDC_User">Fixed Snapshot Resolution</string>
-      <string id="bUseFixedSnapshotResolutionDC_User_Explain">Adobe's preference reference does not describe this value; use the URL column for the documentation link.</string>
+      <string id="bUseFixedSnapshotResolutionDC_User_Explain">Use a fixed DPI for snapshot captures instead of the screen resolution; configure the resolution with iSnapshotResolution.
       <string id="ADC4318556DC_User">Flash Player for 3D</string>
       <string id="ADC4318556DC_User_Explain">Enables playing 3D and multimedia content using a Flash player in PDF.&#10;&#10;Since Flash is no longer supported, admins must install and configure the player.&#10;&#10;Possible values include:&#10;0 or null: Don't play content with a Flash player&#10;1: Use the Flash player</string>
       <string id="bHandSelectsDC_User">Hand Tool Select</string>
@@ -965,13 +965,13 @@
       <string id="bPromptBeforeClosingMultipleTabsDC_User">Prompt Close Tabs</string>
       <string id="bPromptBeforeClosingMultipleTabsDC_User_Explain">Specifies whether to warn the user before closing documents open in multiple tabs.&#10;&#10;The ability to open documents in separate tabs was introduced in October, 2015.&#10;&#10;Possible values include:&#10;0: Don't warn the user&#10;1: Warn the user</string>
       <string id="bImagesFirstDC_User">Select Images First</string>
-      <string id="bImagesFirstDC_User_Explain">Adobe's preference reference does not describe this value; use the URL column for the documentation link.</string>
+      <string id="bImagesFirstDC_User_Explain">Prioritize image selection over text when clicking in areas where both overlap.
       <string id="bInfobubbleDC_User">Show Tool Pane Tips</string>
       <string id="bInfobubbleDC_User_Explain">Specifies whether the popup tooltips for the Tools, Comments, and Share panes should appear.&#10;&#10;Possible values include:&#10;0: Disable popup tooltips&#10;1: Enable popup tooltips</string>
       <string id="bKeyPrefsShowVirtualKeyoardDC_User">Show Touch Keyboard</string>
       <string id="bKeyPrefsShowVirtualKeyoardDC_User_Explain">Specifies whether to show the touch keyboard if device is in touch or tablet mode on Win 8 and later.&#10;&#10;In general, the virtual keyboard should only appear on touch devices running Windows 8 and later where the user has detached a soft keyboard. The keyboard should appear when a user taps a text area such as a search box, comment popup, form field, and so on.&#10;&#10;Possible values include:</string>
       <string id="iSnapshotResolutionDC_User">Snapshot Resolution DPI</string>
-      <string id="iSnapshotResolutionDC_User_Explain">Adobe's preference reference does not describe this value; use the URL column for the documentation link.</string>
+      <string id="iSnapshotResolutionDC_User_Explain">Fixed DPI for snapshot captures when bUseFixedSnapshotResolution is enabled.
       <string id="ADC4406238DC_User">Suppress PDF/UA Dialog</string>
       <string id="ADC4406238DC_User_Explain">Specifies whether to suppress the confirmation dialog when the Acrobat preference Mark PDF/UA compliant is checked in Microsoft Word.&#10;&#10;Admins can disable the following dialog when converting a Microsoft Word document to PDF:&#10;&#10;Possible values include:&#10;0: Don't show the dialog&#10;1: Show the dialog</string>
       <string id="irightPaneStateDC_User">Tools Pane State</string>
@@ -1200,7 +1200,7 @@
       <string id="bUseLocalFontsDC_User">Use Local Fonts</string>
       <string id="bUseLocalFontsDC_User_Explain">Specifies whether to use local fonts.&#10;&#10;Possible values include:&#10;0: Don't use local fonts&#10;1: Do use local fonts</string>
       <string id="iEmailClientSelectionDC_User">XFA Email Client</string>
-      <string id="iEmailClientSelectionDC_User_Explain">Specifies the email client to use when submitting an XFA form.&#10;&#10;Adobe's preference reference does not describe this value; use the URL column for the documentation link.</string>
+      <string id="iEmailClientSelectionDC_User_Explain">Specifies the email client to use when submitting an XFA form via the email submit button.</string>
       <string id="iRXOPolicyDC_User">XObjects View Mode</string>
       <string id="iRXOPolicyDC_User_Explain">Sets XObject access to either Never (0), Always (1), or Only PDF/X-5 Compliant Ones (2).&#10;&#10;The user must also set cRXOLocation and (Windows only) specify a privileged location for each parent (referencing) document.&#10;&#10;Possible values include:&#10;0: Never&#10;1: Always&#10;2: Only PDF/X-5 Compliant Ones</string>
       <string id="iRXOPolicyDC_User_opt0">Never allow XObjects view mode</string>
@@ -1623,13 +1623,13 @@
       <string id="tBaseFolderName_User">Base Folder Name</string>
       <string id="tBaseFolderName_User_Explain">An alias referring to a particular folder.&#10;&#10;The two standard values are &quot;install&quot; and &quot;user&quot;, which refer to the application-level Sequences folder and the user-level Sequences folders, respectively. The name can also refer to an administrator-specified folder.&#10;&#10;Possible values include: install user</string>
       <string id="iColumnSelectHalo_User">Column Select Halo</string>
-      <string id="iColumnSelectHalo_User_Explain">Adobe's preference reference does not describe this value; use the URL column for the documentation link.</string>
+      <string id="iColumnSelectHalo_User_Explain">Sets the pixel halo width used for column text selection.
       <string id="tFileFormat_User">File Format Version</string>
       <string id="tFileFormat_User_Explain">The version number associated with the file format.&#10;&#10;The two valid values are &quot;11&quot; for an Acrobat 11-format .sequ file or &quot;pre-11&quot; for an Acrobat 10-or-earlier format .sequ file.&#10;&#10;Possible values include: Any valid version number.</string>
       <string id="bAlwaysUseFileNameAsDocTitle_User">Filename as Title</string>
       <string id="bAlwaysUseFileNameAsDocTitle_User_Explain">Specifies whether to use the PDF file name as the display name in the application's title bar.&#10;&#10;PDF documents have an Initial View property that's set to &quot;Document Title&quot; by default. Enabling this preference overrides any document-level setting with the app-level setting.&#10;&#10;Possible values include:&#10;0: Don't use file names&#10;1: Use file names for the PDF title</string>
       <string id="bUseFixedSnapshotResolution_User">Fixed Snapshot Resolution</string>
-      <string id="bUseFixedSnapshotResolution_User_Explain">Adobe's preference reference does not describe this value; use the URL column for the documentation link.</string>
+      <string id="bUseFixedSnapshotResolution_User_Explain">Use a fixed DPI for snapshot captures instead of the screen resolution; configure the resolution with iSnapshotResolution.
       <string id="ADC4318556_User">Flash Player for 3D</string>
       <string id="ADC4318556_User_Explain">Enables playing 3D and multimedia content using a Flash player in PDF.&#10;&#10;Since Flash is no longer supported, admins must install and configure the player.&#10;&#10;Possible values include:&#10;0 or null: Don't play content with a Flash player&#10;1: Use the Flash player</string>
       <string id="bHandSelects_User">Hand Tool Select</string>
@@ -1647,13 +1647,13 @@
       <string id="bPromptBeforeClosingMultipleTabs_User">Prompt Close Tabs</string>
       <string id="bPromptBeforeClosingMultipleTabs_User_Explain">Specifies whether to warn the user before closing documents open in multiple tabs.&#10;&#10;The ability to open documents in separate tabs was introduced in October, 2015.&#10;&#10;Possible values include:&#10;0: Don't warn the user&#10;1: Warn the user</string>
       <string id="bImagesFirst_User">Select Images First</string>
-      <string id="bImagesFirst_User_Explain">Adobe's preference reference does not describe this value; use the URL column for the documentation link.</string>
+      <string id="bImagesFirst_User_Explain">Prioritize image selection over text when clicking in areas where both overlap.
       <string id="bInfobubble_User">Show Tool Pane Tips</string>
       <string id="bInfobubble_User_Explain">Specifies whether the popup tooltips for the Tools, Comments, and Share panes should appear.&#10;&#10;Possible values include:&#10;0: Disable popup tooltips&#10;1: Enable popup tooltips</string>
       <string id="bKeyPrefsShowVirtualKeyoard_User">Show Touch Keyboard</string>
       <string id="bKeyPrefsShowVirtualKeyoard_User_Explain">Specifies whether to show the touch keyboard if device is in touch or tablet mode on Win 8 and later.&#10;&#10;In general, the virtual keyboard should only appear on touch devices running Windows 8 and later where the user has detached a soft keyboard. The keyboard should appear when a user taps a text area such as a search box, comment popup, form field, and so on.&#10;&#10;Possible values include:</string>
       <string id="iSnapshotResolution_User">Snapshot Resolution DPI</string>
-      <string id="iSnapshotResolution_User_Explain">Adobe's preference reference does not describe this value; use the URL column for the documentation link.</string>
+      <string id="iSnapshotResolution_User_Explain">Fixed DPI for snapshot captures when bUseFixedSnapshotResolution is enabled.
       <string id="irightPaneState_User">Tools Pane State</string>
       <string id="irightPaneState_User_Explain">Specifies whether to automatically open the Tools Pane on launch.&#10;&#10;Possible values include:&#10;0: Use the default&#10;1: Always closed&#10;2: Always open</string>
       <string id="irightPaneState_User_opt0">Use the default</string>
@@ -1874,7 +1874,7 @@
       <string id="bUseLocalFonts_User">Use Local Fonts</string>
       <string id="bUseLocalFonts_User_Explain">Specifies whether to use local fonts.&#10;&#10;Possible values include:&#10;0: Don't use local fonts&#10;1: Do use local fonts</string>
       <string id="iEmailClientSelection_User">XFA Email Client</string>
-      <string id="iEmailClientSelection_User_Explain">Specifies the email client to use when submitting an XFA form.&#10;&#10;Adobe's preference reference does not describe this value; use the URL column for the documentation link.</string>
+      <string id="iEmailClientSelection_User_Explain">Specifies the email client to use when submitting an XFA form via the email submit button.</string>
       <string id="iRXOPolicy_User">XObjects View Mode</string>
       <string id="iRXOPolicy_User_Explain">Sets XObject access to either Never (0), Always (1), or Only PDF/X-5 Compliant Ones (2).&#10;&#10;The user must also set cRXOLocation and (Windows only) specify a privileged location for each parent (referencing) document.&#10;&#10;Possible values include:&#10;0: Never&#10;1: Always&#10;2: Only PDF/X-5 Compliant Ones</string>
       <string id="iRXOPolicy_User_opt0">Never allow XObjects view mode</string>
