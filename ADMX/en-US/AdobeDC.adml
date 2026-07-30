@@ -787,6 +787,19 @@
       <string id="IsAMTEnforced_AcrobatX64_Explain">Allows deployment of Acrobat on AppV for December, 2018 and later products.&#10;&#10;0: Do not use. 1: Required after December 2018 for Acrobat on AppV.&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
       <string id="bMergeMenuBar_AcrobatX64">Merge Title and Menu Bar</string>
       <string id="bMergeMenuBar_AcrobatX64_Explain">Specifies whether to merge the application's title bar and menu bar into a single bar.&#10;&#10;Note that &quot;Policies&quot; does not appear in the HKLM path.&#10;&#10;Possible values include:&#10;0: Don't merge the title and menu bars&#10;1: Merge the bars&#10;&#10;This non-Policies setting applies to Acrobat and Reader DC (64-bit) installations and writes to the native 64-bit registry view.</string>
+      <string id="ARMLegacyMode_AcrobatX64">ARM Updater: Auto-Update Mode (Acrobat)</string>
+      <string id="ARMLegacyMode_AcrobatX64_Explain">Controls the Adobe ARM service's automatic update mode for Acrobat (64-bit).&#10;&#10;FeatureLockDown\bUpdater takes precedence over this value — if bUpdater is set via policy, this key has no effect. Use this as a secondary lockdown for machines where the FeatureLockDown policy has not yet applied.&#10;&#10;Adobe ARM is a 32-bit service; this key is always under WOW6432Node regardless of product bitness.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-BC15014EA700}\Mode&#10;&#10;Values:&#10;0: Do not download or install updates automatically&#10;2: Download updates automatically; prompt user to install&#10;3: Download and install updates automatically&#10;4: Notify user of available updates; do not download</string>
+      <string id="ARMLegacyCheck_AcrobatX64">ARM Updater: Disable Update Checks (Acrobat)</string>
+      <string id="ARMLegacyCheck_AcrobatX64_Explain">Suppresses update checks by the Adobe ARM service for Acrobat (64-bit). Enabled writes check = 0.&#10;&#10;FeatureLockDown\bUpdater takes precedence — use this as a secondary lockdown.&#10;&#10;Adobe ARM is a 32-bit service; this key is always under WOW6432Node regardless of product bitness.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-BC15014EA700}\check&#10;&#10;Values:&#10;0 = disable update checks&#10;1 = allow update checks</string>
+      <string id="ARMLegacyMode_ReaderX64">ARM Updater: Auto-Update Mode (Reader)</string>
+      <string id="ARMLegacyMode_ReaderX64_Explain">Controls the Adobe ARM service's automatic update mode for Reader (64-bit).&#10;&#10;FeatureLockDown\bUpdater takes precedence over this value — if bUpdater is set via policy, this key has no effect. Use this as a secondary lockdown for machines where the FeatureLockDown policy has not yet applied.&#10;&#10;Adobe ARM is a 32-bit service; this key is always under WOW6432Node regardless of product bitness.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-1033-FF00-7760-BC15014EA700}\Mode&#10;&#10;Values:&#10;0: Do not download or install updates automatically&#10;2: Download updates automatically; prompt user to install&#10;3: Download and install updates automatically&#10;4: Notify user of available updates; do not download</string>
+      <string id="ARMLegacyCheck_ReaderX64">ARM Updater: Disable Update Checks (Reader)</string>
+      <string id="ARMLegacyCheck_ReaderX64_Explain">Suppresses update checks by the Adobe ARM service for Reader (64-bit). Enabled writes check = 0.&#10;&#10;FeatureLockDown\bUpdater takes precedence — use this as a secondary lockdown.&#10;&#10;Adobe ARM is a 32-bit service; this key is always under WOW6432Node regardless of product bitness.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-1033-FF00-7760-BC15014EA700}\check&#10;&#10;Values:&#10;0 = disable update checks&#10;1 = allow update checks</string>
+      <!-- Shared ARM Legacy Mode enum option strings -->
+      <string id="ARMLegacyMode_opt0">Do not download or install updates automatically (0)</string>
+      <string id="ARMLegacyMode_opt2">Download updates automatically; prompt user to install (2)</string>
+      <string id="ARMLegacyMode_opt3">Download and install updates automatically (3)</string>
+      <string id="ARMLegacyMode_opt4">Notify user of available updates; do not download (4)</string>
       <!-- ========================================= -->
       <!--                                           -->
       <!-- Non-Policy Settings - Acrobat DC (32-bit) -->
@@ -860,6 +873,10 @@
       <string id="iLogLevel_AcrobatX86_Explain">Updater log verbosity.&#10;&#10;Logs truncated at 1 MB (backed up as AdobeARM-backup). Path: %LOCALAPPDATA%\Temp\AdobeARM.log.&#10;&#10;Values:&#10;0 = brief&#10;1 = verbose&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...&#10;&#10;Adobe ARM is a 32-bit component; on 64-bit Windows this policy writes to HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\...</string>
       <string id="iLogLevel_AcrobatX86_opt0">Brief</string>
       <string id="iLogLevel_AcrobatX86_opt1">Verbose</string>
+      <string id="ARMLegacyMode_AcrobatX86">ARM Updater: Auto-Update Mode</string>
+      <string id="ARMLegacyMode_AcrobatX86_Explain">Controls the Adobe ARM service's automatic update mode for Acrobat (32-bit).&#10;&#10;FeatureLockDown\bUpdater takes precedence over this value — if bUpdater is set via policy, this key has no effect.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-0C0F074E4100}\Mode&#10;&#10;Values:&#10;0: Do not download or install updates automatically&#10;2: Download updates automatically; prompt user to install&#10;3: Download and install updates automatically&#10;4: Notify user of available updates; do not download&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ARMLegacyCheck_AcrobatX86">ARM Updater: Disable Update Checks</string>
+      <string id="ARMLegacyCheck_AcrobatX86_Explain">Suppresses update checks by the Adobe ARM service for Acrobat (32-bit). Enabled writes check = 0.&#10;&#10;FeatureLockDown\bUpdater takes precedence — use this as a secondary lockdown.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-0C0F074E4100}\check&#10;&#10;Values:&#10;0 = disable update checks&#10;1 = allow update checks&#10;&#10;This non-Policies setting applies to 32-bit Acrobat DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
       <!-- ======================================== -->
       <!--                                          -->
       <!-- Non-Policy Settings - Reader DC (32-bit) -->
@@ -903,6 +920,10 @@
       <string id="Disable_Repair_ReaderX86_Explain">Disable Help &gt; Repair for standard users on virtual installs.&#10;&#10;Restricts repair to admins on Citrix/WT servers. See DisableMaintenance. Registry: HKLM\...\Installer.&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
       <string id="bMergeMenuBar_ReaderX86">Merge Title and Menu Bar</string>
       <string id="bMergeMenuBar_ReaderX86_Explain">Specifies whether to merge the application's title bar and menu bar into a single bar.&#10;&#10;Note that &quot;Policies&quot; does not appear in the HKLM path.&#10;&#10;Possible values include:&#10;0: Don't merge the title and menu bars&#10;1: Merge the bars&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ARMLegacyMode_ReaderX86">ARM Updater: Auto-Update Mode</string>
+      <string id="ARMLegacyMode_ReaderX86_Explain">Controls the Adobe ARM service's automatic update mode for Reader (32-bit).&#10;&#10;FeatureLockDown\bUpdater takes precedence over this value — if bUpdater is set via policy, this key has no effect.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-7AD7-1033-7B44-AC0F074E4100}\Mode&#10;&#10;Values:&#10;0: Do not download or install updates automatically&#10;2: Download updates automatically; prompt user to install&#10;3: Download and install updates automatically&#10;4: Notify user of available updates; do not download&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
+      <string id="ARMLegacyCheck_ReaderX86">ARM Updater: Disable Update Checks</string>
+      <string id="ARMLegacyCheck_ReaderX86_Explain">Suppresses update checks by the Adobe ARM service for Reader (32-bit). Enabled writes check = 0.&#10;&#10;FeatureLockDown\bUpdater takes precedence — use this as a secondary lockdown.&#10;&#10;Registry: HKLM\SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-7AD7-1033-7B44-AC0F074E4100}\check&#10;&#10;Values:&#10;0 = disable update checks&#10;1 = allow update checks&#10;&#10;This non-Policies setting applies to 32-bit Reader DC installations and writes to HKLM\SOFTWARE\WOW6432Node\...</string>
       <!-- ======================================== -->
       <!--                                          -->
       <!-- Adobe Acrobat DC (User) - policy strings -->
@@ -2338,6 +2359,18 @@
       </presentation>
       <presentation id="iLogLevel_AcrobatX86_enum">
         <dropdownList defaultItem="0" refId="iLogLevel_AcrobatX86_enum">Updater Log Level:</dropdownList>
+      </presentation>
+      <presentation id="ARMLegacyMode_AcrobatX64_enum">
+        <dropdownList defaultItem="0" refId="ARMLegacyMode_AcrobatX64_enum">ARM Auto-Update Mode:</dropdownList>
+      </presentation>
+      <presentation id="ARMLegacyMode_ReaderX64_enum">
+        <dropdownList defaultItem="0" refId="ARMLegacyMode_ReaderX64_enum">ARM Auto-Update Mode:</dropdownList>
+      </presentation>
+      <presentation id="ARMLegacyMode_AcrobatX86_enum">
+        <dropdownList defaultItem="0" refId="ARMLegacyMode_AcrobatX86_enum">ARM Auto-Update Mode:</dropdownList>
+      </presentation>
+      <presentation id="ARMLegacyMode_ReaderX86_enum">
+        <dropdownList defaultItem="0" refId="ARMLegacyMode_ReaderX86_enum">ARM Auto-Update Mode:</dropdownList>
       </presentation>
       <presentation id="tBaseFolderNameDC_User_text">
         <textBox refId="tBaseFolderNameDC_User_text"><label>Base folder name:</label></textBox>

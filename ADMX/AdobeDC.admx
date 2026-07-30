@@ -2954,6 +2954,54 @@
       <disabledValue><decimal value="0" /></disabledValue>
     </policy>
 
+    <!-- ARM Legacy - Auto-Update Mode (Acrobat x64) - [Mode] -->
+    <policy class="Machine" displayName="$(string.ARMLegacyMode_AcrobatX64)" explainText="$(string.ARMLegacyMode_AcrobatX64_Explain)" key="SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-BC15014EA700}"
+      name="ARMLegacyMode_AcrobatX64" valueName="Mode" presentation="$(presentation.ARMLegacyMode_AcrobatX64_enum)">
+      <parentCategory ref="UpdatesDesktop_AcrobatX64Category"/>
+      <supportedOn ref="SupportedAcrobatX64"/>
+      <elements>
+        <enum id="ARMLegacyMode_AcrobatX64_enum" valueName="Mode">
+          <item displayName="$(string.ARMLegacyMode_opt0)"><value><decimal value="0"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt2)"><value><decimal value="2"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt3)"><value><decimal value="3"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt4)"><value><decimal value="4"/></value></item>
+        </enum>
+      </elements>
+    </policy>
+
+    <!-- ARM Legacy - Disable Update Checks (Acrobat x64) - [check] -->
+    <policy class="Machine" displayName="$(string.ARMLegacyCheck_AcrobatX64)" explainText="$(string.ARMLegacyCheck_AcrobatX64_Explain)" key="SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-BC15014EA700}"
+      name="ARMLegacyCheck_AcrobatX64" valueName="check">
+      <parentCategory ref="UpdatesDesktop_AcrobatX64Category"/>
+      <supportedOn ref="SupportedAcrobatX64"/>
+      <enabledValue><decimal value="0" /></enabledValue>
+      <disabledValue><decimal value="1" /></disabledValue>
+    </policy>
+
+    <!-- ARM Legacy - Auto-Update Mode (Reader x64) - [Mode] -->
+    <policy class="Machine" displayName="$(string.ARMLegacyMode_ReaderX64)" explainText="$(string.ARMLegacyMode_ReaderX64_Explain)" key="SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-1033-FF00-7760-BC15014EA700}"
+      name="ARMLegacyMode_ReaderX64" valueName="Mode" presentation="$(presentation.ARMLegacyMode_ReaderX64_enum)">
+      <parentCategory ref="UpdatesDesktop_AcrobatX64Category"/>
+      <supportedOn ref="SupportedAcrobatX64"/>
+      <elements>
+        <enum id="ARMLegacyMode_ReaderX64_enum" valueName="Mode">
+          <item displayName="$(string.ARMLegacyMode_opt0)"><value><decimal value="0"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt2)"><value><decimal value="2"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt3)"><value><decimal value="3"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt4)"><value><decimal value="4"/></value></item>
+        </enum>
+      </elements>
+    </policy>
+
+    <!-- ARM Legacy - Disable Update Checks (Reader x64) - [check] -->
+    <policy class="Machine" displayName="$(string.ARMLegacyCheck_ReaderX64)" explainText="$(string.ARMLegacyCheck_ReaderX64_Explain)" key="SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-1033-FF00-7760-BC15014EA700}"
+      name="ARMLegacyCheck_ReaderX64" valueName="check">
+      <parentCategory ref="UpdatesDesktop_AcrobatX64Category"/>
+      <supportedOn ref="SupportedAcrobatX64"/>
+      <enabledValue><decimal value="0" /></enabledValue>
+      <disabledValue><decimal value="1" /></disabledValue>
+    </policy>
+
     <!-- ========================================= -->
     <!--                                           -->
     <!-- Non-Policy Settings - Acrobat DC (32-bit) -->
@@ -3187,6 +3235,30 @@
       </elements>
     </policy>
 
+    <!-- ARM Legacy - Auto-Update Mode (Acrobat x86) - [Mode] -->
+    <policy class="Machine" displayName="$(string.ARMLegacyMode_AcrobatX86)" explainText="$(string.ARMLegacyMode_AcrobatX86_Explain)" key="SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-0C0F074E4100}"
+      name="ARMLegacyMode_AcrobatX86" valueName="Mode" presentation="$(presentation.ARMLegacyMode_AcrobatX86_enum)">
+      <parentCategory ref="UpdatesDesktop_AcrobatX86Category"/>
+      <supportedOn ref="SupportedAcrobatX86"/>
+      <elements>
+        <enum id="ARMLegacyMode_AcrobatX86_enum" valueName="Mode">
+          <item displayName="$(string.ARMLegacyMode_opt0)"><value><decimal value="0"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt2)"><value><decimal value="2"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt3)"><value><decimal value="3"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt4)"><value><decimal value="4"/></value></item>
+        </enum>
+      </elements>
+    </policy>
+
+    <!-- ARM Legacy - Disable Update Checks (Acrobat x86) - [check] -->
+    <policy class="Machine" displayName="$(string.ARMLegacyCheck_AcrobatX86)" explainText="$(string.ARMLegacyCheck_AcrobatX86_Explain)" key="SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Acrobat\{AC76BA86-1033-FFFF-7760-0C0F074E4100}"
+      name="ARMLegacyCheck_AcrobatX86" valueName="check">
+      <parentCategory ref="UpdatesDesktop_AcrobatX86Category"/>
+      <supportedOn ref="SupportedAcrobatX86"/>
+      <enabledValue><decimal value="0" /></enabledValue>
+      <disabledValue><decimal value="1" /></disabledValue>
+    </policy>
+
     <!-- ======================================== -->
     <!--                                          -->
     <!-- Non-Policy Settings - Reader DC (32-bit) -->
@@ -3288,6 +3360,30 @@
       <supportedOn ref="SupportedReaderX86"/>
       <enabledValue><decimal value="1" /></enabledValue>
       <disabledValue><decimal value="0" /></disabledValue>
+    </policy>
+
+    <!-- ARM Legacy - Auto-Update Mode (Reader x86) - [Mode] -->
+    <policy class="Machine" displayName="$(string.ARMLegacyMode_ReaderX86)" explainText="$(string.ARMLegacyMode_ReaderX86_Explain)" key="SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-7AD7-1033-7B44-AC0F074E4100}"
+      name="ARMLegacyMode_ReaderX86" valueName="Mode" presentation="$(presentation.ARMLegacyMode_ReaderX86_enum)">
+      <parentCategory ref="UpdatesDesktop_ReaderX86Category"/>
+      <supportedOn ref="SupportedReaderX86"/>
+      <elements>
+        <enum id="ARMLegacyMode_ReaderX86_enum" valueName="Mode">
+          <item displayName="$(string.ARMLegacyMode_opt0)"><value><decimal value="0"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt2)"><value><decimal value="2"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt3)"><value><decimal value="3"/></value></item>
+          <item displayName="$(string.ARMLegacyMode_opt4)"><value><decimal value="4"/></value></item>
+        </enum>
+      </elements>
+    </policy>
+
+    <!-- ARM Legacy - Disable Update Checks (Reader x86) - [check] -->
+    <policy class="Machine" displayName="$(string.ARMLegacyCheck_ReaderX86)" explainText="$(string.ARMLegacyCheck_ReaderX86_Explain)" key="SOFTWARE\WOW6432Node\Adobe\Adobe ARM\Legacy\Reader\{AC76BA86-7AD7-1033-7B44-AC0F074E4100}"
+      name="ARMLegacyCheck_ReaderX86" valueName="check">
+      <parentCategory ref="UpdatesDesktop_ReaderX86Category"/>
+      <supportedOn ref="SupportedReaderX86"/>
+      <enabledValue><decimal value="0" /></enabledValue>
+      <disabledValue><decimal value="1" /></disabledValue>
     </policy>
 
     <!-- ======================================== -->
