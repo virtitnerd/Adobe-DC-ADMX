@@ -79,6 +79,7 @@ Complete list of 124 Reader DC policies in the combined v3.5 ADMX templates, sor
 | Flash Content in PDFs | ``bEnableFlash`` | Render Flash content in PDFs. |
 | Flash Editing Tools | ``EnableFlashEditing`` | Enable the Flash tools for adding annotations or Flash in the Rich Media app. |
 | Protected Mode Sandbox | ``bProtectedMode`` | Enables Protected Mode which sandboxes Acrobat and Reader processes. |
+| Protected View Mode | ``iProtectedView`` | Protected View mode scope: disabled, unsafe locations only, or all files. |
 | Protected Mode Whitelist Config | ``bUseWhitelistConfigFile`` | Allows the use of the policy whitelist to allow behavior that Protected Mode would otherwise prevent. |
 | Protected View Exit Shortcut Key | ``bEnablePVSwitchoutShortcut`` | Shortcut key to exit Protected View for the current document. |
 | Unlisted Attachment Type Permissions | ``iUnlistedAttachmentTypePerm`` | Specifies the default permissions for file types that aren't listed in the default or user-specified lists. |
@@ -121,7 +122,6 @@ Complete list of 124 Reader DC policies in the combined v3.5 ADMX templates, sor
 | Hide Shared Files from Recent List | ``bMixRecentFilesFeatureLockDown`` | Show shared files in the Recent list. |
 | Save Signature to Cloud | ``bToggleFSSSignatureSaving`` | Save a newly created signature in the cloud. |
 | Send & Track Outlook Plugin | ``bAdobeSendPluginToggle`` | Adobe Send and Track button in Outlook. |
-| SharePoint Chrome Extension Previous State | ``bPreviouslyEnabledSharePointInChromeExtn`` | Stores the previous state of the SharePoint FeatureLockDown settings. |
 | SharePoint in Chrome Extension | ``bEnableSharePointInChromeExtn`` | Integrate SharePoint into the Acrobat's Chrome extension. |
 | Show Acrobat Sign Tracking Tab | ``bToggleManageSign`` | Signature tab on Home, notifications, and sign tracking. |
 | Show Comment Author in Shared Review | ``bDisableOnBehalfOfText`` | If false, the string "On behalf of" does not append the author's name in the comment when another person opens the document in a shared-review workflow. |
@@ -177,6 +177,7 @@ Complete list of 124 Reader DC policies in the combined v3.5 ADMX templates, sor
 
 | ![FriendlyName](https://img.shields.io/badge/FriendlyName-316dca?style=flat-square) | ![ValueName](https://img.shields.io/badge/ValueName-316dca?style=flat-square) | ![Summary](https://img.shields.io/badge/Summary-316dca?style=flat-square) |
 |---|---|---|
+| Disable Promotional Campaign Messages | ``bToggleSophiaWebInfra`` | Show users messages which promote (Trials, Acrobat, PDF Pack etc.) |
 | Limit Informational Prompts | ``bLimitPromptsFeatureKey`` | Limit the number of prompts a user will see in a 24 hour period. |
 | Prompt Reader Users to Download Acrobat | ``bReaderRetentionExperiment`` | Prompt Acrobat subscribers using Reader to download Acrobat. |
 | Show App Center UI | ``bToggleDCAppCenter`` | App Center and get-apps banner on Home. |

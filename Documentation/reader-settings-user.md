@@ -55,16 +55,13 @@ Complete list of 254 Reader DC policies in the combined v3.5 ADMX templates, sor
 | Comment Author | ``tauthor`` | The author name specified by balwaysUseIdent. |
 | Comment Font Name | ``tNoteFontName`` | Sets the comment font name for the viewer. |
 | Comment Font Size | ``dNoteFontSize`` | Sets the font size. |
-| Comment Opacity | ``iNoteOpacity`` | The opacity in percent of all comments. |
 | Complex Script Support | ``bComplexScript`` | Enable support for writing direction switching (complex script). |
 | Confirm Review Import | ``bconfirmEBRMerge`` | Displays an alert on document open asking the user to confirm importing comments into an active review. |
 | Copy Text to Drawing | ``bcopyTextToDrawAnnot`` | Copy the encircled text into drawing comment popups. |
 | Copy Text to Markup | ``bcopyTextToMarkupAnnot`` | Copies the selected text into highlight, cross-out, and underline comment popups. |
 | Create Report | ``bCreateLog`` | Toggles whether to create an accessibility report when running an accessibility full check. |
-| Default Dictionary | ``iDictionaryDefaultID`` | Identifies the default spelling dictionary ID. |
 | Default Page Layout | ``iPageViewLayoutMode`` | Specifies the default page layout when a PDF opens. |
 | Default Paragraph Dir | ``iParaDir`` | Specifies the paragraph direction. |
-| Default Zoom Scale | ``iDefaultZoomScale`` | Specifies the zoom scale % to use when a PDF opens. |
 | Default Zoom Type | ``iDefaultZoomType`` | Specifies the default zoom type (other than a %) to use when a PDF opens. |
 | Dictionary Name | ``tDictionaryName`` | Identifies the default spelling dictionary name. |
 | Embedded Comment Limit | ``imaxPDFCommentsSize`` | Sets the comment threshold size for determining whether comments are embedded or sent as FDF files. |
@@ -85,7 +82,6 @@ Complete list of 254 Reader DC policies in the combined v3.5 ADMX templates, sor
 | Override Line Art Colors | ``bOverrideLineArtColors`` | Limits color changes to black text and line art when iAccessColorPolicy is enabled and a replacement color has been specified. |
 | Override Page Layout | ``iPageLayout`` | Specifies the user selected page layout override. |
 | Override Zoom | ``bOverrideZoom`` | Let users set a default zoom for all documents. |
-| Override Zoom Scale | ``iZoomScale`` | Zoom percentage when iZoomType is a percent value. |
 | Override Zoom Type | ``iZoomType`` | Specifies the zoom scale for all other documents other than a % scale and overrides Page Display settings. |
 | Paragraph Direction | ``iParagraphDirection`` | Specifies the paragraph direction. |
 | Popup When Selected | ``bPopupsOpenIffSelected`` | Open a popup when it is selected. |
@@ -119,7 +115,6 @@ Complete list of 254 Reader DC policies in the combined v3.5 ADMX templates, sor
 | Store Numeric Entries | ``bStoreNumericEntries`` | Store user entered numeric values. |
 | Structure Tab Order | ``bUseStructTabOrder`` | Use the PDF document structure for determining the tab order. |
 | System Selection Color | ``bUseSystemSelectionColor`` | Specifies whether the default selection color (blue) is overridden with a color that the system specifies. |
-| Text Color | ``iAccessTextColor`` | Specifies the default document text color (accessibility feature) |
 | Use Local Fonts | ``bUseLocalFonts`` | Use local fonts. |
 | XFA Email Client | ``iEmailClientSelection`` | Specifies the email client to use when submitting an XFA form. |
 | XObjects View Mode | ``iRXOPolicy`` | Sets XObject access to either Never (0), Always (1), or Only PDF/X-5 Compliant Ones (2). |

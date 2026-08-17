@@ -25,6 +25,9 @@ Complete list of 170 Acrobat DC policies in the combined v3.5 ADMX templates, so
 | Preferences Synchronization | ``bTogglePrefsSync`` | Sync desktop preferences across signed-in devices. |
 | Services & Web-Plugin Updates | ``bUpdater`` | Web-plugin updates and cloud services. |
 | Third-Party Cloud Connectors | ``bToggleWebConnectors`` | Third-party cloud storage connectors (Continuous track). |
+| External Browser Sign-In | ``iAcroLoginType`` | Forces Acrobat to use the system browser for sign-in instead of the embedded CEF browser. Workaround 1 for Azure AD Conditional Access failures. |
+| Federated Login Domain | ``login_domain`` | Specifies the organization domain for federated (SSO) sign-in under NGL AuthInfo. |
+| Legacy Sign-In Engine | ``iNGLCEFWorkflowEnabled`` | Disables the NGL CEF sign-in workflow and falls back to the legacy authentication engine. |
 
 ## Context, Tools & Search
 
@@ -154,7 +157,6 @@ Complete list of 170 Acrobat DC policies in the combined v3.5 ADMX templates, so
 | Save Signature to Cloud | ``bToggleFSSSignatureSaving`` | Save a newly created signature in the cloud. |
 | Send & Track Outlook Plugin | ``bAdobeSendPluginToggle`` | Adobe Send and Track button in Outlook. |
 | Share and Review Reminder Tip | ``bEnableReviewPromote`` | Display a Share/Review feature reminder message when users have used those features in the past. |
-| SharePoint Chrome Extension Previous State | ``bPreviouslyEnabledSharePointInChromeExtn`` | Stores the previous state of the SharePoint FeatureLockDown settings. |
 | SharePoint in Chrome Extension | ``bEnableSharePointInChromeExtn`` | Integrate SharePoint into the Acrobat's Chrome extension. |
 | Show Acrobat Sign Tracking Tab | ``bToggleManageSign`` | Signature tab on Home, notifications, and sign tracking. |
 | Show Comment Author in Shared Review | ``bDisableOnBehalfOfText`` | If false, the string "On behalf of" does not append the author's name in the comment when another person opens the document in a shared-review workflow. |

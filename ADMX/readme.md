@@ -4,37 +4,25 @@
 
 # AdobeDC ADMX - Combined Machine + User
 
-**Current version: v3.5** (22 July 2026). Full version history: [Changelog (Combined)](../Documentation/changelog.md).
+**Current version: v3.5** (22 July 2026). Full version history: [GitHub Releases](https://github.com/virtitnerd/Adobe-DC-ADMX/releases).
 
 **Current production release.** Supersedes the separate machine template (v2.21) and user template ([Adobe-DC-User-ADMX v1.10](https://github.com/systmworks/Adobe-DC-User-ADMX)) for new Group Policy and Intune deployments.
 
 > [!IMPORTANT]
-> **Stable upgrade path (v3.4+).** From v3.4 onward, releases are **additive-only** except where a changelog entry documents a one-time control-type correction. Re-uploading `AdobeDC.admx` + ADML preserves existing Intune/GPO bindings for all other settings. Deleting the imported ADMX in Intune before re-upload is still required (platform limitation for custom ADMX). The frozen policy set is recorded in `Documentation/data/policy-baseline.json`.
-
-> [!NOTE]
-> **Upgrading from combined v3.4 to v3.5** keeps the same namespace and policy `name` attributes for all v3.4 settings. Re-upload `AdobeDC.admx` + ADML. **2** settings change control type and require one-time re-selection: **`tauthor`** (User, Toggle -> Text) and **`iLogLevel`** (Device, Toggle -> Enum). All other bindings are preserved. See [v3.5 changelog](../Documentation/changelog.md#v35---22-july-2026).
+> **Stable upgrade path (v3.4+).** From v3.4 onward, releases are **additive-only** except where a release note documents a one-time control-type correction. Re-uploading `AdobeDC.admx` + ADML preserves existing Intune/GPO bindings for all other settings. Deleting the imported ADMX in Intune before re-upload is still required (platform limitation for custom ADMX).
 
 > [!WARNING]
 > **Breaking change when migrating from v2.x or User ADMX v1.x.** Combined v3.0+ uses namespace `Adobe.Policies.AdobeDC` and a re-organised policy tree. **Intune ADMX policy backups / exports taken against v2.x (or the separate User ADMX v1.x) will not import** - the `definitionId` GUIDs and category paths no longer match. To migrate an existing v2.x export, run [`Helper_Scripts/Convert-AdobeDcIntuneExportToCombinedV3.ps1`](../Helper_Scripts/Convert-AdobeDcIntuneExportToCombinedV3.ps1) to convert it to the combined layout before re-importing. See [Migrating from v2.21 + User v1.10](#migrating-from-v221--user-v110).
 
 > [!NOTE]
-> **Upgrading from combined v3.3 to v3.4** keeps the same namespace and policy `name` attributes for all v3.3 settings. Re-upload `AdobeDC.admx` + ADML. This was the **final classification pass**: **2** user toggles become enum dropdowns (`iAccessColorPolicy`, `iPageLayout`), and **17** unique user text prefs were added (**30** new ADMX entries across Acrobat+Reader) - re-select only those affected settings. See [v3.4 changelog](../Documentation/changelog.md#v34---20-july-2026).
-
-> [!NOTE]
-> **Upgrading from combined v3.2 to v3.3** keeps the same namespace and policy `name` attributes. Re-upload `AdobeDC.admx` + ADML. **5** new user text policies, enum/numeric control fixes, and **8** app-internal toggles removed - re-select affected User settings in Intune/GPO after re-upload. See [v3.3 changelog](../Documentation/changelog.md#v33---20-july-2026).
-
-> [!NOTE]
-> **Upgrading from combined v3.1 to v3.2** keeps the same namespace and policy `name` attributes. Re-upload `AdobeDC.admx` + ADML. **40 user-scope policies** change from toggles to enum dropdowns or numeric spinners - re-select those settings in Intune/GPO after re-upload. **Built-in Attachment Permissions List** (`tBuiltInPermList`) is **removed** (REG_BINARY; ADMX cannot author it). See [v3.2 changelog](../Documentation/changelog.md#v32---20-july-2026).
-
-> [!NOTE]
-> **Upgrading from combined v3.0 to v3.1** is not import-breaking (same namespace and policy `name` attributes). Re-upload `AdobeDC.admx` + ADML. The v3.1 release corrects **Usage Measurement (legacy)** (`bUsageMeasurement`) polarity - see [v3.1 changelog](../Documentation/changelog.md#v31---20-july-2026).
+> **Upgrading from any combined v3.x release** keeps the same namespace and policy `name` attributes for all settings present in that version. Re-upload `AdobeDC.admx` + ADML. Check the [release notes](https://github.com/virtitnerd/Adobe-DC-ADMX/releases) for the target version to identify any control-type corrections that require one-time re-selection in Intune/GPO.
 
 ## What is in the combined template
 
 | Area | Detail |
 |------|--------|
 | **Packaging** | Single `AdobeDC.admx`/ADML pair for **Computer + User** configuration under one namespace |
-| **Policy inventory** | **834** policies — **316** machine + **525** user (ADMX `<policy>` entries; see note below) |
+| **Policy inventory** | **834** policies — **319** machine + **515** user (ADMX `<policy>` entries; see note below) |
 | **Namespace** | `Adobe.Policies.AdobeDC` (replaces separate `Adobe.Policies.Adobe_User` user namespace) |
 | **Computer tree** | **Adobe DC** → **Acrobat & Reader DC** / **Reader DC (32-bit)** / **Non-Policy Settings** / **Web Browser Extension** |
 | **User tree** | **Adobe DC** → **Acrobat DC** / **Reader DC** |
@@ -69,7 +57,7 @@ If you migrated Intune exports from v2.19, Reader-only x64 upsell settings alrea
 |------|-------|----------|
 | `AdobeDC.admx` + `en-US/AdobeDC.adml` | Machine + User | **834** (319 machine + 515 user) |
 
-*319 machine = ADMX policy entries (includes 12 Web Browser Extension policies, 2 Machine-scope URL Access Permissions policies, 8 ARM Legacy updater policies, and 5 Azure AD/federated sign-in + Reader Protected View + Reader promotional campaign policies); 155 unique machine settings from Adobe PrefRef; product-scoped reference tables total 124 Reader + 170 Acrobat.*
+*319 machine = ADMX policy entries (includes 12 Web Browser Extension policies, 2 Machine-scope URL Access Permissions policies, 8 ARM Legacy updater policies, and 5 Azure AD/federated sign-in + Reader Protected View + Reader promotional campaign policies); 155 unique machine settings from Adobe PrefRef; product-scoped reference tables total 125 Reader + 172 Acrobat.*
 
 Published policy reference tables: [Documentation](../README.md).
 
@@ -88,13 +76,13 @@ Published policy reference tables: [Documentation](../README.md).
 2. Wait 2-5 minutes after deletion.
 3. Upload `AdobeDC.admx` and `en-US/AdobeDC.adml` together.
 4. Assign machine settings to a **device group**; assign user settings to a **user group** (or combine both in one profile - scope is determined by each policy's `class` attribute).
-5. After upgrading to v3.4, re-select **User** policies that changed in the final classification pass (`iAccessColorPolicy`, `iPageLayout`, and any newly added text policies - see [v3.4 changelog](../Documentation/changelog.md#v34---20-july-2026)). After upgrading to v3.3, re-select User policies that changed (new text policies, enum/numeric fixes, removed app-internal toggles - see [v3.3 changelog](../Documentation/changelog.md#v33---20-july-2026)). After upgrading to v3.2, re-select toggle->enum/numeric User policies (see [v3.2 changelog](../Documentation/changelog.md#v32---20-july-2026)). After upgrading from v3.0 to v3.1, re-verify **Usage Measurement (legacy)** if configured - **Disabled** now correctly writes telemetry **off** (DWORD 0).
+5. After upgrading, re-select any settings whose control type changed in that release. See the [release notes](https://github.com/virtitnerd/Adobe-DC-ADMX/releases) for the target version for the specific list.
 
 ## Group Policy
 
 Copy `AdobeDC.admx` to `%SystemRoot%\PolicyDefinitions` and `AdobeDC.adml` to `%SystemRoot%\PolicyDefinitions\en-US`, then run `gpupdate /force`. Machine policies appear under **Computer Configuration**; user policies under **User Configuration**.
 
-Earlier release history: [Changelog (Combined)](../Documentation/changelog.md) - legacy per-scope logs [Device](../Documentation/changelog-device-retired.md) - [User](../Documentation/changelog-user-retired.md).
+Full release history: [GitHub Releases](https://github.com/virtitnerd/Adobe-DC-ADMX/releases).
 
 ---
 
