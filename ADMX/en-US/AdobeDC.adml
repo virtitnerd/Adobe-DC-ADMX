@@ -92,6 +92,14 @@
       <string id="bUpdater_Updates_Acrobat_Explain">Web-plugin updates and cloud services.&#10;&#10;Disables all services including sign-in. Not the same as FeatureLockDown\bUpdater (product updates).&#10;&#10;Values:&#10;0 = disable services and component updates&#10;1 = enable</string>
       <string id="bToggleWebConnectors_Acrobat">Third-Party Cloud Connectors</string>
       <string id="bToggleWebConnectors_Acrobat_Explain">Third-party cloud storage connectors (Continuous track).&#10;&#10;Controls Box, OneDrive, and Dropbox (not SharePoint). Disables Home, Add Account, and custom Open/Save entry points.&#10;&#10;Values:&#10;0 = enabled&#10;1 = disabled</string>
+      <string id="iAcroLoginType_Acrobat">External Browser Sign-In</string>
+      <string id="iAcroLoginType_Acrobat_Explain">Forces Acrobat to use the default system browser for sign-in instead of the embedded CEF browser.&#10;&#10;Applies to Acrobat DC only. Use when CEF-based sign-in fails Conditional Access or device identity checks. Selecting this value writes iAcroLoginType = 5 under FeatureLockDown. Disabled or Not Configured removes the value and restores Adobe's default CEF sign-in. Not compatible with Federated Login Domain when external browser sign-in is configured. Adobe documents this as Workaround 1 for Azure AD Conditional Access.</string>
+      <string id="iAcroLoginType_Acrobat_opt0">Use the default system browser</string>
+      <string id="login_domain_Acrobat">Federated Login Domain</string>
+      <string id="login_domain_Acrobat_Explain">Sets the federated login domain so sign-in redirects to the organization's identity provider for the claimed domain.&#10;&#10;Applies to Acrobat DC only. Requires a domain claimed in the Adobe Admin Console and Federated ID accounts. Specify the exact claimed domain (no wildcards). Not compatible with External Browser Sign-In. Adobe excludes Acrobat Reader from this feature.</string>
+      <string id="iNGLCEFWorkflowEnabled_Acrobat">Legacy Sign-In Engine (HTTPS Calls)</string>
+      <string id="iNGLCEFWorkflowEnabled_Acrobat_Explain">Forces Acrobat to use the legacy HTTPS calls sign-in engine instead of the embedded CEF browser.&#10;&#10;Applies to Acrobat DC only. Use when CEF-based sign-in fails and external browser sign-in is not suitable. Selecting this value writes iNGLCEFWorkflowEnabled = 0 under FeatureLockDown. Disabled or Not Configured removes the value and restores Adobe's default CEF sign-in. Adobe documents this as Workaround 2 for Azure AD Conditional Access.</string>
+      <string id="iNGLCEFWorkflowEnabled_Acrobat_opt0">Use the HTTPS calls engine</string>
 
       <!-- ======================================== -->
       <!--        Context, Tools and Search         -->
@@ -292,8 +300,7 @@
       <string id="bAdobeSendPluginToggle_Acrobat_Explain">Adobe Send and Track button in Outlook.&#10;&#10;Uploads attachments to Document Cloud and inserts public preview/download links in email.&#10;&#10;Values:&#10;0 = enabled&#10;1 = disabled</string>
       <string id="bEnableReviewPromote_Acrobat">Share and Review Reminder Tip</string>
       <string id="bEnableReviewPromote_Acrobat_Explain">Controls whether a Share/Review reminder tip is shown to users who have previously used those features.&#10;&#10;0 = no reminder tip shown&#10;1 = reminder tip shown to eligible users</string>
-      <string id="bPreviouslyEnabledSharePointInChromeExtn_Acrobat">SharePoint Chrome Extension Previous State</string>
-      <string id="bPreviouslyEnabledSharePointInChromeExtn_Acrobat_Explain">Tracks the prior state of the bEnableSharePointInChromeExtn setting. Used internally by the application; not intended as a primary admin control.&#10;&#10;Enabled writes 1 = SharePoint was previously enabled. Disabled writes 0 = SharePoint was not previously enabled.</string>
+
       <string id="bEnableSharePointInChromeExtn_Acrobat">SharePoint in Chrome Extension</string>
       <string id="bEnableSharePointInChromeExtn_Acrobat_Explain">Controls whether SharePoint integration is active in the Acrobat Chrome browser extension.&#10;&#10;0 = SharePoint integration disabled&#10;1 = SharePoint integration enabled in Chrome extension</string>
       <string id="bToggleManageSign_Acrobat">Show Acrobat Sign Tracking Tab</string>
@@ -538,6 +545,11 @@
       <string id="bEnableFlash_Reader_Explain">Controls whether Flash content in PDFs is rendered. Privileged locations do not override this setting.&#10;&#10;0 = Flash content blocked (empty box and security warning)&#10;1 = Flash content rendered if Flash Player is present</string>
       <string id="bProtectedMode_Reader">Protected Mode Sandbox</string>
       <string id="bProtectedMode_Reader_Explain">Controls whether Protected Mode is enabled, sandboxing Reader processes to protect user systems and data.&#10;&#10;0 = Protected Mode disabled&#10;1 = Protected Mode enabled</string>
+      <string id="iProtectedView_Reader">Protected View Mode</string>
+      <string id="iProtectedView_Reader_Explain">Protected View mode.&#10;&#10;Values: 0 = off (default); 1 = untrusted locations only (recommended); 2 = all files.&#10;&#10;Security Reference: STIG ARDC-CN-000020 (V-213171) Medium; STIG AADC-CN-001015 (V-213128) Medium</string>
+      <string id="iProtectedView_Reader_opt0">Disable Protected View</string>
+      <string id="iProtectedView_Reader_opt1">Enable Protected View for unsafe locations only</string>
+      <string id="iProtectedView_Reader_opt2">Enable Protected View for all files</string>
       <string id="bUseWhitelistConfigFile_Reader">Protected Mode Whitelist Config</string>
       <string id="bUseWhitelistConfigFile_Reader_Explain">Controls whether the application reads a policy whitelist file to allow behavior that Protected Mode would otherwise block.&#10;&#10;0 = whitelist config file ignored&#10;1 = whitelist config file honored</string>
       <string id="iUnlistedAttachmentTypePerm_Reader">Unlisted Attachment Type Permissions</string>
@@ -620,8 +632,7 @@
       <string id="bToggleFSSSignatureSaving_Reader_Explain">Controls whether the option to save a newly created signature to the cloud is shown. Also applies to user initials.&#10;&#10;0 = save signature to cloud UI shown&#10;1 = save signature to cloud UI hidden</string>
       <string id="bAdobeSendPluginToggle_Reader">Send &amp; Track Outlook Plugin</string>
       <string id="bAdobeSendPluginToggle_Reader_Explain">Controls whether the Adobe Send and Track button appears in Outlook, allowing users to upload attachments to Document Cloud and insert preview/download links.&#10;&#10;0 = Send and Track Outlook plugin active&#10;1 = Send and Track Outlook plugin disabled</string>
-      <string id="bPreviouslyEnabledSharePointInChromeExtn_Reader">SharePoint Chrome Extension Previous State</string>
-      <string id="bPreviouslyEnabledSharePointInChromeExtn_Reader_Explain">Tracks the prior state of the bEnableSharePointInChromeExtn setting. Used internally by the application; not intended as a primary admin control.&#10;&#10;Enabled writes 1 = SharePoint was previously enabled. Disabled writes 0 = SharePoint was not previously enabled.</string>
+
       <string id="bEnableSharePointInChromeExtn_Reader">SharePoint in Chrome Extension</string>
       <string id="bEnableSharePointInChromeExtn_Reader_Explain">Controls whether SharePoint integration is active in the Acrobat Chrome browser extension.&#10;&#10;0 = SharePoint integration disabled&#10;1 = SharePoint integration enabled in Chrome extension</string>
       <string id="bToggleManageSign_Reader">Show Acrobat Sign Tracking Tab</string>
@@ -716,6 +727,8 @@
       <!--                  Upsell                  -->
       <!-- ======================================== -->
 
+      <string id="bToggleSophiaWebInfra_Reader">Disable Promotional Campaign Messages</string>
+      <string id="bToggleSophiaWebInfra_Reader_Explain">Controls whether Adobe promotional campaign messages (trials, upsell banners) are shown in the Reader right-hand pane.&#10;&#10;0 = campaign messages disabled&#10;1 = campaign messages enabled</string>
       <string id="bLimitPromptsFeatureKey_Reader">Limit Informational Prompts</string>
       <string id="bLimitPromptsFeatureKey_Reader_Explain">Controls whether informational prompts (tips, calls-to-action, feature walkthroughs) are throttled per user per day.&#10;&#10;0 = prompts not throttled&#10;1 = prompts limited to 1 per day and 3 per week</string>
       <string id="bReaderRetentionExperiment_Reader">Prompt Reader Users to Download Acrobat</string>
@@ -1031,8 +1044,7 @@
       <string id="tNoteFontNameDC_User_Explain">Sets the font used for comment text in the viewer (does not embed in the PDF; controls viewer display preference only).&#10;&#10;Enter a font name available on the system, e.g. Tahoma.</string>
       <string id="dNoteFontSizeDC_User">Comment Font Size</string>
       <string id="dNoteFontSizeDC_User_Explain">Sets the font size (in points) for comment text in the viewer (does not embed in the PDF; controls viewer display preference only).&#10;&#10;Valid range: 6 to 72 points. Default is 10.</string>
-      <string id="iNoteOpacityDC_User">Comment Opacity</string>
-      <string id="iNoteOpacityDC_User_Explain">Controls whether a custom comment opacity level is applied (set the opacity percentage via the UI; the value is stored as a hex DWORD, e.g. d99a = 85%).&#10;&#10;Enabled writes 1 = opacity customization applied. Disabled writes 0 = default opacity used.</string>
+
       <string id="bComplexScriptDC_User">Complex Script Support</string>
       <string id="bComplexScriptDC_User_Explain">Controls whether complex script support is enabled, allowing writing direction switching for right-to-left and bidirectional languages.&#10;&#10;0 = writing direction switching disabled&#10;1 = writing direction switching enabled</string>
       <string id="bconfirmEBRMergeDC_User">Confirm Review Import</string>
@@ -1043,8 +1055,7 @@
       <string id="bcopyTextToMarkupAnnotDC_User_Explain">Controls whether selected text is automatically copied into the popup note for highlight, cross-out, and underline annotations.&#10;&#10;0 = selected text copied into markup annotation popup&#10;1 = selected text not copied into markup annotation popup</string>
       <string id="bCreateLogDC_User">Create Report</string>
       <string id="bCreateLogDC_User_Explain">Controls whether an accessibility report file is created when an accessibility full check is run.&#10;&#10;0 = no report file created&#10;1 = accessibility report file created</string>
-      <string id="iDictionaryDefaultIDDC_User">Default Dictionary</string>
-      <string id="iDictionaryDefaultIDDC_User_Explain">Sets the default spelling dictionary by its numeric ID (found in cDictionaryOrderID\i0; corresponding name in cDictionaryOrder\t0).&#10;&#10;To find the correct value: set it in the UI, close the application, and read this key from the registry.</string>
+
       <string id="iPageViewLayoutModeDC_User">Default Page Layout</string>
       <string id="iPageViewLayoutModeDC_User_Explain">Sets the default page layout used when a PDF opens (can be overridden by Accessibility page layout settings).&#10;&#10;0 = automatic&#10;1 = single page&#10;2 = single page continuous&#10;3 = two up continuous&#10;5 = two up</string>
       <string id="iPageViewLayoutModeDC_User_opt0">Automatic</string>
@@ -1057,8 +1068,7 @@
       <string id="iParaDirDC_User_opt0">Left to Right</string>
       <string id="iParaDirDC_User_opt1">Right to Left</string>
       <string id="iParaDirDC_User_opt2">Infer from document</string>
-      <string id="iDefaultZoomScaleDC_User">Default Zoom Scale</string>
-      <string id="iDefaultZoomScaleDC_User_Explain">Sets the default zoom scale (as a hex DWORD) when a PDF opens; used when iDefaultZoomType specifies a percentage zoom.&#10;&#10;To find the correct value: set it in the UI and read the registry key. Common hex values: 199a = 10%, 4000 = 25%, 8000 = 50%, c000 = 75%, 10000 = 100%.</string>
+
       <string id="iDefaultZoomTypeDC_User">Default Zoom Type</string>
       <string id="iDefaultZoomTypeDC_User_Explain">Sets the default zoom mode when a PDF opens; percentage zoom levels use iDefaultZoomScale.&#10;&#10;1 = fit page&#10;2 = fit width&#10;3 = fit height&#10;4 = fit visible&#10;6 = reflow</string>
       <string id="iDefaultZoomTypeDC_User_opt0">Fit Page (automatic)</string>
@@ -1111,8 +1121,7 @@
       <string id="iPageLayoutDC_User_opt3">Two Up</string>
       <string id="bOverrideZoomDC_User">Override Zoom</string>
       <string id="bOverrideZoomDC_User_Explain">Let users set a default zoom for all documents.&#10;&#10;Overrides author Page Display settings and sets iZoomScale when enabled.&#10;&#10;Values:&#10;0 = document default&#10;1 = enable zoom dropdown</string>
-      <string id="iZoomScaleDC_User">Override Zoom Scale</string>
-      <string id="iZoomScaleDC_User_Explain">Zoom percentage when iZoomType is a percent value.&#10;&#10;Overrides Page Display. Hex examples: 199a=10%, 4000=25%, 8000=50%, c000=75%, 10000=100%.</string>
+
       <string id="iZoomTypeDC_User">Override Zoom Type</string>
       <string id="iZoomTypeDC_User_Explain">Sets the accessibility zoom mode override applied to all documents (percentage zoom levels use iZoomScale).&#10;&#10;1 = fit page&#10;2 = fit width&#10;3 = fit height&#10;4 = fit visible&#10;6 = reflow</string>
       <string id="iZoomTypeDC_User_opt0">Fit Page</string>
@@ -1195,8 +1204,7 @@
       <string id="bUseStructTabOrderDC_User_Explain">Controls whether the PDF document's logical structure is used to determine form field tab order instead of the visual layout order.&#10;&#10;0 = visual layout tab order&#10;1 = document structure tab order</string>
       <string id="bUseSystemSelectionColorDC_User">System Selection Color</string>
       <string id="bUseSystemSelectionColorDC_User_Explain">Controls whether the system-defined highlight color is used for text selection instead of the default blue.&#10;&#10;0 = default selection color (blue) used&#10;1 = system-defined selection color used</string>
-      <string id="iAccessTextColorDC_User">Text Color</string>
-      <string id="iAccessTextColorDC_User_Explain">Sets the custom document text color used when Replace Document Colors is active. Writes 1 under HKCU\Software\Adobe\Adobe Acrobat\DC\Originals\cAccessTextColor to enable the custom color; the RGB components are stored in sibling values (Blue, Green, Red).</string>
+
       <string id="bUseLocalFontsDC_User">Use Local Fonts</string>
       <string id="bUseLocalFontsDC_User_Explain">Controls whether fonts installed locally on the system are used when rendering PDF content that references them.&#10;&#10;0 = local fonts not used for rendering&#10;1 = local fonts used for rendering</string>
       <string id="iEmailClientSelectionDC_User">XFA Email Client</string>
@@ -1709,8 +1717,7 @@
       <string id="tNoteFontName_User_Explain">Specifies the font used for comment text in the viewer. The font is not embedded in the PDF and controls viewer display only, not the author preference.&#10;&#10;Enabled writes the configured font name (e.g., "Tahoma"). Disabled removes the override.</string>
       <string id="dNoteFontSize_User">Comment Font Size</string>
       <string id="dNoteFontSize_User_Explain">Specifies the font size (in points) used for comment text in the viewer.&#10;&#10;Enabled writes the configured value (points). Disabled removes the override (application default of 10 points applies).&#10;&#10;Integer: 6-72 points (default 10)</string>
-      <string id="iNoteOpacity_User">Comment Opacity</string>
-      <string id="iNoteOpacity_User_Explain">Controls whether a custom opacity level is applied to comment popups (the opacity percentage is stored as a hex DWORD, e.g., d99a = 85%).&#10;&#10;Enabled writes 1 = custom opacity active. Disabled writes 0 = custom opacity not applied.</string>
+
       <string id="bComplexScript_User">Complex Script Support</string>
       <string id="bComplexScript_User_Explain">Controls whether complex script support (writing direction switching for right-to-left languages) is enabled.&#10;&#10;0 = complex script / writing direction switching disabled&#10;1 = complex script / writing direction switching enabled</string>
       <string id="bconfirmEBRMerge_User">Confirm Review Import</string>
@@ -1721,8 +1728,7 @@
       <string id="bcopyTextToMarkupAnnot_User_Explain">Controls whether selected text is automatically copied into highlight, cross-out, and underline annotation popups (note: registry value bcopyTextToMarkupAnnot is inverted).&#10;&#10;0 = selected text copied into markup annotation popups&#10;1 = selected text not copied into markup annotation popups</string>
       <string id="bCreateLog_User">Create Report</string>
       <string id="bCreateLog_User_Explain">Controls whether an accessibility report file is created when running a full accessibility check.&#10;&#10;0 = accessibility report not created&#10;1 = accessibility report created after full check</string>
-      <string id="iDictionaryDefaultID_User">Default Dictionary</string>
-      <string id="iDictionaryDefaultID_User_Explain">Controls whether a specific default spelling dictionary is active. The ID value corresponds to cDictionaryOrderID\i0; the dictionary name appears in cDictionaryOrder\t0. To find the correct ID, configure it in the UI, close the product, and read the registry value.&#10;&#10;Enabled writes 1 = custom dictionary ID active. Disabled writes 0 = dictionary ID not set.</string>
+
       <string id="iPageViewLayoutMode_User">Default Page Layout</string>
       <string id="iPageViewLayoutMode_User_Explain">Controls the default page layout mode when a PDF opens (may be overridden by Accessibility settings such as bOverridePageLayout).&#10;&#10;0 = automatic&#10;1 = single page&#10;2 = single page continuous&#10;3 = two up continuous&#10;5 = two up</string>
       <string id="iPageViewLayoutMode_User_opt0">Automatic</string>
@@ -1735,8 +1741,7 @@
       <string id="iParaDir_User_opt0">Left to Right</string>
       <string id="iParaDir_User_opt1">Right to Left</string>
       <string id="iParaDir_User_opt2">Infer from document</string>
-      <string id="iDefaultZoomScale_User">Default Zoom Scale</string>
-      <string id="iDefaultZoomScale_User_Explain">Controls whether a specific default zoom scale is applied when a PDF opens (the scale is stored as a hex DWORD). To find the right value, configure zoom in the UI, close the product, and read the registry value.&#10;&#10;Enabled writes 1 = default zoom scale active. Disabled writes 0 = zoom scale not set.&#10;&#10;Hex examples: 199a=10%, 4000=25%, 8000=50%, c000=75%, 10000=100%</string>
+
       <string id="iDefaultZoomType_User">Default Zoom Type</string>
       <string id="iDefaultZoomType_User_Explain">Controls the default zoom type (non-percentage) applied when a PDF opens; percentage scales are configured separately via iDefaultZoomScale.&#10;&#10;1 = fit page (automatic)&#10;2 = fit width&#10;3 = fit height&#10;4 = fit visible&#10;6 = reflow</string>
       <string id="iDefaultZoomType_User_opt0">Fit Page (automatic)</string>
@@ -1789,8 +1794,7 @@
       <string id="iPageLayout_User_opt3">Two Up</string>
       <string id="bOverrideZoom_User">Override Zoom</string>
       <string id="bOverrideZoom_User_Explain">Controls whether a user-defined zoom level overrides the document's Page Display settings (when enabled, configure the zoom level via iZoomScale and iZoomType).&#10;&#10;0 = document default zoom used&#10;1 = zoom override active (configured via iZoomScale/iZoomType)</string>
-      <string id="iZoomScale_User">Override Zoom Scale</string>
-      <string id="iZoomScale_User_Explain">Controls the zoom percentage override applied when iZoomType is set to a percentage scale (stored as a hex DWORD, requires bOverrideZoom = 1).&#10;&#10;Enabled writes 1 = percentage zoom override active. Disabled writes 0 = percentage zoom not overridden.&#10;&#10;Hex DWORD examples: 199a=10%, 4000=25%, 8000=50%, c000=75%, 10000=100%</string>
+
       <string id="iZoomType_User">Override Zoom Type</string>
       <string id="iZoomType_User_Explain">Controls the zoom type override for all documents (non-percentage modes; percentage scales are configured via iZoomScale). Requires bOverrideZoom = 1.&#10;&#10;1 = fit page&#10;2 = fit width&#10;3 = fit height&#10;4 = fit visible&#10;6 = reflow</string>
       <string id="iZoomType_User_opt0">Fit Page</string>
@@ -1869,8 +1873,7 @@
       <string id="bUseStructTabOrder_User_Explain">Controls whether the PDF document's logical structure (tag tree) determines the Tab key navigation order rather than the visual order of fields.&#10;&#10;0 = visual order used for Tab navigation&#10;1 = document structure (tag tree) used for Tab navigation</string>
       <string id="bUseSystemSelectionColor_User">System Selection Color</string>
       <string id="bUseSystemSelectionColor_User_Explain">Controls whether the system-defined selection highlight color replaces the application's default blue selection color.&#10;&#10;0 = default blue selection color used&#10;1 = system selection color used for text/content selection</string>
-      <string id="iAccessTextColor_User">Text Color</string>
-      <string id="iAccessTextColor_User_Explain">Controls whether a custom accessibility text color is applied to document text. The actual color components are stored as sub-keys appended with Blue, Green, Red, or Space.&#10;&#10;Enabled writes 1 = custom text color active. Disabled writes 0 = custom text color not applied.</string>
+
       <string id="bUseLocalFonts_User">Use Local Fonts</string>
       <string id="bUseLocalFonts_User_Explain">Controls whether locally installed system fonts are used for rendering when the PDF's embedded fonts are not available.&#10;&#10;0 = local fonts not used for rendering&#10;1 = local fonts used when embedded fonts are unavailable</string>
       <string id="iEmailClientSelection_User">XFA Email Client</string>
@@ -2047,7 +2050,7 @@
       <string id="bRevCheckTrust_User">Revoke Check Trust</string>
       <string id="bRevCheckTrust_User_Explain">Revocation-check intermediate (non-root) trust anchors.&#10;&#10;Enabled writes 1 = check. Disabled writes 0 = no check.&#10;&#10;Detects compromise of third-party trust anchors. Root and self-signed certs are exempt.&#10;&#10;Values:&#10;0 = no check&#10;1 = check</string>
       <string id="iRSAPSSSaltLength_User">RSA-PSS Salt Length</string>
-      <string id="iRSAPSSSaltLength_User_Explain">Controls whether a specific salt length is enforced for RSA-PSS signing.&#10;&#10;0 = default salt length&#10;1 = custom salt length enforced</string>
+      <string id="iRSAPSSSaltLength_User_Explain">Specifies the salt length (in bytes) the RSA-PSS algorithm uses. Enter in decimal; registry stores as DWORD (e.g. decimal 32 = hex 0x20).</string>
       <string id="bEnableRSAPSSSigning_User">RSA-PSS Signing</string>
       <string id="bEnableRSAPSSSigning_User_Explain">Controls whether signatures are created using the RSA-PSS algorithm.&#10;&#10;0 = use default RSA signing algorithm&#10;1 = use RSA-PSS for signing</string>
       <string id="aRSAPSSHashAlgorithm_User">RSAPSS Hash Algorithm</string>
@@ -2109,7 +2112,7 @@
       <string id="iHashAlgo_User_opt1">SHA1</string>
       <string id="iHashAlgo_User_opt2">SHA256</string>
       <string id="iSize_User">Timestamp Sig Size</string>
-      <string id="iSize_User_Explain">Controls whether a custom timestamp signature property size is configured in the ASPKI provider.&#10;&#10;0 = size not configured&#10;1 = size configured</string>
+      <string id="iSize_User_Explain">ASPKI requires the signature property to predict the size (in bytes) so that enough space can be set aside.</string>
       <string id="tServer_User">Tracker Server URL</string>
       <string id="tServer_User_Explain">Specifies the DNS server name for the Acrobat tracker server (e.g., alrms.adobe.com). No URL scheme is included.&#10;&#10;Enabled writes the configured server name. Disabled removes the override.</string>
       <string id="bTrueTypeFontPDFSigQWarn_User">TrueType Font Warn</string>
@@ -2300,6 +2303,18 @@
       <string id="DisableExpressEdge_Explain">Disables Adobe Express features (such as Edit Image) in the Acrobat browser extension.&#10;&#10;Configured via Edge's managed-storage policy mechanism (a 3rdparty extension policy), not Adobe's own FeatureLockDown registry namespace.&#10;&#10;Possible values include: true: Disable Express features in the extension.&#10;false: Allow Express features in the extension.</string>
     </stringTable>
     <presentationTable>
+      <presentation id="iAcroLoginType_Acrobat_enum">
+        <dropdownList defaultItem="0" refId="iAcroLoginType_Acrobat_enum">External Browser Sign-In:</dropdownList>
+      </presentation>
+      <presentation id="login_domain_Acrobat_text">
+        <textBox refId="login_domain_Acrobat_text"><label>Claimed domain:</label></textBox>
+      </presentation>
+      <presentation id="iNGLCEFWorkflowEnabled_Acrobat_enum">
+        <dropdownList defaultItem="0" refId="iNGLCEFWorkflowEnabled_Acrobat_enum">Legacy Sign-In Engine (HTTPS Calls):</dropdownList>
+      </presentation>
+      <presentation id="iProtectedView_Reader_enum">
+        <dropdownList defaultItem="0" refId="iProtectedView_Reader_enum">Protected View Mode:</dropdownList>
+      </presentation>
       <presentation id="iMIPCloud_Acrobat_enum">
         <dropdownList defaultItem="0" refId="iMIPCloud_Acrobat_enum">MIP Sovereign Cloud:</dropdownList>
       </presentation>
@@ -2495,6 +2510,12 @@
       <presentation id="iResponseFreshnessDC_User_num">
         <decimalTextBox refId="iResponseFreshnessDC_User_num" defaultValue="3600">OCSP response freshness in seconds:</decimalTextBox>
       </presentation>
+      <presentation id="iRSAPSSSaltLengthDC_User_num">
+        <decimalTextBox refId="iRSAPSSSaltLengthDC_User_num" defaultValue="32">RSA-PSS salt length (bytes):</decimalTextBox>
+      </presentation>
+      <presentation id="iSizeDC_User_num">
+        <decimalTextBox refId="iSizeDC_User_num" defaultValue="4192">Timestamp signature size (bytes):</decimalTextBox>
+      </presentation>
       <presentation id="tLockboxIdDC_User_text">
         <textBox refId="tLockboxIdDC_User_text"><label>Password lockbox ID:</label></textBox>
       </presentation>
@@ -2680,6 +2701,12 @@
       </presentation>
       <presentation id="iResponseFreshness_User_num">
         <decimalTextBox refId="iResponseFreshness_User_num" defaultValue="3600">OCSP response freshness in seconds:</decimalTextBox>
+      </presentation>
+      <presentation id="iRSAPSSSaltLength_User_num">
+        <decimalTextBox refId="iRSAPSSSaltLength_User_num" defaultValue="32">RSA-PSS salt length (bytes):</decimalTextBox>
+      </presentation>
+      <presentation id="iSize_User_num">
+        <decimalTextBox refId="iSize_User_num" defaultValue="4192">Timestamp signature size (bytes):</decimalTextBox>
       </presentation>
       <presentation id="tLockboxId_User_text">
         <textBox refId="tLockboxId_User_text"><label>Password lockbox ID:</label></textBox>
