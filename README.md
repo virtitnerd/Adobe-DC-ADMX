@@ -35,24 +35,27 @@ These ADMX/ADML templates (v3.5) provide Group Policy and Intune management of A
 |------|-------|----------|
 | `AdobeDC.admx` + ADML | **Adobe DC** (Computer + User) | 834 (319 machine + 515 user) |
 
-### Computer Configuration tree
-
-- **Acrobat & Reader DC** - shared ``HKLM\SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\...`` (Acrobat x86/x64 + modern x64 Reader)
-- **Reader DC (32-bit)** - shared ``HKLM\SOFTWARE\Policies\Adobe\Acrobat Reader\DC\...`` (legacy 32-bit standalone Reader)
-- **Non-Policy Settings** - architecture-specific non-Policies registry paths (64-bit Acrobat/Reader, 32-bit Acrobat, 32-bit Reader)
-
-### User Configuration tree
-
-- **Acrobat DC** / **Reader DC** - ``HKCU`` preferences
+```mermaid
+flowchart TD
+    ADMX["AdobeDC.admx + ADML"]
+    ADMX --> Computer["Computer Configuration (HKLM)"]
+    ADMX --> User["User Configuration (HKCU)"]
+    Computer --> AR["Acrobat & Reader DC<br/>Policies\\Adobe\\Adobe Acrobat\\DC (Acrobat x86/x64 + modern x64 Reader)"]
+    Computer --> R32["Reader DC (32-bit)<br/>Policies\\Adobe\\Acrobat Reader\\DC (legacy 32-bit Reader)"]
+    Computer --> NP["Non-Policy Settings<br/>architecture-specific non-Policies paths"]
+    Computer --> BE["Browser Extensions<br/>Chrome + Edge 3rdparty extension policy paths"]
+    User --> UA["Acrobat DC (User)"]
+    User --> UR["Reader DC (User)<br/>HKCU prefs; leaf names carry the (User) suffix"]
+```
 
 ## Important Notes
 
 | ![Note](https://img.shields.io/badge/Note-316dca?style=flat-square) |
 |------|
 | x64 Reader (Unified Installer) is configured under **Acrobat & Reader DC** (Acrobat hive), not the Reader hive. Configure legacy 32-bit Reader under **Reader DC (32-bit)**. |
-| ``HKLM\SOFTWARE\Policies`` is shared across WOW64; lockable policies are not duplicated per architecture. |
+| Some machine settings write outside `HKLM\SOFTWARE\Policies` and appear under **Adobe DC > Non-Policy Settings** with architecture-specific sub-nodes (**Acrobat & Reader DC (64-bit)**, **Acrobat DC (32-bit)**, **Reader DC (32-bit)**). See curated guides for marked entries. |
+| Browser extension settings write to each browser's 3rdparty extension policy path under **Adobe DC > Browser Extensions** (Google Chrome / Microsoft Edge). Values are REG_SZ strings, not DWORD. See [Browser Extension Settings](Documentation/browser-extension.md). |
 | Several ``bToggle*`` policies use inverted registry values (DWORD 0 = feature ON, DWORD 1 = feature OFF). |
-| User policies use ``class=`"User`"`` and appear under User Configuration only. |
 
 ## Category Overview (Device)
 
