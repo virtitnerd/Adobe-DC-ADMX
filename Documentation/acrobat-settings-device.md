@@ -198,6 +198,7 @@ Complete list of 170 Acrobat DC policies in the combined v3.5 ADMX templates, so
 | Auto Dock HUD Bar | ``bEnableAutoDockUndockHUD`` | Automatically dock and undock the HUD bar based on the window size. |
 | Auto Open Acrobat from Reader | ``bHasAcrobatConsent`` | Specifies whether the Reader process should automatically open Acrobat for the current file. |
 | Crash Reporter Dialog | ``bCrashReporterEnabled`` | Show the crash reporter dialog on application crash (Windows only). |
+| Disable Adobe Express Photos Install | ``bDisableHarmonyInstallationFeature`` | Prevent Acrobat from installing the Adobe Express Photos app for eligible users on launch. |
 | Disable Chrome PDF Extension | ``bAcroSuppressOpenInReader`` | Disable and lock the PDF viewer Chrome extension. |
 | Disable Major Version Upgrade Prompt | ``iDisablePromptForUpgrade`` | Suppress major-version upgrade prompt. |
 | Disable Repair for All Users | ``DisableMaintenance`` | Disable Help > Repair for all users. |

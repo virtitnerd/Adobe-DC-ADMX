@@ -68,6 +68,7 @@ Settings to suppress unwanted messages, popups, and promotions (Device scope).
 | Startup & Experience | Show To Do Cards in Recent Tab | Set to ![Disabled](https://img.shields.io/badge/Disabled-f85149?style=flat-square) |
 | Startup & Experience | What's New Experience | Set to ![Disabled](https://img.shields.io/badge/Disabled-f85149?style=flat-square) |
 | Updates & Desktop Integration | Crash Reporter Dialog | Set to ![Disabled](https://img.shields.io/badge/Disabled-f85149?style=flat-square) |
+| Updates & Desktop Integration | Disable Adobe Express Photos Install | Set to ![Enabled](https://img.shields.io/badge/Enabled-238636?style=flat-square) |
 | Updates & Desktop Integration | Disable Major Version Upgrade Prompt | Set to ![Enabled](https://img.shields.io/badge/Enabled-238636?style=flat-square) |
 | Updates & Desktop Integration | Disable Repair for All Users | Set to ![Enabled](https://img.shields.io/badge/Enabled-238636?style=flat-square) |
 | Updates & Desktop Integration | Disable Repair for Standard Users | Set to ![Enabled](https://img.shields.io/badge/Enabled-238636?style=flat-square) |

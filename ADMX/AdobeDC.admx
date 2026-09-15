@@ -1444,6 +1444,15 @@
       <disabledValue><decimal value="0" /></disabledValue>
     </policy>
 
+    <!-- Disable Adobe Express Photos Install - [bDisableHarmonyInstallationFeature] -->
+    <policy class="Machine" displayName="$(string.bDisableHarmonyInstallationFeature_Acrobat)" explainText="$(string.bDisableHarmonyInstallationFeature_Acrobat_Explain)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
+      name="bDisableHarmonyInstallationFeature_Acrobat" valueName="bDisableHarmonyInstallationFeature">
+      <parentCategory ref="UpdatesDesktop_AcrobatCategory"/>
+      <supportedOn ref="SupportedAcrobatReaderPolicies"/>
+      <enabledValue><decimal value="1" /></enabledValue>
+      <disabledValue><decimal value="0" /></disabledValue>
+    </policy>
+
     <!-- Disable Chrome PDF Extension - [bAcroSuppressOpenInReader] -->
     <policy class="Machine" displayName="$(string.bAcroSuppressOpenInReader_Acrobat)" explainText="$(string.bAcroSuppressOpenInReader_Acrobat_Explain)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown"
       name="bAcroSuppressOpenInReader_Acrobat" valueName="bAcroSuppressOpenInReader">
@@ -5881,6 +5890,33 @@
     <!-- App Launched (User) - [bLaunched] -->
     <policy class="User" displayName="$(string.bLaunchedDC_User)" explainText="$(string.bLaunchedDC_User_Explain)" key="Software\Adobe\Adobe Acrobat\DC\AdobeViewer"
       name="bLaunchedDC_User" valueName="bLaunched">
+      <parentCategory ref="StartupExperienceCategoryDC_User"/>
+      <supportedOn ref="SupportedAcrobatDC_User"/>
+      <enabledValue><decimal value="1" /></enabledValue>
+      <disabledValue><decimal value="0" /></disabledValue>
+    </policy>
+
+    <!-- Auto-Open Downloaded PDFs (User) - [bIsAutoDocOpenFeatureEnabled] -->
+    <policy class="User" displayName="$(string.bIsAutoDocOpenFeatureEnabledDC_User)" explainText="$(string.bIsAutoDocOpenFeatureEnabledDC_User_Explain)" key="Software\Adobe\Adobe Acrobat\DC\AutoDocOpen"
+      name="bIsAutoDocOpenFeatureEnabledDC_User" valueName="bIsAutoDocOpenFeatureEnabled">
+      <parentCategory ref="StartupExperienceCategoryDC_User"/>
+      <supportedOn ref="SupportedAcrobatDC_User"/>
+      <enabledValue><decimal value="1" /></enabledValue>
+      <disabledValue><decimal value="0" /></disabledValue>
+    </policy>
+
+    <!-- Auto-Open From All Browsers (User) - [bAutoOpenFromAllBrowsers] -->
+    <policy class="User" displayName="$(string.bAutoOpenFromAllBrowsersDC_User)" explainText="$(string.bAutoOpenFromAllBrowsersDC_User_Explain)" key="Software\Adobe\Adobe Acrobat\DC\AutoDocOpen"
+      name="bAutoOpenFromAllBrowsersDC_User" valueName="bAutoOpenFromAllBrowsers">
+      <parentCategory ref="StartupExperienceCategoryDC_User"/>
+      <supportedOn ref="SupportedAcrobatDC_User"/>
+      <enabledValue><decimal value="1" /></enabledValue>
+      <disabledValue><decimal value="0" /></disabledValue>
+    </policy>
+
+    <!-- Auto-Open From Edge (User) - [bIsAutoDocOpenEnabledForEdge] -->
+    <policy class="User" displayName="$(string.bIsAutoDocOpenEnabledForEdgeDC_User)" explainText="$(string.bIsAutoDocOpenEnabledForEdgeDC_User_Explain)" key="Software\Adobe\Adobe Acrobat\DC\AutoDocOpen"
+      name="bIsAutoDocOpenEnabledForEdgeDC_User" valueName="bIsAutoDocOpenEnabledForEdge">
       <parentCategory ref="StartupExperienceCategoryDC_User"/>
       <supportedOn ref="SupportedAcrobatDC_User"/>
       <enabledValue><decimal value="1" /></enabledValue>

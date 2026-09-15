@@ -270,6 +270,9 @@ Complete list of 271 Acrobat DC policies in the combined v3.5 ADMX templates, so
 | App Has Launched | ``bHasLaunched`` | Records whether the application has been launched after installation. |
 | App Initialized | ``bAppInitialized`` | Records whether the application has been initialized after installation. |
 | App Launched | ``bLaunched`` | Caches whether or not the application has ever been launched. |
+| Auto-Open Downloaded PDFs | ``bIsAutoDocOpenFeatureEnabled`` | Controls whether PDFs downloaded in Chrome or Edge automatically open in Acrobat or Reader. |
+| Auto-Open From All Browsers | ``bAutoOpenFromAllBrowsers`` | Controls whether auto-open applies for PDFs downloaded from all supported browsers. |
+| Auto-Open From Edge | ``bIsAutoDocOpenEnabledForEdge`` | Controls whether PDFs downloaded in Microsoft Edge automatically open in Acrobat or Reader. |
 | Browser EULA Accepted | ``EULAAcceptedForBrowser`` | For Acrobat's browser plugin, caches whether the browser-based EULA has been accepted. |
 | Choose Language Startup | ``bChooseLangAtStartup`` | Allows the user to choose the language at startup. |
 | Create Form Onboarding | ``bCreateFormDiscoveryShown`` | Show the onboarding coachmark when the user invokes the Create Form panel. |
