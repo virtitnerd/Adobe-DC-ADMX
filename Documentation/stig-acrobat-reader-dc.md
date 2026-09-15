@@ -21,37 +21,41 @@
 ## Controls
 
 26 total. The **ADMX Policy** column shows the display name as it appears in GPMC and Intune Admin Templates.
-For 32-bit Reader on a 64-bit machine, policies appear under
-`Computer Configuration → Administrative Templates → Adobe DC → Reader DC (32-bit)`.
+For 32-bit Reader on a 64-bit machine, Computer-scope policies appear under
+`Computer Configuration → Administrative Templates → Adobe DC → Reader DC (32-bit)`; User-scope policies appear
+under `User Configuration → Administrative Templates → Adobe DC → Reader DC`. The **Path** column gives the
+specific category folder to open under that branch to find the policy.
 
-| VUL ID | STIG Rule | Severity | Requirement | ADMX Policy | Registry Value | Setting | Scope |
-|---|---|---|---|---|---|---|---|
-| V-213192 | ARDC-CN-000340 | CAT I | Latest security-related software updates must be installed | — (procedural) | — | Verify via Help → About | — |
-| V-213168 | ARDC-CN-000005 | CAT II | Enhanced Security in standalone mode must be enabled | Enhanced Security Standalone | `FeatureLockDown\bEnhancedSecurityStandalone` | `1` | Computer |
-| V-213169 | ARDC-CN-000010 | CAT II | Enhanced Security in browser mode must be enabled | Enhanced Security in Browser | `FeatureLockDown\bEnhancedSecurityInBrowser` | `1` | Computer |
-| V-213170 | ARDC-CN-000015 | CAT II | Protected Mode must be enabled | Protected Mode Sandbox | `FeatureLockDown\bProtectedMode` | `1` | Computer |
-| V-213171 | ARDC-CN-000020 | CAT II | Protected View must be enabled | Protected View Mode | `FeatureLockDown\iProtectedView` | `2` (All files) | Computer |
-| V-213172 | ARDC-CN-000025 | CAT II | Access to websites must be blocked | URL Access Permissions | `FeatureLockDown\cDefaultLaunchURLPerms\iURLPerms` | `1` | Computer |
-| V-213173 | ARDC-CN-000030 | CAT II | Access to unknown websites must be blocked | Unknown URL Access Policy | `FeatureLockDown\cDefaultLaunchURLPerms\iUnknownURLPerms` | `3` (Block) | Computer |
-| V-213174 | ARDC-CN-000035 | CAT II | Files other than PDF or FDF must be blocked | Block non-PDF file attachments | `FeatureLockDown\iFileAttachmentPerms` | `1` | Computer |
-| V-213175 | ARDC-CN-000045 | CAT II | Flash Content must be blocked | Flash Content in PDFs | `FeatureLockDown\bEnableFlash` | `0` | Computer |
-| V-213178 | ARDC-CN-000060 | CAT II | Document Cloud Services must be disabled | Document Cloud Services | `FeatureLockDown\cServices\bToggleAdobeDocumentServices` | `1` | Computer |
-| V-213179 | ARDC-CN-000065 | CAT II | Cloud Synchronization must be disabled | Preferences Synchronization | `FeatureLockDown\cServices\bTogglePrefsSync` | `1` | Computer |
-| V-213181 | ARDC-CN-000075 | CAT II | Third-party web connectors must be disabled | Third-Party Cloud Connectors | `FeatureLockDown\cServices\bToggleWebConnectors` | `1` | Computer |
-| V-213184 | ARDC-CN-000090 | CAT II | Webmail access must be disabled | Disable WebMail Integration | `FeatureLockDown\cWebmailProfiles\bDisableWebmail` | `1` | Computer |
-| V-213185 | ARDC-CN-000100 | CAT II | Online SharePoint access must be disabled | Disable SharePoint & Office 365 Integration | `FeatureLockDown\cSharePoint\bDisableSharePointFeatures` | `1` | Computer |
-| V-213188 | ARDC-CN-000315 | CAT II | Ability to add Trusted Files and Folders must be disabled | Lock Trusted Folders and Files | `FeatureLockDown\bDisableTrustedFolders` | `1` | Computer |
-| V-213189 | ARDC-CN-000320 | CAT II | Ability to elevate IE Trusted Sites to Privileged Locations must be disabled | Lock Trusted Host Sites | `FeatureLockDown\bDisableTrustedSites` | `1` | Computer |
-| V-213193 | ARDC-CN-000345 | CAT II | FIPS mode must be enabled | FIPS Mode | `AVGeneral\bFIPSMode` | `1` | User |
-| V-213176 | ARDC-CN-000050 | CAT III | Ability to change the Default Handler must be disabled | Lock Default PDF Viewer | `FeatureLockDown\bDisablePDFHandlerSwitching` | `1` | Computer |
-| V-213177 | ARDC-CN-000055 | CAT III | Adobe Send and Track plugin for Outlook must be disabled | Send & Track Outlook Plugin | `FeatureLockDown\cCloud\bAdobeSendPluginToggle` | `1` | Computer |
-| V-213180 | ARDC-CN-000070 | CAT III | Repair Installation must be disabled | Disable Repair for All Users | `Acrobat Reader\DC\Installer\DisableMaintenance` | `1` | Computer |
-| V-213182 | ARDC-CN-000080 | CAT III | Acrobat upsell prompts must be disabled | Show Upgrade Prompts | `FeatureLockDown\bAcroSuppressUpsell` | `1` | Computer |
-| V-213183 | ARDC-CN-000085 | CAT III | Adobe Send for Signature must be disabled | Adobe Acrobat Sign | `FeatureLockDown\cServices\bToggleAdobeSign` | `1` | Computer |
-| V-213186 | ARDC-CN-000115 | CAT III | Welcome Screen must be disabled | Welcome Screen on Startup | `FeatureLockDown\cWelcomeScreen\bShowWelcomeScreen` | `0` | Computer |
-| V-213187 | ARDC-CN-000120 | CAT III | Service upgrades must be disabled | Services & Web-Plugin Updates | `FeatureLockDown\cServices\bUpdater` | `0` | Computer |
-| V-213190 | ARDC-CN-000330 | CAT III | Periodic uploading of European certificates must be disabled | Load Security Settings from Server (European Certificates) | `Security\cDigSig\cEUTLDownload\bLoadSettingsFromURL` | `0` | User |
-| V-213191 | ARDC-CN-000335 | CAT III | Periodic uploading of Adobe certificates must be disabled | Load Security Settings from Server (Adobe Certificates) | `Security\cDigSig\cAdobeDownload\bLoadSettingsFromURL` | `0` | User |
+| VUL ID | STIG Rule | Severity | Requirement | ADMX Policy | Path | Registry Value | Setting | Scope |
+|---|---|---|---|---|---|---|---|---|
+| V-213192 | ARDC-CN-000340 | CAT I | Latest security-related software updates must be installed | — (procedural) | — | — | Verify via Help → About | — |
+| V-213168 | ARDC-CN-000005 | CAT II | Enhanced Security in standalone mode must be enabled | Enhanced Security Standalone | Security: Execution & Protection | `FeatureLockDown\bEnhancedSecurityStandalone` | `1` | Computer |
+| V-213169 | ARDC-CN-000010 | CAT II | Enhanced Security in browser mode must be enabled | Enhanced Security in Browser | Security: Execution & Protection | `FeatureLockDown\bEnhancedSecurityInBrowser` | `1` | Computer |
+| V-213170 | ARDC-CN-000015 | CAT II | Protected Mode must be enabled | Protected Mode Sandbox | Security: Execution & Protection | `FeatureLockDown\bProtectedMode` | `1` | Computer |
+| V-213171 | ARDC-CN-000020 | CAT II | Protected View must be enabled | Protected View Mode | Security: Execution & Protection | `FeatureLockDown\iProtectedView` | `2` (All files) | Computer |
+| V-213172 | ARDC-CN-000025 | CAT II | Access to websites must be blocked | URL Access Permissions | Security: Trust & Permissions | `FeatureLockDown\cDefaultLaunchURLPerms\iURLPerms` | `1` | Computer |
+| V-213173 | ARDC-CN-000030 | CAT II | Access to unknown websites must be blocked | Unknown URL Access Policy | Security: Trust & Permissions | `FeatureLockDown\cDefaultLaunchURLPerms\iUnknownURLPerms` | `3` (Block) | Computer |
+| V-213174 | ARDC-CN-000035 | CAT II | Files other than PDF or FDF must be blocked | Block non-PDF file attachments | Security: Execution & Protection | `FeatureLockDown\iFileAttachmentPerms` | `1` | Computer |
+| V-213175 | ARDC-CN-000045 | CAT II | Flash Content must be blocked | Flash Content in PDFs | Security: Execution & Protection | `FeatureLockDown\bEnableFlash` | `0` | Computer |
+| V-213178 | ARDC-CN-000060 | CAT II | Document Cloud Services must be disabled | Document Cloud Services | Cloud & Connectors | `FeatureLockDown\cServices\bToggleAdobeDocumentServices` | `1` | Computer |
+| V-213179 | ARDC-CN-000065 | CAT II | Cloud Synchronization must be disabled | Preferences Synchronization | Cloud & Connectors | `FeatureLockDown\cServices\bTogglePrefsSync` | `1` | Computer |
+| V-213181 | ARDC-CN-000075 | CAT II | Third-party web connectors must be disabled | Third-Party Cloud Connectors | Cloud & Connectors | `FeatureLockDown\cServices\bToggleWebConnectors` | `1` | Computer |
+| V-213184 | ARDC-CN-000090 | CAT II | Webmail access must be disabled | Disable WebMail Integration | Sharing & Features | `FeatureLockDown\cWebmailProfiles\bDisableWebmail` | `1` | Computer |
+| V-213185 | ARDC-CN-000100 | CAT II | Online SharePoint access must be disabled | Disable SharePoint & Office 365 Integration | Sharing & Features | `FeatureLockDown\cSharePoint\bDisableSharePointFeatures` | `1` | Computer |
+| V-213188 | ARDC-CN-000315 | CAT II | Ability to add Trusted Files and Folders must be disabled | Lock Trusted Folders and Files | Security: Trust & Permissions | `FeatureLockDown\bDisableTrustedFolders` | `1` | Computer |
+| V-213189 | ARDC-CN-000320 | CAT II | Ability to elevate IE Trusted Sites to Privileged Locations must be disabled | Lock Trusted Host Sites | Security: Trust & Permissions | `FeatureLockDown\bDisableTrustedSites` | `1` | Computer |
+| V-213193 | ARDC-CN-000345 | CAT II | FIPS mode must be enabled | FIPS Mode | Security: Execution & Protection | `AVGeneral\bFIPSMode` | `1` | User |
+| V-213176 | ARDC-CN-000050 | CAT III | Ability to change the Default Handler must be disabled | Lock Default PDF Viewer | Updates & Desktop Integration | `FeatureLockDown\bDisablePDFHandlerSwitching` | `1` | Computer |
+| V-213177 | ARDC-CN-000055 | CAT III | Adobe Send and Track plugin for Outlook must be disabled | Send & Track Outlook Plugin | Sharing & Features | `FeatureLockDown\cCloud\bAdobeSendPluginToggle` | `1` | Computer |
+| V-213180 | ARDC-CN-000070 | CAT III | Repair Installation must be disabled | Disable Repair for All Users | Non-Policy Settings → Reader DC (32-bit) → Updates & Desktop Integration [^1] | `Acrobat Reader\DC\Installer\DisableMaintenance` | `1` | Computer |
+| V-213182 | ARDC-CN-000080 | CAT III | Acrobat upsell prompts must be disabled | Show Upgrade Prompts | Upsell | `FeatureLockDown\bAcroSuppressUpsell` | `1` | Computer |
+| V-213183 | ARDC-CN-000085 | CAT III | Adobe Send for Signature must be disabled | Adobe Acrobat Sign | Sharing & Features | `FeatureLockDown\cServices\bToggleAdobeSign` | `1` | Computer |
+| V-213186 | ARDC-CN-000115 | CAT III | Welcome Screen must be disabled | Welcome Screen on Startup | Startup & Experience | `FeatureLockDown\cWelcomeScreen\bShowWelcomeScreen` | `0` | Computer |
+| V-213187 | ARDC-CN-000120 | CAT III | Service upgrades must be disabled | Services & Web-Plugin Updates | Cloud & Connectors | `FeatureLockDown\cServices\bUpdater` | `0` | Computer |
+| V-213190 | ARDC-CN-000330 | CAT III | Periodic uploading of European certificates must be disabled | Load Security Settings from Server (European Certificates) | Security: Trust & Permissions | `Security\cDigSig\cEUTLDownload\bLoadSettingsFromURL` | `0` | User |
+| V-213191 | ARDC-CN-000335 | CAT III | Periodic uploading of Adobe certificates must be disabled | Load Security Settings from Server (Adobe Certificates) | Security: Trust & Permissions | `Security\cDigSig\cAdobeDownload\bLoadSettingsFromURL` | `0` | User |
+
+[^1]: This is a Non-Policy Setting, not a `FeatureLockDown` policy - it sits under `Adobe DC → Non-Policy Settings → Reader DC (32-bit)` rather than `Reader DC (32-bit)`.
 
 ---
 
